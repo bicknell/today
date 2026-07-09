@@ -10,6 +10,11 @@ it and how it has propagated since.
 `today.12` data files, exactly as originally saved, are in
 [`today/`](today/).
 
+**Building:** the original source doesn't compile clean on modern
+compilers without changes — see [BUILDING.md](BUILDING.md) for the
+compiler flags that get a clean build without touching the source, and
+for a known bug in the original code.
+
 > **Leo Bicknell: personal note** — I found this code in a very old git
 > repository. This was one of the few bits of code that I did not write
 > that I felt like saving at the time.  Most likely I saved the original
