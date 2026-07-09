@@ -32,7 +32,11 @@ value. None of these were run down during the initial research pass.
      Erindale / computing turned up nothing. Several Toronto-area
      "Michael Butler" obituaries exist (notably one for 1948–2019) but
      none mention computing or U of T — treat those as false leads, not
-     candidates.
+     candidates. Re-ran the same University of Toronto/Erindale/1981/
+     PL-1/VM-CMS combinations with "Mike Butler" instead of "Michael
+     Butler" specifically (since `TODAY.DOC` itself only ever says
+     "Mike") — also nothing. Both name forms are exhausted against this
+     specific institutional context; no need to retry either.
    - GitHub code search for "Michael Butler" / "Mike Butler": nothing.
    - UTM's own history pages (the CS department's public timeline, the
      "It was 50 years ago today" retrospective article): no mention.
