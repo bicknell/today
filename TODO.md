@@ -10,16 +10,23 @@ value. None of these were run down during the initial research pass.
    Marin County property/voter record or an old Marin-Sonoma PC User
    Group roster from the mid-1980s could close this gap directly.
 
-2. **Butler's identity is now anchored, but not complete.** `TODAY.DOC`
-   credited only "Mike Butler" as the author of the original PL/1 program
-   that inspired Kincaid's PC port. A June 5, 2019 Facebook post from
-   `UTMBiology` (University of Toronto Mississauga, known as **Erindale
-   College** in 1981) independently confirmed his full name — **Michael
-   Butler** — the institution, and the exact date the mainframe original
-   first ran (June 5, 1981, matching the `today.6` self-reference
-   `S06051981 TODAY ran for 1st time`). See README Section I for the full
-   quote and the archived screenshot at
+2. **Butler's identity is now anchored, but not complete.** The `arcbbs`-
+   hosted `TODAY_DOC` only credited "Mike Butler." A June 5, 2019 Facebook
+   post from `UTMBiology` (University of Toronto Mississauga, known as
+   **Erindale College** in 1981) independently confirmed his full name —
+   **Michael Butler** — the institution, and the exact date the mainframe
+   original first ran (June 5, 1981, matching the `today.6`
+   self-reference `S06051981 TODAY ran for 1st time`). See README Section
+   I for the full quote and the archived screenshot at
    [`screenshots/utmbiology-facebook-2019-06-05.png`](screenshots/utmbiology-facebook-2019-06-05.png).
+
+   **Update:** this is now independently corroborated a second time, and
+   from Kincaid himself. The full `TODAY.DOC` manual recovered inside
+   `TODAY34.ZIP` (see README Section I and [`zips/`](zips/)) has a
+   dedicated "TODAY's History" section, in Kincaid's own words, also
+   naming "**Michael Butler**" in full — not just "Mike." The Facebook
+   post and Kincaid's own documentation are independent of each other and
+   agree exactly, which meaningfully strengthens this identification.
 
    Still open: whether Butler was a student, faculty, or staff member at
    Erindale/UTM in 1981; whether any of the original PL/1 source
@@ -85,6 +92,20 @@ value. None of these were run down during the initial research pass.
    propagation and don't require a Usenet posting to have happened at
    all.
 
+   **Update:** three later Usenet/Fidonet posts have since turned up
+   showing the DOS *executable* itself in use (`rec.org.sca`, Aug 1995;
+   `comp.os.msdos`, Sept 2001; `fido7.moscow-oklahom`, Jan 2004 — see
+   README Section I for the version banners each one shows). None of
+   these is the original release posting — they're years-later reposts
+   of program output by end users, not source distribution — but they do
+   confirm real circulation on Usenet/Fidonet from at least 1995 onward,
+   and independently established a version history (1986 → 1988 → 1990
+   v3.1 → 1993 v3.3 → Nov. 1993 v3.6) that didn't exist in this document
+   before. Hugo Fiennes's direct account (item 9, below) now makes
+   BBS-to-BBS spread — rather than a Usenet source posting — the
+   better-supported propagation story overall; the original-posting
+   question may be somewhat moot.
+
    The [tuhs.org](https://www.tuhs.org/Usenet/comp.sources.misc/) and
    [nycbug](https://mirrors.nycbug.org/pub/The_Unix_Archive/Unix_Usenet/comp.sources.misc/)
    archives only cover January 1988–June 1991 — that's just what happens
@@ -148,37 +169,38 @@ value. None of these were run down during the initial research pass.
    Chavez respectively — but nothing ties them to Heineman or this
    research thread either; not worth pursuing.)
 
-8. **Track down a copy of `TODAY.OWN`.** `TODAY.DOC` describes this as a
-   sample personal customization file distributed with the package. If a
-   copy survives anywhere, it may contain further personalization or
-   attribution clues beyond what's in the month files.
+8. **Track down a copy of `TODAY.OWN` — done.** Found intact inside
+   `TODAY34.ZIP` (see README Section I and [`zips/TODAY34.ZIP`](zips/TODAY34.ZIP)):
+   a short, unremarkable set of sample reminders (mortgage payment,
+   fictional family birthdays) — no personalization or attribution clues
+   about Kincaid himself. The identical 380-byte file size in the later
+   `TODAY36.ZIP` listing suggests it never changed across releases.
 
-9. **Contact Hugo Fiennes — now the single best lead in this whole
-    research thread.** See README Section V for his full profile. The
-    byte-level comparison pass (Section III) turned up his own
-    self-referential birthday entry in the `arcbbs` copy (`B03311971`)
-    and a line dating his ARCbbs software's integration of this dataset
-    to May 14, 1990 — meaning he had a copy of `TODAY`'s data roughly
-    four years before the next-earliest documented point after Kincaid's
-    1986 release (the GNU `gcal` conversion, March 1991). Unlike Kincaid
-    and Heineman, he's alive, has a public LinkedIn, GitHub, and X/Twitter
-    presence, and his own `arcbbs` README explicitly invites contact
-    ("If you want any help, ask!").
+9. **Contact Hugo Fiennes — done; he replied.** See README Section V for
+    his full profile and his verbatim reply (July 2026). Summary of what
+    was resolved and what wasn't:
+    - His ARCbbs "on this day" module was his **own independent C
+      implementation** (`c/today` in his repo), not a port of Kincaid's
+      code — it just reads the same data-file format.
+    - He believes he got the data files from another BBS sysop, or
+      downloaded them from another BBS — he does not know which one, or
+      whether it traces back to Kincaid directly or through intermediate
+      hands.
+    - He has **no contact with anyone named in `TODAY.DOC`** (neither
+      Kincaid nor Butler) and describes himself as "very much a leaf
+      node in this whole thing."
+    - He did **not** confirm or deny Usenet access in the 1980s; the
+      question wasn't directly answered, so item 3's open question about
+      a possible Usenet posting is still unresolved on that front (though
+      his account generally favors BBS-to-BBS spread over a Usenet
+      source-posting).
+    - He's agreed to be invited to the repo.
 
-    Specific things worth asking him:
-    - How the `TODAY` data actually reached him by 1990 — directly from
-      Kincaid, via a BBS/file-exchange network, or via Usenet?
-    - His LinkedIn lists a **DEC VAX/VMS system management certification
-      from Reading, UK, dated 1986** — well before his 1994–97 University
-      of Warwick degree. That's exactly the kind of minicomputer training
-      that would have given a UK teenager Usenet/EUnet access in the
-      mid-1980s. Worth asking directly whether he actually had Usenet
-      access then, and if so, whether that's how he found `TODAY` — this
-      could resolve item 3's open question about whether a Usenet
-      posting is real and roughly when.
-    - Whether he had any direct contact with Kincaid, or knows anything
-      about how the data moved between the Bay Area PC/BBS scene and the
-      UK Acorn scene circa 1986–1990.
+    **New lead from his reply:** he suggested contacting the operator of
+    [bbsdocumentary.com](http://www.bbsdocumentary.com/) (Jason Scott, who
+    compiled the BBS Documentary project) as someone who might know more
+    about this program's place in BBS history generally. Not yet
+    contacted.
 
 10. **Consider flagging the domain hijack.** `burgerbecky.com` currently
     redirects to a gambling site (see README Section IV) with no obvious
@@ -187,3 +209,81 @@ value. None of these were run down during the initial research pass.
     retro-computing/games-preservation community, or someone connected to
     her estate or the `Olde-Skuul` org — it may be worth a heads-up,
     independent of the Kincaid research.
+
+11. **Track down the actual v3.1/v3.3/v3.6 DOS releases, and place this
+    repo's copy in the resulting timeline.** Largely resolved: real,
+    verified copies of **v3.1** (`TODAY31.ZIP`, from
+    [archive.org](https://archive.org/details/msdos_festival_TODAY31)),
+    **v3.4** (`TODAY34.ZIP`, from
+    [bbs.retropc.se](https://bbs.retropc.se/smmwldct/TODAY34.ZIP)), and
+    **v3.6** (`TODAY36.ZIP`, from
+    [archive.org](https://archive.org/details/TODAY36_ZIP)) have all been
+    downloaded, MD5-verified where archive.org provided a checksum, and
+    are preserved in [`zips/`](zips/) — see README Section I for
+    everything they revealed (the full "TODAY's History" section and
+    Michael Butler's full name direct from Kincaid in v3.1/v3.4, its
+    removal by v3.6, registration terms, the Golden Gate Computer
+    Society/Corte Madera/PCBoard details, the full data-format spec,
+    `TODAY.OWN`'s actual contents, byte-exact confirmation of the Usenet
+    version banner, and confirmation the lunar-phase feature is absent
+    from all three releases' code and docs alike). Line-level comparison
+    against this repo's own month files now places this repo's copy
+    **chronologically between v3.1 and v3.4** — see README Section I.
+    Still open:
+    - v3.3 specifically is still not located as a real executable — only
+      known from the Usenet copyright banner in Section I.
+    - None of the three recovered `TODAY.EXE` files has actually been
+      *run* (in DOSBox or similar) — only their embedded strings have
+      been read (directly, for the uncompressed v3.1 binary; not at all
+      yet for the LZEXE-compressed v3.4/v3.6 binaries, which would need
+      decompressing first to read their internal strings the same way).
+    - `TODAYQ1.ZIP`–`Q4.ZIP` and `TODAYWIT.ZIP` (on pcorner.com) are
+      separately-distributed, more expanded versions of the data/
+      witticisms files, known only from their pcorner.com listings so
+      far — worth downloading and comparing against this repo's own
+      month files too, alongside the v3.1/v3.4 comparisons already done.
+    - This repository's own [`today.c`](today/today.c) still has no
+      version banner, no copyright string, and no lunar-phase code at
+      all — unlike every DOS release documented so far. Why a data
+      snapshot from this specific window would be paired with a reader
+      that never had (or had already lost) the version-banner code seen
+      in every surviving DOS release is still unexplained.
+
+12. **Golden Gate Computer Society vs. Marin-Sonoma PC User Group — same
+    BBS, two names?** The `TODAY34.ZIP` manual (README Section I) gives
+    Kincaid's distribution board as the "Golden Gate Computer Society
+    Bulletin Board, (415) 927-1216" — the *exact* phone number the
+    `arcbbs`-hosted `TODAY_DOC` calls the "Marin-Sonoma PC User Group
+    BBS." Worth finding out whether these were two names for the same
+    board over time (a renaming, or two user groups sharing one system),
+    which would tidy up a loose thread rather than a real conflict.
+
+13. **Chase the `MUSIC`/`SPACE`/`SCIENCE` specialized-database lead.**
+    `TODAY34.ZIP`'s changelog mentions a `MUSIC` database, in the same
+    file format, "found on the GGCS BBS" and readable via `TODAY`'s new
+    `ADD` option. `TODAY31.ZIP`'s doc reveals this was one instance of a
+    broader, Kincaid-encouraged pattern: "create specialized databases,
+    (SPACE.mon, SCIENCE.mon etc) to share with the rest of us." None of
+    these — `MUSIC`, `SPACE`, `SCIENCE`, or others that may exist — have
+    been located yet.
+
+14. **Chase Bruce Goldman's `DAY907-*.ZIP` series and `NEWDAY/PC`.**
+    Per `TODAYBBS.DOC` (see [`zips/README.md`](zips/README.md)), Bruce
+    Goldman was, by 1993, distributing his own expanded
+    `TODAY.nnn`-compatible data files (series "907") through The
+    Charlatan's Cabin BBS, for use with both `TODAYBBS` and a program
+    called `NEWDAY/PC`. Neither Goldman nor `NEWDAY/PC` turned up in a
+    first search pass; worth a dedicated look.
+
+15. **Contact Michael Conley, author of `TODAYDOR`/`TODAYBBS`.** A third
+    independent implementer of a reader for Kincaid's data format (see
+    README Section I and III, and [`zips/README.md`](zips/README.md)),
+    alongside Kincaid and Hugo Fiennes. Ran The Charlatan's Cabin BBS in
+    Los Angeles, CA in the early 1990s. Not yet searched for or
+    contacted — worth the same kind of outreach that worked for Fiennes
+    (item 9).
+
+16. **Contact Jason Scott / bbsdocumentary.com**, per Hugo Fiennes's
+    suggestion (item 9) — he may know more about this program's general
+    place in BBS history, or have leads on the sysop(s) between Kincaid
+    and Fiennes.
