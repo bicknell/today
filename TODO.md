@@ -187,13 +187,16 @@ value. None of these were run down during the initial research pass.
    `billr@saab.cna.tek.com` ("tek" = Tektronix) address. Both are strong
    company/location/era matches. Not yet confirmed.
 
-6. **Preserve the Wayback Machine capture.** The last known-good archive
-   of `burgerbecky.com` is from January 16, 2026
+6. **Preserve the Wayback Machine capture — done.** The last known-good
+   archive of `burgerbecky.com` is from January 16, 2026
    ([link](https://web.archive.org/web/20260116062301/http://burgerbecky.com/burgerlib/docs/)).
-   Worth saving a local copy in case Wayback access changes, and worth
-   checking whether Heineman's Doxygen-generated documentation for the
-   `today` tool (if it existed at that URL) had any additional history
-   notes beyond the source comment.
+   The whole site (4,077 URLs, last good pre-hijack capture of each) has
+   since been mirrored and preserved at
+   [bicknell/burgerbecky.com](https://github.com/bicknell/burgerbecky.com),
+   so it no longer depends on Wayback access remaining available.
+   Checked directly in that mirror: Heineman's Doxygen-generated
+   `burgerlib` documentation has no additional history notes about
+   `today` beyond the source comment already quoted in README Section I.
 
 7. **`KitchenSink` itself has no other contributors to ask — checked via
    the GitHub API.** It's a single commit, authored solely by Rebecca
@@ -259,7 +262,11 @@ value. None of these were run down during the initial research pass.
     natural point of contact — GoDaddy abuse reporting, a member of the
     retro-computing/games-preservation community, or someone connected to
     her estate or the `Olde-Skuul` org — it may be worth a heads-up,
-    independent of the Kincaid research.
+    independent of the Kincaid research. **Update:** the site itself is
+    no longer at risk of being lost regardless — see
+    [bicknell/burgerbecky.com](https://github.com/bicknell/burgerbecky.com)
+    (item 6, above) — but the hijacked domain itself is still worth
+    flagging if a good point of contact turns up.
 
 11. **Track down the actual DOS releases, and place this repo's copy in
     the resulting timeline.** Resolved, far more completely than
@@ -363,13 +370,17 @@ value. None of these were run down during the initial research pass.
       changelog), has not surfaced.
 
 12. **Golden Gate Computer Society vs. Marin-Sonoma PC User Group — same
-    BBS, two names?** The `TODAY34.ZIP` manual (README Section I) gives
-    Kincaid's distribution board as the "Golden Gate Computer Society
-    Bulletin Board, (415) 927-1216" — the *exact* phone number the
+    BBS, two names? Resolved.** The `TODAY34.ZIP` manual (README Section I)
+    gives Kincaid's distribution board as the "Golden Gate Computer
+    Society Bulletin Board, (415) 927-1216" — the *exact* phone number the
     `arcbbs`-hosted `TODAY_DOC` calls the "Marin-Sonoma PC User Group
-    BBS." Worth finding out whether these were two names for the same
-    board over time (a renaming, or two user groups sharing one system),
-    which would tidy up a loose thread rather than a real conflict.
+    BBS." A June 16, 1994 Usenet post by Walter Olson to
+    [`ba.internet`](https://groups.google.com/g/ba.internet/c/B7zuOtDipAg)
+    ("Marin: GGCS Internet SIG Meeting") settles it: "The Golden Gate
+    Computer Society (**formerly** the Marin / Sonoma PC Users Group) is
+    starting a new special Interest Group (SIG)..." — a straightforward
+    renaming of the same user group/BBS, not two groups sharing one
+    system. (Provided directly by Leo Bicknell.)
 
 13. **Chase the `MUSIC`/`SPACE`/`SCIENCE` specialized-database lead.**
     `TODAY34.ZIP`'s changelog mentions a `MUSIC` database, in the same
@@ -447,3 +458,19 @@ value. None of these were run down during the initial research pass.
     lookup (VK6ZMH) to see if it resolves to a real name and current
     contact info, and/or searching for any surviving record of a Perth,
     WA BBS called "Omen" from the late 1980s. Not yet attempted.
+
+18. **Contact the Golden Gate Computer Society directly — it's still an
+    active organization.** Per item 12 (now resolved), GGCS is the
+    renamed continuation of the Marin/Sonoma PC User Group BBS Kincaid
+    used to distribute `TODAY`, and per its own [About
+    page](https://www.ggcs.org/about-2), it's been running continuously
+    since 1981 as a 501(c)(3) — the same founding year as Butler's
+    mainframe original, though the site gives no indication whether
+    that's a coincidence or the group's founding is itself tied to this
+    research in some way. Unlike every other lead in this document, this
+    is a live, current organization with a working contact address
+    (`sec@ggcs.org`, `membership@ggcs.org`, `help@ggcs.org`,
+    P.O. Box 150624, San Rafael, CA 94915-0624) — worth asking whether
+    any long-time members remember Kincaid, the "TODAY Conference"
+    message area on their old PCBoard BBS, or have any surviving BBS-era
+    records/archives. Not yet contacted.

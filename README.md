@@ -206,18 +206,30 @@ sources recovered in this research. Highlights:
   why `TODAY35.ZIP`/`TODAY36.ZIP` no longer ship a separate `WHEN.DOC`).
   `TODAY36.DOC` simply continues this shorter style.
 - **A different name for the same BBS phone number, now with a specific
-  city.** `TODAY34.ZIP`'s registration section calls Kincaid's
-  distribution channel the "**Golden Gate Computer Society Bulletin
-  Board**, (415) 927-1216" — the identical phone number the
-  `arcbbs`-hosted `TODAY_DOC` (Section I) calls the "Marin-Sonoma PC User
-  Group BBS." `TODAY36.DOC` (1993) gives a city for it: "I upload the
-  latest version of TODAY to the Golden Gate Computer Society Bulletin
-  Board **in Corte Madera, California**" (Marin County, next door to
-  Kincaid's own Mill Valley address) — and adds that it ran **PCBoard**
-  BBS software and hosted a dedicated "**TODAY Conference**" message area
-  just for the program. Whether "Golden Gate Computer Society" and
-  "Marin-Sonoma PC User Group" are the same board under two names, or two
-  groups sharing one system, is still unresolved — see [TODO.md](TODO.md).
+  city — and now confirmed to be a renaming, not two groups.** `TODAY34.ZIP`'s
+  registration section calls Kincaid's distribution channel the "**Golden
+  Gate Computer Society Bulletin Board**, (415) 927-1216" — the identical
+  phone number the `arcbbs`-hosted `TODAY_DOC` (Section I) calls the
+  "Marin-Sonoma PC User Group BBS." `TODAY36.DOC` (1993) gives a city for
+  it: "I upload the latest version of TODAY to the Golden Gate Computer
+  Society Bulletin Board **in Corte Madera, California**" (Marin County,
+  next door to Kincaid's own Mill Valley address) — and adds that it ran
+  **PCBoard** BBS software and hosted a dedicated "**TODAY Conference**"
+  message area just for the program. A June 16, 1994
+  [`ba.internet`](https://groups.google.com/g/ba.internet/c/B7zuOtDipAg)
+  Usenet post by Walter Olson ("Marin: GGCS Internet SIG Meeting")
+  settles it directly: "The Golden Gate Computer Society (**formerly**
+  the Marin / Sonoma PC Users Group) is starting a new special Interest
+  Group (SIG)..." — one user group, renamed at some point before mid-1994,
+  not two groups sharing a board. **The Golden Gate Computer Society is
+  still active today**, at [ggcs.org](https://www.ggcs.org/) — its own
+  "About" page states "We began in 1981, shortly after the first IBM
+  personal computer came to market," matching the founding-era timeline
+  throughout this research, though the site itself doesn't mention
+  Kincaid, `TODAY`, or its earlier name. As a still-operating 501(c)(3)
+  organization (P.O. Box 150624, San Rafael, CA 94915-0624;
+  `sec@ggcs.org`/`membership@ggcs.org`/`help@ggcs.org`), it's a live
+  outreach lead in its own right — see [TODO.md](TODO.md) item 18.
 - **Registration terms**, matching the address already known: $10 to
   register, $15–20 for diskette/manual copies, checks payable to
   "Patrick Kincaid, 618 Douglas Drive, Mill Valley, CA 94941 USA" — and,
@@ -631,6 +643,14 @@ and likely explained by, there being no one left to maintain her
 infrastructure after her death. This is noted here for the record, not
 as part of the Kincaid research thread.
 
+**Update:** the whole site has since been mirrored from the Wayback
+Machine and preserved at
+[bicknell/burgerbecky.com](https://github.com/bicknell/burgerbecky.com) —
+4,077 files (the last good pre-hijack capture of every page, as of a
+January 20, 2026 cutoff), including the `burgerlib` documentation, her
+personal pages, and some fanfiction she'd hosted there. See that repo's
+README for the full recovery methodology.
+
 ---
 
 ## V. Hugo Fiennes and ARCbbs
@@ -788,5 +808,8 @@ while opening one new one:
 35. [`TODAY21.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/6948/TheCaliforniaCollection.cdr/his018/today21.zip) — the actual v2.1 (April 1988) release; downloaded and read in full; preserved at [`zips/TODAY21.ZIP`](zips/TODAY21.ZIP), see [`zips/README.md`](zips/README.md)
 36. [`TODAY-CPM.ARC`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/19793/2015.02.ftp.barnyard.co.uk.tar/ftp.barnyard.co.uk/cpm/walnut-creek-CDROM/BEEHIVE/UTILITYS/TODAY.ARC) — Mick Howland's independent CP/M port (Turbo Pascal, 1989); preserved at [`zips/TODAY-CPM.ARC`](zips/TODAY-CPM.ARC), see [`zips/README.md`](zips/README.md)
 37. [`TODAY11.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/29642/ibm0240-0249/ibm0243.tar/ibm0243/TODAY11.ZIP) — false positive, "Today's Callers v1.1 for PC-Express," an unrelated BBS caller-log utility
+38. Walter Olson, "Marin: GGCS Internet SIG Meeting," [`ba.internet`](https://groups.google.com/g/ba.internet/c/B7zuOtDipAg), June 16, 1994 — confirms the Golden Gate Computer Society was formerly named the Marin/Sonoma PC Users Group, resolving TODO.md item 12
+39. [Golden Gate Computer Society, ggcs.org](https://www.ggcs.org/) and its [About page](https://www.ggcs.org/about-2) — the group's current, still-active website; confirms 1981 founding and provides current contact information (see TODO.md item 18)
+40. [bicknell/burgerbecky.com](https://github.com/bicknell/burgerbecky.com) — a Wayback Machine mirror of Rebecca Heineman's personal site, made as an offshoot of this research after the domain hijack was discovered (Section IV); see TODO.md item 6
 
 *Compiled July 2026. See [TODO.md](TODO.md) for open research threads.*
