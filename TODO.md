@@ -379,20 +379,45 @@ value. None of these were run down during the initial research pass.
     complete v2.1 dataset rather than 9 of 12 months (result: unchanged,
     99.6%).
 
+    **Update (July 2026): the LZEXE-compressed v3.4/v3.5/v3.6 binaries
+    are now decoded too.** All three carry the `LZ91` signature (LZEXE
+    v0.91). [`mywave82/unlzexe`](https://github.com/mywave82/unlzexe), a
+    POSIX-ported build of the classic `UNLZEXE` decompressor, compiled
+    cleanly with a plain `clang` invocation and decompressed all three
+    without issue. This gave clean version banners directly from each
+    binary — `TODAY  Version 3.4   01/05/92`, `TODAY  Version 3.5
+    07/12/92`, `TODAY  Version 3.6   11/14/93` — matching the already-
+    known v3.6 release date exactly and pinning v3.4/v3.5's for the
+    first time. Confirms (via a `strings`/diff comparison of all three
+    decompressed binaries) that no lunar-phase code exists in any of
+    them, and that v3.4→v3.5→v3.6 are near-identical builds differing
+    mainly in the version string and minor internal offsets — consistent
+    with the "pure bugfix release" pattern already established from the
+    doc files. Every one of the seven recovered `TODAY.EXE`/`.COM`
+    binaries has now had its compression scheme defeated and its strings
+    read directly; none has actually been *run* yet (DOSBox or similar)
+    — see below.
+
+    **Also resolved: `TODAYQ1.ZIP` and `TODAYWIT.ZIP` retrieved and
+    compared** (found via discmaster.textfiles.com, since neither was
+    directly downloadable through pcorner.com's Wayback captures — see
+    [`zips/README.md`](zips/README.md) for full provenance). Both
+    confirm the "far more expanded, separately-maintained" hypothesis:
+    `TODAYQ1.ZIP`'s Jan/Feb/Mar files run 5–7x longer than this repo's
+    own, with real but small verbatim overlap (confirming shared
+    lineage, not just a shared format) and neither Kincaid's nor
+    Fiennes's self-referential entries present. `TODAYQ2.ZIP`–`Q4.ZIP`
+    remain unrecovered — zero hits on discmaster.textfiles.com, and
+    pcorner.com's actual downloads were never captured by the Wayback
+    Machine (only its `/INFO/` description pages were).
+
     Still open:
     - None of the seven recovered `TODAY.EXE`/`.COM` files has actually
       been *run* (in DOSBox, a CP/M emulator, or similar) — only their
-      embedded strings have been read (directly, for the uncompressed
-      v1.0/v3.1 binaries, and now, via `hwzip`, decoded for v2.1's too;
-      not at all yet for the LZEXE-compressed v3.4/v3.5/v3.6 binaries,
-      which is a separate compression scheme from Reducing and hasn't
-      been tried against any of the tools above).
-    - `TODAYQ1.ZIP`–`Q4.ZIP` and `TODAYWIT.ZIP` (on pcorner.com) are
-      separately-distributed, more expanded versions of the data/
-      witticisms files, known only from their pcorner.com listings so
-      far — worth downloading (or searching for on
-      discmaster.textfiles.com) and comparing against this repo's own
-      month files too, alongside the comparisons already done.
+      embedded strings have been read, now for all seven (see update
+      above for the LZEXE-compressed trio).
+    - `TODAYQ2.ZIP`–`Q4.ZIP` (on pcorner.com) remain unrecovered — see
+      update above.
     - This repository's own [`today.c`](today/today.c) still has no
       version banner, no copyright string, and no lunar-phase code at
       all — unlike every DOS release documented so far, including the

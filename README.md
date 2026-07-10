@@ -267,18 +267,24 @@ sources recovered in this research. Highlights:
   changelog and readable via a new `ADD` option (`TODAY ADD MUSIC`) was
   evidently one instance. None of these specialized databases have been
   tracked down yet; see [TODO.md](TODO.md).
-- **The lunar-phase feature is verifiably absent from all five
+- **The lunar-phase feature is verifiably absent from all seven
   releases — in both the documentation and the executables themselves.**
-  None of the five manuals mention the moon, lunar phase, or anything
+  None of the seven manuals mention the moon, lunar phase, or anything
   similar anywhere. `TODAY31.ZIP`'s `TODAY.EXE` is not compressed, so its
   embedded strings are directly readable — no "moon," "lunar," or "phase"
-  string appears anywhere in it either (the later executables are
-  LZEXE-compressed, so their strings aren't directly readable without
-  decompressing them first, but their docs are equally silent). Since the
-  2001 Usenet poster wanted the *original 1986* release specifically for
-  its lunar-phase reporting, and it's already gone by v3.0/3.1 (1990) in
-  both code and documentation, its removal most likely dates to the 1988
-  update rather than lingering into the 1990s.
+  string appears anywhere in it either. **Update (July 2026):** the
+  later, LZEXE-compressed executables (`TODAY34.ZIP`/`35`/`36`) have now
+  been decompressed too, via
+  [`mywave82/unlzexe`](https://github.com/mywave82/unlzexe) (a
+  POSIX-ported build of the classic `UNLZEXE` tool, since all three
+  carry the `LZ91` signature) — same result, no lunar-phase strings in
+  any of them, and their version banners read directly from the binary:
+  `TODAY  Version 3.4   01/05/92`, `TODAY  Version 3.5   07/12/92`,
+  `TODAY  Version 3.6   11/14/93`. Since the 2001 Usenet poster wanted
+  the *original 1986* release specifically for its lunar-phase
+  reporting, and it's already gone by v3.0/3.1 (1990) in both code and
+  documentation, its removal most likely dates to the 1988 update rather
+  than lingering into the 1990s.
 - **Byte-for-byte confirmation of the Usenet banner.** `TODAY31.ZIP`'s
   uncompressed `TODAY.EXE` contains the literal strings `TODAY  Version
   3.1  09/01/90` and `Copyright 1986,88,90  By Patrick Kincaid` — an
@@ -404,8 +410,21 @@ V), that this dataset kept growing as a crowdsourced, separately-
 distributed add-on well after the 1993 release. A standalone
 `TODAYWIT.ZIP` distributes the `TODAY.WIT` witticisms file on its own,
 paired with a `XTRAQUOT.TXT` of additional quotes in the same `F`
-format. Neither of these quarterly/witticisms packs has itself been
-downloaded — only their pcorner.com listings are known so far.
+format.
+
+**Update (July 2026):** `TODAYQ1.ZIP` and `TODAYWIT.ZIP` have now been
+retrieved (via discmaster.textfiles.com, since pcorner.com's own
+downloads were never captured by the Wayback Machine — only its
+`/INFO/` listing pages were) and preserved at
+[`zips/TODAYQ1.ZIP`](zips/TODAYQ1.ZIP) and
+[`zips/TODAYWIT.ZIP`](zips/TODAYWIT.ZIP) — see
+[`zips/README.md`](zips/README.md) for full details. Confirmed: the
+"far more expanded" hypothesis above holds (1,040/707/1,139 lines for
+Jan/Feb/Mar, 5–7x this repo's own month files), and there's real, if
+small, verbatim overlap with this repo's data (shared lineage, not
+merely a shared file format) — but neither Kincaid's nor Fiennes's
+self-referential entries appear anywhere in it. `TODAYQ2.ZIP`–`Q4.ZIP`
+remain unrecovered (zero hits on discmaster.textfiles.com).
 
 **A filename search across discmaster.textfiles.com's roughly 1.6
 billion indexed files confirms just how widely this software
@@ -565,6 +584,8 @@ there). Byte/line comparisons below were run against this directory's
 | [`TODAYDOR.ZIP`](https://bbs.retropc.se/smmwldct/TODAYDOR.ZIP) / [`TODAYBBS.ZIP`](https://bbs.retropc.se/smmwldct/TODAYBBS.ZIP), bbs.retropc.se — preserved at [`zips/`](zips/) | Wildcat! BBS "door" (`TODAYDOR` v3.24) and bulletin-generator (`TODAYBBS` v3.08) programs, both by **Michael Conley** (1993) | Independent third-party readers of the same `TODAY.xxx` data format — not copies of Kincaid's code, but further evidence (alongside Fiennes's ARCbbs module) that the data format was widely reimplemented rather than treated as tied to one program. See Section I and [`zips/README.md`](zips/README.md). |
 | [`TODAY-CPM.ARC`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/19793/2015.02.ftp.barnyard.co.uk.tar/ftp.barnyard.co.uk/cpm/walnut-creek-CDROM/BEEHIVE/UTILITYS/TODAY.ARC) — preserved at [`zips/TODAY-CPM.ARC`](zips/TODAY-CPM.ARC) | A CP/M port in Turbo Pascal (`TODAY.COM`, `TODAY.PAS` source, all 12 month files, `TODAY.OWN`, `README.DOC`), by **Mick Howland (VK6ZMH)**, Perth, Western Australia, 1989 | A fifth independent implementer, on a third platform (after DOS and Fiennes's Acorn/RISC OS). Reuses Kincaid's actual databases; self-references pin its release to May 22, 1989. See Section I. |
 | [ProLine 3.0 source, morgandavis.net](https://www.morgandavis.net/post/proline) | `man/man/man.G/today.G`, a man page for ProLine's built-in `today` command (no source/data bundled — see below) | Not a code or data copy — a **documentation trail**. The man page directly names **Jeff Jungblut** (`jeff@pro-avalon.cts.com`) as author of the ProLine port, and states outright that its database "is from a similar public domain program for the IBM PC called TODAY/PC" — independently confirming Kincaid's exact program name and identifying a sixth independent implementer. This is also the direct source of the "ProLine's today file" attribution in the GNU `gcal` row above. See [TODO.md](TODO.md) item 4. |
+| [`TODAYQ1.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/18105/Wildcat%20Gold%20-%20The%20Optical%20BBS%20%28The%20Golden%20ROM%20Series%29%28Volume%204%20Number%201%29%28The%20Digital%20Publishing%20Company%29%281992%29.ISO/misc/todayq1.zip) — preserved at [`zips/TODAYQ1.ZIP`](zips/TODAYQ1.ZIP) | Expanded `TODAY.JAN`/`.FEB`/`.MAR` (5–7x this repo's own month files), plus an unrelated bundled `GOOD.COM` BBS splash screen | A separately-distributed, far more expanded edition of the data, previously known only from a pcorner.com listing. Real but small verbatim overlap confirms shared lineage with this repo's data, though neither Kincaid's nor Fiennes's self-referential entries appear in it. See Section I and [`zips/README.md`](zips/README.md). |
+| [`TODAYWIT.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/16610/Shareware%20Explorer%20Series%20-%20MS-DOS%20Collection%20%28New%20Frontiers%29%20%28Volume%201%29.ISO/a050/todaywit.zip) — preserved at [`zips/TODAYWIT.ZIP`](zips/TODAYWIT.ZIP) | An expanded standalone `TODAY.WIT` witticisms file, plus `XTRAQUOT.TXT` | Same expanded/separately-maintained pattern as `TODAYQ1.ZIP`. See Section I and [`zips/README.md`](zips/README.md). |
 
 **Excluded as false positives:** several other hits turned out to be
 unrelated programs that merely share a filename with this one.
@@ -820,5 +841,7 @@ while opening one new one:
 41. [Wireless Institute of Australia Silent Key database](https://www.wiaawards.com/view/ViewSK.php) — confirms Jean-Michel "Mick" Howland, VK6ZMH, died in 2008; see TODO.md item 17
 42. `usbbs152.lst`, a dial-up BBS phone-number directory (mirrored at [textfiles.serverrack.net](http://textfiles.serverrack.net/bbs/BBSLISTS/USBBS/usbbs152.lst) and [textfiles.meulie.net](https://textfiles.meulie.net/bbs/BBSLISTS/USBBS/usbbs152.lst)) — independently corroborates Michael Conley as the sysop of "Charlatan Cabn" in Los Angeles, at a different phone number than his 1996 Usenet post; see TODO.md item 15
 43. [Morgan Davis, "ProLine," morgandavis.net](https://www.morgandavis.net/post/proline), and its `proline-3.0-source.zip`, specifically `man/man/man.G/today.G` — names Jeff Jungblut as author of ProLine's `today` port and confirms Kincaid's program name "TODAY/PC" directly, resolving most of TODO.md item 4
+44. [`mywave82/unlzexe`](https://github.com/mywave82/unlzexe) — POSIX-ported build of the classic `UNLZEXE` decompressor, used to decode the LZEXE-compressed `TODAY.EXE` binaries in `TODAY34.ZIP`/`TODAY35.ZIP`/`TODAY36.ZIP`
+45. [`TODAYQ1.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/18105/Wildcat%20Gold%20-%20The%20Optical%20BBS%20%28The%20Golden%20ROM%20Series%29%28Volume%204%20Number%201%29%28The%20Digital%20Publishing%20Company%29%281992%29.ISO/misc/todayq1.zip) and [`TODAYWIT.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/16610/Shareware%20Explorer%20Series%20-%20MS-DOS%20Collection%20%28New%20Frontiers%29%20%28Volume%201%29.ISO/a050/todaywit.zip) — expanded, separately-distributed data/witticisms packs, downloaded and compared against this repo's own data; preserved at [`zips/`](zips/), see [`zips/README.md`](zips/README.md)
 
 *Compiled July 2026. See [TODO.md](TODO.md) for open research threads.*

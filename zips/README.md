@@ -294,24 +294,79 @@ travels with the file.
   from `http://annex.retroarchive.org/cdrom/smsw-modmad-1/WILDCAT/TODAYBBS.ZIP`
   (July 2026).
 
+## `TODAYQ1.ZIP`
+
+- **What it is:** "Events for TODAY program" (per pcorner.com's listing),
+  a far more expanded, separately-distributed edition of the January–
+  March data files — `TODAY.JAN` (1,040 lines/57,349 bytes), `TODAY.FEB`
+  (707 lines/38,911 bytes), and `TODAY.MAR` (1,139 lines/59,980 bytes),
+  each roughly 5–7x the line count of this repo's own `today.1`–`.3`.
+  Same record format (`B`/`S`, `*mmddyyyy` header comments) and a real,
+  if small, direct overlap with this repo's own data (e.g. `B01041838
+  Charles Stratton...`, `B01101738 Ethan Allen...` appear verbatim in
+  both) — confirming common lineage, not just a coincidentally similar
+  format, even though the overwhelming majority of entries are additions
+  from some other/later curation process. Neither Kincaid's June 28 nor
+  Hugo Fiennes's March 31 self-referential entries (Section I/III of the
+  main README) appear anywhere in this pack, suggesting it branched off
+  before those specific edits were added, or grew along an independent
+  path. Also contains `GOOD.COM`, a `TheDraw`-generated BBS modem-connect
+  splash screen (300 baud through USR HST/V32 Dual Standard) — unrelated
+  to the `TODAY` data, just bundled into the same archive.
+- **Source:** found via [discmaster.textfiles.com](https://discmaster.textfiles.com/);
+  this copy is from the ["Wildcat Gold - The Optical BBS (The Golden ROM
+  Series)(Volume 4 Number 1)(The Digital Publishing Company)(1992)"](https://discmaster.textfiles.com/browse/18105/Wildcat%20Gold%20-%20The%20Optical%20BBS%20%28The%20Golden%20ROM%20Series%29%28Volume%204%20Number%201%29%28The%20Digital%20Publishing%20Company%29%281992%29.ISO/misc/todayq1.zip)
+  CD-ROM (`misc/todayq1.zip`); internal file timestamps show Jan/Mar
+  files dated Sept 23 1990 and Feb dated June 25 1988. `TODAYQ2.ZIP`–
+  `Q4.ZIP` were not found on discmaster.textfiles.com (zero hits for
+  each) despite being listed on pcorner.com — the Wayback Machine only
+  captured pcorner's `/INFO/` description pages for all four, never the
+  actual downloads, so Q2–Q4's contents remain unrecovered. See
+  [`../TODO.md`](../TODO.md) item 11.
+- **Downloaded:** July 2026.
+- **SHA-256:** `b6023ad7efe923a3926f2c31cc90e251a325e7bf68cf4304a836f5cfbed4c3ea`
+
+## `TODAYWIT.ZIP`
+
+- **What it is:** A standalone edition of the `TODAY.WIT` witticisms
+  file (33,531 bytes, 653 lines — much larger than the version bundled
+  in the numbered `TODAYnn.ZIP` releases), paired with `XTRAQUOT.TXT`
+  (4,967 bytes, 103 lines), a supplementary quotes file in the same `F`
+  record format. Same expanded/separately-maintained pattern as
+  `TODAYQ1.ZIP`.
+- **Source:** found via discmaster.textfiles.com; this copy is from the
+  ["Shareware Explorer Series - MS-DOS Collection (New Frontiers)
+  (Volume 1)"](https://discmaster.textfiles.com/browse/16610/Shareware%20Explorer%20Series%20-%20MS-DOS%20Collection%20%28New%20Frontiers%29%20%28Volume%201%29.ISO/a050/todaywit.zip)
+  CD-ROM (`a050/todaywit.zip`); internal file timestamps show both files
+  dated Nov 17 1990. Two further copies were found on discmaster (a
+  "Media Share 2" CD-ROM and a "Games 1993 (Chicago Computer Broker)"
+  CD-ROM) but not individually downloaded.
+- **Downloaded:** July 2026.
+- **SHA-256:** `e07a712694a7e621272528998d36b0842d22816870e4bbc926e0e2ec584a10c1`
+
 ## Wider circulation evidence, via discmaster.textfiles.com
 
 [discmaster.textfiles.com](https://discmaster.textfiles.com/) indexes
 filenames (and, optionally, file contents) across a huge number of
 dumped shareware CD-ROMs, BBS archives, and old FTP mirrors — far beyond
 what general web search turns up. A filename-only search for each of
-these turned up many more independent copies than previously known,
-none of which have been individually downloaded (their existence and
-consistent sizes/dates are corroboration enough on their own):
+these turned up many more independent copies than previously known.
+Most of these were not individually downloaded (their existence and
+consistent sizes/dates are corroboration enough on their own) — the
+exceptions, one copy each of `TODAYQ1.ZIP` and `TODAYWIT.ZIP`, are noted
+below and preserved in full above:
 
 - `TODAY36.ZIP` — 9 copies, e.g. on Walnut Creek CD-ROM (Mar 1996),
   Chestnut CD-ROM's "Shareware Overload Trio," Night Owl PDSI, and the
   "Software Vault (The Emerald Collection)" and `dos_gold` collections
   (the latter two byte-size-identical to the archive.org copy above).
 - `TODAY31.ZIP` — 1 further copy, on the "Wildcat Gold" CD-ROM.
-- `TODAYDOR.ZIP` — 29 copies; `TODAYBBS.ZIP` — 26 copies; `TODAYWIT.ZIP`
-  — 3 copies; `TODAYQ1.ZIP` — 1 copy (`TODAYQ2`–`Q4` — none found this
-  way).
+- `TODAYDOR.ZIP` — 29 copies; `TODAYBBS.ZIP` — 26 copies. None of these
+  individually downloaded (their existence and consistent sizes/dates
+  are corroboration enough on their own).
+- `TODAYWIT.ZIP` — 3 copies, and `TODAYQ1.ZIP` — 1 copy (`TODAYQ2`–`Q4`
+  — zero hits for any of the three) — one copy of each of the first two
+  **was** downloaded and preserved above.
 
 ## Checked but not preserved here (false positives)
 
