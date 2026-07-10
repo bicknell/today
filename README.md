@@ -32,6 +32,18 @@ for a known bug in the original code.
 > when I realized several of the key individuals are no longer with us.
 > I hope by publishing this now they can get some eternal recognition
 > for their contribution.
+>
+> On how I likely got my own copy (relevant to [TODO.md](TODO.md) item 11's
+> open question about why this repo's `today.c` has no version banner or
+> lunar-phase code): I was briefly into the BBS scene and may have seen
+> `TODAY` on one or more boards, but the files in this archive date from
+> my college years, when I was doing everything on Ultrix or NetBSD
+> machines. It's quite likely I went looking for a Unix port of the
+> software, or ran across one on a newsgroup — that would explain a bare
+> Unix C reader with none of the DOS-specific version banner or
+> copyright strings every recovered DOS release has. There's even a very
+> small chance I wrote the reader myself, though I really don't think
+> that's the case.
 
 As with any piece of folk history, the trail is a mix of hard evidence and
 inference. This note tries to keep the two apart: **Verified** claims are
@@ -291,6 +303,18 @@ sources recovered in this research. Highlights:
   exact match, straight from the binary, for what the Usenet posts in
   this section quote — plus Kincaid's mailing address embedded directly
   in the executable.
+- **v3.1 has actually been run, in DOSBox, and the easter egg fires on
+  screen exactly as the data predicts.** With the DOS date set to June
+  28, `TODAY.EXE` displays "Happy Birthday to... In 1947 Patrick
+  Kincaid, send him a card, he'll love it." alongside real historical
+  entries (Henry VIII, Rousseau, Gilda Radner), closing with "And
+  remember... Pay the mortgage!" — see
+  [`screenshots/today31-dosbox-1947-birthday-1.png`](screenshots/today31-dosbox-1947-birthday-1.png)
+  and
+  [`screenshots/today31-dosbox-1947-birthday-2.png`](screenshots/today31-dosbox-1947-birthday-2.png).
+  `TODAY.DOC`'s own manual uses "0628" as its example date and remarks
+  "you will see why I used it" — Kincaid was pointing readers at his own
+  joke. See [TODO.md](TODO.md) item 11.
 - **This repository's own data is not merely an early ancestor of this
   dataset — it is a byte-for-byte, unmodified copy of the *original 1986*
   release.** Two earlier, previously-undocumented releases have since

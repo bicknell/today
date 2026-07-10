@@ -411,20 +411,60 @@ value. None of these were run down during the initial research pass.
     pcorner.com's actual downloads were never captured by the Wayback
     Machine (only its `/INFO/` description pages were).
 
+    **Update (July 2026): v3.1 has now actually been run, in DOSBox.**
+    Leo Bicknell installed `dosbox-staging` and ran `TODAY31.ZIP`'s
+    `TODAY.EXE` directly, with the DOS date set to June 28 — Kincaid's
+    own birthday. The live output matches the strings-based reading
+    exactly, and confirms the program's actual on-screen formatting and
+    color scheme (white/yellow/cyan text on blue, red highlighted years):
+    the "Happy Birthday to..."/"On this day..."/"Thought for the
+    day..."/"And remember..." sections, ending on the same "Pay the
+    mortgage!" reminder and Kincaid's own birthday entry ("In 1947
+    Patrick Kincaid, send him a card, he'll love it.") already known from
+    the data files — see
+    [`screenshots/today31-dosbox-1947-birthday-1.png`](screenshots/today31-dosbox-1947-birthday-1.png)
+    and
+    [`screenshots/today31-dosbox-1947-birthday-2.png`](screenshots/today31-dosbox-1947-birthday-2.png).
+    The `DISK`/`NOPAUSE` options (documented in `TODAY.DOC`) also work as
+    described, writing an identical transcript to `TODAY.PRN`. Also
+    confirmed directly from the doc: the manual's own example date,
+    "0628," is explained by "you will see why I used it" — Kincaid was
+    pointing readers at his own easter egg.
+
     Still open:
-    - None of the seven recovered `TODAY.EXE`/`.COM` files has actually
-      been *run* (in DOSBox, a CP/M emulator, or similar) — only their
-      embedded strings have been read, now for all seven (see update
-      above for the LZEXE-compressed trio).
+    - Only v3.1 has been run so far; the other six recovered binaries
+      (v1.0, v2.1, v3.3–v3.6) haven't been tried in DOSBox yet, though
+      there's no reason to expect they wouldn't work the same way now
+      that the setup is proven. v1.0 in particular would be worth
+      running, since its data files are the ones byte-for-byte identical
+      to this repo's own — literally watching this repo's own data
+      through the original program.
     - `TODAYQ2.ZIP`–`Q4.ZIP` (on pcorner.com) remain unrecovered — see
       update above.
     - This repository's own [`today.c`](today/today.c) still has no
       version banner, no copyright string, and no lunar-phase code at
       all — unlike every DOS release documented so far, including the
-      v1.0 release its own data files are an exact copy of. Why a 1986
-      data snapshot would be paired with a reader that never had (or had
-      already lost) the version-banner code seen in every surviving DOS
-      release is still unexplained.
+      v1.0 release its own data files are an exact copy of.
+
+      **Update (July 2026): a plausible explanation, from Leo Bicknell
+      himself.** He was briefly into the BBS scene, but this archive's
+      files date from his college years, spent entirely on Ultrix/NetBSD
+      machines — so he most likely went looking for (or ran across on a
+      newsgroup) a **Unix port** of the software, rather than the DOS
+      original. That would explain a bare Unix C reader with none of the
+      DOS-specific version banner/copyright strings: it'd be a from-
+      scratch reader written against the data-file format (the same
+      pattern as Fiennes's ARCbbs module, Howland's CP/M port, and
+      Jungblut's ProLine port — see Sections III/V and TODO items 4/17),
+      not a direct transcription of Kincaid's own DOS source, even though
+      its *data* files are an exact copy of Kincaid's 1986 originals.
+      Not confirmed — the exact source (which newsgroup, whose port) is
+      lost to time — but it reframes this from an unexplained anomaly to
+      an expected consequence of this being yet another independent
+      reader implementation, consistent with how widely this data format
+      was reimplemented across platforms. (He also allows a small chance
+      he wrote the reader himself, though he doesn't believe that's the
+      case.)
     - Both recovered v3.3 copies are missing `TODAY.OWN` (present in
       every other version) — likely a repackaging omission rather than
       something genuinely dropped by Kincaid for that one release, but
