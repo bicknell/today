@@ -694,4 +694,8 @@ value. None of these were run down during the initial research pass.
     P.O. Box 150624, San Rafael, CA 94915-0624) — worth asking whether
     any long-time members remember Kincaid, the "TODAY Conference"
     message area on their old PCBoard BBS, or have any surviving BBS-era
-    records/archives. Not yet contacted.
+    records/archives.
+
+    **In progress (July 2026):** Leo Bicknell has emailed
+    `info@ggcs.org` asking about Kincaid and the BBS's history. Awaiting
+    a reply.
