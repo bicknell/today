@@ -150,36 +150,54 @@ all — it doesn't obviously match any of these DOS releases, and where it
 falls in this lineage (a pre-versioned prototype? a stripped-down
 Unix-side rewrite?) is an open question. See [TODO.md](TODO.md).
 
-**Real, complete copies of v3.1, v3.4, and v3.6 have now all been
-recovered, downloaded, and read in full.** `TODAY31.ZIP` and
+**Real, complete copies of v3.1, v3.3, v3.4, v3.5, and v3.6 have now all
+been recovered, downloaded, and read in full.** `TODAY31.ZIP` and
 `TODAY36.ZIP` came from the Internet Archive
 ([`msdos_festival_TODAY31`](https://archive.org/details/msdos_festival_TODAY31),
 [`TODAY36_ZIP`](https://archive.org/details/TODAY36_ZIP)); `TODAY34.ZIP`
 from a surviving BBS file archive at
-[bbs.retropc.se](https://bbs.retropc.se/smmwldct/TODAY34.ZIP). All three
-are preserved in this repository under [`zips/`](zips/), each with its
+[bbs.retropc.se](https://bbs.retropc.se/smmwldct/TODAY34.ZIP);
+`TODAY33.ZIP` and `TODAY35.ZIP` — versions not referenced in any prior
+source in this research — were found via
+[discmaster.textfiles.com](https://discmaster.textfiles.com/), a search
+engine indexing filenames (and contents) across roughly 1.6 billion
+files from thousands of dumped shareware CD-ROMs, BBS archives, and old
+FTP mirrors, which also turned up dozens more circulating copies of
+files already in hand (9 further copies of `TODAY36.ZIP` alone, plus 29
+of `TODAYDOR.ZIP` and 26 of `TODAYBBS.ZIP` — see below). All five are
+preserved in this repository under [`zips/`](zips/), each with its
 source URL and checksum recorded in [`zips/README.md`](zips/README.md)
 (the two archive.org copies were verified against the MD5 checksums in
 their own item metadata). Between them these are the richest primary
 sources recovered in this research. Highlights:
 
 - **A dedicated "TODAY's History" section, in Kincaid's own words —
-  present in v3.1 and v3.4, dropped by v3.6:** "This program was written
-  by Patrick Kincaid first in 1986, then updated in 1988 and again in
-  1990. It was inspired by a program written by **Michael Butler** on an
-  IBM VM/CMS system in the PL/1 language. Credit for the concept and
-  original data should go to him." This exact paragraph appears
-  word-for-word in both `TODAY31.ZIP`'s and `TODAY34.ZIP`'s `TODAY.DOC`,
-  independently corroborating the version-history timeline above and —
-  critically — giving Butler's full first name **directly from Kincaid
-  himself**, not just from the third-party 2019 UTMBiology Facebook post
-  (Section I above). `TODAY36.DOC` (1993) drops this section entirely;
-  see below for what replaced it.
+  present through v3.1/v3.3/v3.4, dropped starting with v3.5:** "This
+  program was written by Patrick Kincaid first in 1986, then updated in
+  1988 and again in 1990. It was inspired by a program written by
+  **Michael Butler** on an IBM VM/CMS system in the PL/1 language.
+  Credit for the concept and original data should go to him." This exact
+  paragraph appears word-for-word in `TODAY31.ZIP`, `TODAY33.ZIP`, and
+  `TODAY34.ZIP`'s `TODAY.DOC` (in fact `TODAY33.ZIP` and `TODAY34.ZIP`
+  ship the *identical, byte-for-byte* `TODAY.DOC`, confirming v3.4 really
+  was a pure bugfix release), independently corroborating the
+  version-history timeline above and — critically — giving Butler's full
+  first name **directly from Kincaid himself**, not just from the
+  third-party 2019 UTMBiology Facebook post (Section I above). It's gone
+  from `TODAY35.ZIP` onward, and `TODAY35.ZIP`'s own `WHATS.NEW` explains
+  why — see below.
 - **Documentation consistently lags the version number by one release.**
-  `TODAY31.ZIP`'s manual titles itself "Version 3.0"; `TODAY34.ZIP`'s
-  titles itself "Version 3.3." Both describe the *previous* release, not
-  the one they ship with — a minor but consistent shareware-doc habit,
-  not an inconsistency in the research.
+  `TODAY31.ZIP`'s manual titles itself "Version 3.0"; `TODAY33.ZIP`/
+  `TODAY34.ZIP`'s titles itself "Version 3.3." Both describe the
+  *previous* release, not the one they ship with — a minor but
+  consistent shareware-doc habit, not an inconsistency in the research.
+- **The "History" section wasn't specifically cut for v3.6 — it was
+  a casualty of a general documentation rewrite in v3.5.** `TODAY35.ZIP`'s
+  `WHATS.NEW` says so directly: "The documentation has been rewritten and
+  is now somewhat shorter and more concise. WHEN documentation has been
+  made a part of the main document rather than separate" (accounting for
+  why `TODAY35.ZIP`/`TODAY36.ZIP` no longer ship a separate `WHEN.DOC`).
+  `TODAY36.DOC` simply continues this shorter style.
 - **A different name for the same BBS phone number, now with a specific
   city.** `TODAY34.ZIP`'s registration section calls Kincaid's
   distribution channel the "**Golden Gate Computer Society Bulletin
@@ -214,9 +232,15 @@ sources recovered in this research. Highlights:
 - **`TODAY.OWN`'s actual contents** — a short set of sample reminders
   ("Pay the mortgage!", birthday reminders for fictional family members
   Daryl, Alyssa, etc.) rather than anything biographical about Kincaid
-  himself. It's exactly 380 bytes in all three recovered packages
-  (v3.1, v3.4, v3.6) — the same unchanged file across at least three
-  years of releases.
+  himself. It's exactly 380 bytes, dated August 5, 1990, in every
+  recovered package that includes it (v3.1, v3.4, v3.5, v3.6) — the same
+  unchanged file across at least three years of releases. The two v3.3
+  copies checked (`TODAY33.ZIP`, and another independent copy from a
+  different CD-ROM) are both missing it, most likely a repackaging
+  omission specific to whatever distributor/CD-ROM these particular
+  copies passed through, rather than something genuinely absent from
+  Kincaid's original v3.3, given it's present in the version immediately
+  before (v3.1) and the byte-identical v3.4 doc/data that followed it.
 - **A pattern of user-contributed specialized databases, not just one.**
   `TODAY31.ZIP`'s doc explains the origin: "I encourage you to create
   specialized databases, (SPACE.mon, SCIENCE.mon etc) to share with the
@@ -224,12 +248,12 @@ sources recovered in this research. Highlights:
   changelog and readable via a new `ADD` option (`TODAY ADD MUSIC`) was
   evidently one instance. None of these specialized databases have been
   tracked down yet; see [TODO.md](TODO.md).
-- **The lunar-phase feature is verifiably absent from all three
+- **The lunar-phase feature is verifiably absent from all five
   releases — in both the documentation and the executables themselves.**
-  None of the three manuals mention the moon, lunar phase, or anything
+  None of the five manuals mention the moon, lunar phase, or anything
   similar anywhere. `TODAY31.ZIP`'s `TODAY.EXE` is not compressed, so its
   embedded strings are directly readable — no "moon," "lunar," or "phase"
-  string appears anywhere in it either (the v3.4/v3.6 executables are
+  string appears anywhere in it either (the later executables are
   LZEXE-compressed, so their strings aren't directly readable without
   decompressing them first, but their docs are equally silent). Since the
   2001 Usenet poster wanted the *original 1986* release specifically for
@@ -245,19 +269,26 @@ sources recovered in this research. Highlights:
 - **This repository's own data is a genuine, earlier ancestor of this
   same dataset — and can now be placed more precisely in the lineage.**
   Comparing this repo's [`today.1`–`today.12`](today/) line-by-line
-  (after normalizing line endings and trailing padding) against both
-  `TODAY31.ZIP` and `TODAY34.ZIP`'s month files gives two different
-  overlap rates. Against `TODAY31.ZIP` (1990), 65–85% of this repo's
-  lines reappear verbatim, and — notably — this repo's own files are
-  *larger* than `TODAY31.ZIP`'s in every single month. Against
-  `TODAY34.ZIP` (1991–92), only 50–80% of this repo's lines reappear,
-  and this repo's files are now *smaller* than `TODAY34.ZIP`'s (which
-  roughly doubled in size, matching the "tripled" database-expansion
-  claim in its own changelog). Put together, this repository's copy
-  appears to sit **chronologically between v3.1 and v3.4** — larger than
-  the 1990 release, smaller than the 1991–92 one — consistent with an
-  early-1990s snapshot taken sometime during that expansion, rather than
-  either endpoint. This is the strongest evidence yet for where this
+  (after normalizing line endings and trailing padding, and summing
+  across all twelve months — 2,284 lines total) against every recovered
+  version gives a clear trend:
+
+  | Compared against | Total lines in that version | Lines shared with this repo | Share of this repo's lines found verbatim |
+  |---|---|---|---|
+  | `TODAY31.ZIP` (1990) | 1,932 | 1,572 | 68.8% |
+  | `TODAY33.ZIP`/`TODAY34.ZIP` (1991–92) | 4,508 | 1,243 | 54.4% |
+  | `TODAY35.ZIP` (1992) | 4,525 | 1,212 | 53.1% |
+
+  This repo's own files are *larger* than v3.1's in every single month,
+  but *smaller* than v3.3/v3.4/v3.5's in every month (all three of which
+  roughly doubled in size from v3.1, matching the "tripled"
+  database-expansion claim in v3.3's own changelog) — and the overlap
+  percentage falls off steadily the further forward in time the
+  comparison version is, exactly as expected if this repo's copy is an
+  ancestor rather than a later or unrelated variant. Put together, this
+  repository's copy appears to sit **chronologically between v3.1
+  (September 1990) and v3.3 (May 1991)** — closer to v3.1 than to any
+  later release. This is the strongest evidence yet for where this
   repository's own copy sits in the version lineage (see
   [TODO.md](TODO.md) item 11), though it remains a placement by data
   content only — the lack of any version banner or lunar-phase code in
@@ -275,6 +306,29 @@ distributed add-on well after the 1993 release. A standalone
 paired with a `XTRAQUOT.TXT` of additional quotes in the same `F`
 format. Neither of these quarterly/witticisms packs has itself been
 downloaded — only their pcorner.com listings are known so far.
+
+**A filename search across discmaster.textfiles.com's roughly 1.6
+billion indexed files confirms just how widely this software
+circulated.** Beyond `TODAY33.ZIP` and `TODAY35.ZIP` (recovered in full,
+above), the same search turned up 9 further copies of `TODAY36.ZIP`
+(on, among others, Walnut Creek CD-ROM, Chestnut CD-ROM's "Shareware
+Overload Trio," and Night Owl PDSI), 1 further copy of `TODAY31.ZIP`,
+and — strikingly — **29 copies of `TODAYDOR.ZIP` and 26 of
+`TODAYBBS.ZIP`**, Michael Conley's Wildcat! door/bulletin programs
+(Section V). None of these additional copies were downloaded (their
+consistent presence across so many independent CD-ROM collections is
+corroboration enough), but two of the `TODAY33.ZIP` copies found this
+way had been re-zipped by warez-scene BBSes, with "leeched from The HMS
+Bounty BBS" and "The WaREZ HouZE Super System" banners tacked onto the
+archive — harmless provenance noise from later redistribution, not a
+content difference from the clean copy preserved here.
+
+**One more false positive, also via discmaster.textfiles.com:**
+`TODAY32.ZIP` turned out to be an unrelated HP48 calculator application
+(under 6 KB, filed under "HP48/Applications" on several "Palmtops"
+CD-ROMs). Whether Kincaid ever released a numbered v3.2 at all is
+unknown — no archive under that name has surfaced, unlike every other
+version from 3.1 through 3.6.
 
 **Two more genuine derivatives turned up alongside `TODAY34.ZIP`, from a
 third implementer: Michael Conley.** The same `bbs.retropc.se` file area
@@ -298,14 +352,16 @@ Boardwalk Software, copyright 1989/91) turned out to be an unrelated
 Wildcat! BBS caller-log/hello-screen generator — a false positive, noted
 in [`zips/README.md`](zips/README.md) rather than preserved here.
 
-**Two more false positives, encountered while searching for the above.**
-Both share the name "TODAY" purely by coincidence: `TODAY10.ZIP` on
-pcorner.com (category "C Source Code") is a Unix/VMS date-and-time-in-English
-utility explicitly credited in its own source to **Martin Minow**, unrelated
-to Kincaid despite bundling its own moon-phase code (`MOONTX.C`); and
-`ADATODAY.ZIP` on pcorner.com is an issue of an "Ada Today" newsletter
-about the Ada programming language. Neither shares any code, data, or
-attribution with Kincaid's `TODAY`.
+**Three more false positives, encountered while searching for the
+above.** All share the name "TODAY" purely by coincidence: `TODAY10.ZIP`
+on pcorner.com (category "C Source Code") is a Unix/VMS date-and-time-
+in-English utility explicitly credited in its own source to **Martin
+Minow**, unrelated to Kincaid despite bundling its own moon-phase code
+(`MOONTX.C`); `ADATODAY.ZIP` on pcorner.com is an issue of an "Ada
+Today" newsletter about the Ada programming language; and `TODAY32.ZIP`,
+found via discmaster.textfiles.com, is an unrelated HP48 calculator
+application. None shares any code, data, or attribution with Kincaid's
+`TODAY`.
 
 **Rebecca Ann Heineman produced a C++ port of the program**, distributed
 in her open-source `KitchenSink` toolkit, and explicitly credited Kincaid
@@ -400,8 +456,10 @@ there). Byte/line comparisons below were run against this directory's
 | [Possibly93/possibly93.github.io](https://github.com/Possibly93/possibly93.github.io) | `c/files/images/ansi/unsorted/today.jan.ans`, `today.jun.ans` (filed under "ansi" in a BBS file dump, but not actually ANSI art) | Despite the `.ans` extension and folder, this is plain-text `TODAY.JAN` data, misfiled. Nearly identical to this copy, but with two edits indicating a later-generation snapshot: Mozart's birthday is corrected from this copy's `B01231756` (January 23 — an error; Mozart was born January 27) to the historically correct `B01271756`, and a new event line is present, `S01281986 Space Shuttle Challenger explodes, killing a brave crew and NASA...` — the Challenger disaster (January 28, 1986) postdates Kincaid's July 1986 `TODAY/PC` release, so this snapshot was updated at least once after the original release. |
 | [wyattshanahan/BIS](https://github.com/wyattshanahan/BIS) | `WebDev1/lab08/trivia.dat` (student web-dev coursework) | Not a copy of the `B`/`S`/`R` file format at all — reformatted into CSV (`month,day,year,description`, e.g. `1,1,1801,Giuseppe Piazzi discovered 1st asteroid...`). Confirmed to reuse this dataset's content directly (its January 1 entries match this copy's verbatim, just re-punctuated), pulled in for an unrelated class assignment. A downstream reformatted derivative, similar in kind to `cfug-today`. |
 | [`TODAY31.ZIP`, archive.org](https://archive.org/details/msdos_festival_TODAY31) — preserved at [`zips/TODAY31.ZIP`](zips/TODAY31.ZIP) | `TODAY.EXE` (uncompressed), all 12 month files, `TODAY.DOC`, `TODAY.OWN`, `TODAY.WIT`, `TODAYCFG.EXE` (real DOS shareware archive, downloaded and read in full) | The actual v3.1 (09/01/90) release, MD5-verified against archive.org's own metadata. Byte-exact match for the Usenet-quoted version banner. Line-level comparison against this repo's `today.1`–`.12` shows 65–85% of this repo's lines reappearing verbatim, with this repo's files larger than v3.1's in every month — see Section I. |
-| [`TODAY34.ZIP`, bbs.retropc.se](https://bbs.retropc.se/smmwldct/TODAY34.ZIP) — preserved at [`zips/TODAY34.ZIP`](zips/TODAY34.ZIP) | `TODAY.EXE`, all 12 month files, `TODAY.DOC` (full manual), `TODAY.OWN`, `TODAY.WIT`, `TODAYCFG.EXE`, `WHEN.EXE`/`.DOC` (real DOS shareware archive, downloaded and read in full) | The actual v3.4 (1991–92) release; downloaded, extracted, and read directly — see Section I for what it revealed. Line-level comparison of its month files against this repo's `today.1`–`.12` shows ~50–80% of this repo's lines reappearing verbatim, with this repo's files now *smaller* than v3.4's in every month — consistent with this repo's copy sitting chronologically between v3.1 and v3.4. |
-| [`TODAY36.ZIP`, archive.org](https://archive.org/details/TODAY36_ZIP) — preserved at [`zips/TODAY36.ZIP`](zips/TODAY36.ZIP) | `TODAY.EXE` (LZEXE-compressed), `TODAY.JAN`–`.DEC`, `TODAY36.DOC`, `WHATS.NEW`, `README.1ST`, `TODAY.OWN`, `TODAYCFG.EXE`, `WHEN.EXE`, `TODAY.WIT` (real DOS shareware archive, downloaded and read in full; MD5-verified against archive.org's metadata) | The actual v3.6 (11/14/93) release, the last documented DOS version — see Section I for what `TODAY36.DOC` revealed (it drops the "TODAY's History"/Butler section present in v3.1/v3.4, but adds the Corte Madera/PCBoard/"TODAY Conference" detail and Kincaid's "learn a new compiler" remark). |
+| [`TODAY33.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/6948/TheCaliforniaCollection.cdr/his032/today33.zip) — preserved at [`zips/TODAY33.ZIP`](zips/TODAY33.ZIP) | `TODAY.EXE`, all 12 month files, `TODAY.DOC`, `TODAY.WIT`, `TODAYCFG.EXE`, `WHEN.EXE`/`.DOC` (no `TODAY.OWN` — see Section I) | The actual v3.3 (May 1991) release. Its `TODAY.DOC` is byte-for-byte identical to `TODAY34.ZIP`'s, confirming v3.4 was a pure bugfix release. |
+| [`TODAY34.ZIP`, bbs.retropc.se](https://bbs.retropc.se/smmwldct/TODAY34.ZIP) — preserved at [`zips/TODAY34.ZIP`](zips/TODAY34.ZIP) | `TODAY.EXE`, all 12 month files, `TODAY.DOC` (full manual), `TODAY.OWN`, `TODAY.WIT`, `TODAYCFG.EXE`, `WHEN.EXE`/`.DOC` (real DOS shareware archive, downloaded and read in full) | The actual v3.4 (1991–92) release; downloaded, extracted, and read directly — see Section I for what it revealed. |
+| [`TODAY35.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/6179/PSL%20Monthly%20Shareware%20CD-ROM%20(Public%20Software%20Library)%20(January%201994).iso/dos/business/today35.zip) — preserved at [`zips/TODAY35.ZIP`](zips/TODAY35.ZIP) | `TODAY.EXE`, all 12 month files, `TODAY35.DOC`, `WHATS.NEW`, `TODAY.OWN`, `TODAY.WIT`, `TODAYCFG.EXE`, `WHEN.EXE` (no separate `WHEN.DOC`) | A previously undocumented version (1992), not referenced by any prior source in this research. Its `WHATS.NEW` explains the shorter `TODAY36.DOC` style — see Section I. |
+| [`TODAY36.ZIP`, archive.org](https://archive.org/details/TODAY36_ZIP) — preserved at [`zips/TODAY36.ZIP`](zips/TODAY36.ZIP) | `TODAY.EXE` (LZEXE-compressed), `TODAY.JAN`–`.DEC`, `TODAY36.DOC`, `WHATS.NEW`, `README.1ST`, `TODAY.OWN`, `TODAYCFG.EXE`, `WHEN.EXE`, `TODAY.WIT` (real DOS shareware archive, downloaded and read in full; MD5-verified against archive.org's metadata; 9 further copies found via discmaster.textfiles.com but not individually downloaded) | The actual v3.6 (11/14/93) release, the last documented DOS version — see Section I for what `TODAY36.DOC` revealed (Corte Madera/PCBoard/"TODAY Conference" detail and Kincaid's "learn a new compiler" remark). |
 | [`TODAYDOR.ZIP`](https://bbs.retropc.se/smmwldct/TODAYDOR.ZIP) / [`TODAYBBS.ZIP`](https://bbs.retropc.se/smmwldct/TODAYBBS.ZIP), bbs.retropc.se — preserved at [`zips/`](zips/) | Wildcat! BBS "door" (`TODAYDOR` v3.24) and bulletin-generator (`TODAYBBS` v3.08) programs, both by **Michael Conley** (1993) | Independent third-party readers of the same `TODAY.xxx` data format — not copies of Kincaid's code, but further evidence (alongside Fiennes's ARCbbs module) that the data format was widely reimplemented rather than treated as tied to one program. See Section I and [`zips/README.md`](zips/README.md). |
 
 **Excluded as false positives:** several other hits turned out to be
@@ -623,5 +681,7 @@ while opening one new one:
 29. [`WCTODAY.ZIP`, bbs.retropc.se](https://bbs.retropc.se/smmwldct/WCTODAY.ZIP) — false positive, Boardwalk Software's unrelated "Who Called Today?" caller-log utility
 30. [`TODAY31.ZIP`](https://archive.org/details/msdos_festival_TODAY31) and [`TODAY36.ZIP`](https://archive.org/details/TODAY36_ZIP), Internet Archive — the actual v3.1 and v3.6 releases, downloaded, MD5-verified, and read in full; preserved at [`zips/`](zips/), see [`zips/README.md`](zips/README.md)
 31. `TODAY34.ZIP`, `TODAYDOR.ZIP`, and `TODAYBBS.ZIP`, obtained independently by Leo Bicknell from `annex.retroarchive.org` (`cdrom/smsw-modmad-1/WILDCAT/`), July 2026 — byte-for-byte identical (SHA-256 confirmed) to the bbs.retropc.se copies above, corroborating their exact circulation on a second CD-ROM collection; see [`zips/README.md`](zips/README.md)
+32. [`TODAY33.ZIP`](https://discmaster.textfiles.com/view/6948/TheCaliforniaCollection.cdr/his032/today33.zip) and [`TODAY35.ZIP`](https://discmaster.textfiles.com/view/6179/PSL%20Monthly%20Shareware%20CD-ROM%20(Public%20Software%20Library)%20(January%201994).iso/dos/business/today35.zip), via [discmaster.textfiles.com](https://discmaster.textfiles.com/) — previously undocumented versions, downloaded and read in full; preserved at [`zips/`](zips/), see [`zips/README.md`](zips/README.md)
+33. Michael Conley, "TODAYBBS files," [`alt.bbs.wildcat`](https://groups.google.com/g/alt.bbs.wildcat/c/u0QVUS_Z7qg), June 8, 1996 — confirms Bruce Goldman's continued data maintenance (series "910") and Mustang Software's role in distribution
 
 *Compiled July 2026. See [TODO.md](TODO.md) for open research threads.*

@@ -72,9 +72,16 @@ value. None of these were run down during the initial research pass.
    - Check for a UTM/Erindale "Computing Society" or similar student
      club, which would be a more likely venue than the general newspaper
      for coverage of a hobby mainframe program.
-   - Try University of Toronto's general alumni directory/LinkedIn search
-     for "Michael Butler" combined with class years around 1979–1983 (if
-     he was a student) — not yet attempted with that specific framing.
+
+   **In progress (July 2026):** Leo Bicknell is reaching out via
+   LinkedIn to a **Michael Butler**
+   ([linkedin.com/in/strider1](https://www.linkedin.com/in/strider1/)) —
+   based in Mississauga, ON, BA in Economics and Political Science from
+   the University of Toronto, 1980–1984. Matches the right city
+   (Mississauga/Erindale) and era; class years start just after the
+   1981 mainframe debut, so if this is the right person he'd have been a
+   first- or second-year student at the time. Not yet confirmed as the
+   same Michael Butler.
 
 3. **Find the original Usenet posting — but note the evidence for *when*
    is weaker than it looks.** The working assumption that this was posted
@@ -135,6 +142,17 @@ value. None of these were run down during the initial research pass.
    CalenTool format in 1991. Any of the three may have first-hand
    knowledge of where the ProLine file came from, or retain older copies
    with more attribution than what survived into `gcal`.
+
+   **In progress (July 2026):** Leo Bicknell is reaching out via
+   LinkedIn to a **Robert Heckendorn**
+   ([linkedin.com/in/robertheckendorn](https://www.linkedin.com/in/robertheckendorn/))
+   — software engineer at HP, Fort Collins, CO, 1979–1995, matching the
+   `robert@fc.hp.com` ("fc" = Fort Collins) address exactly — and a
+   **Bill Randle**
+   ([linkedin.com/in/billrandle](https://www.linkedin.com/in/billrandle))
+   — at Tektronix, Beaverton, OR, 1974–2001, matching the
+   `billr@saab.cna.tek.com` ("tek" = Tektronix) address. Both are strong
+   company/location/era matches. Not yet confirmed.
 
 6. **Preserve the Wayback Machine capture.** The last known-good archive
    of `burgerbecky.com` is from January 16, 2026
@@ -211,43 +229,63 @@ value. None of these were run down during the initial research pass.
     independent of the Kincaid research.
 
 11. **Track down the actual v3.1/v3.3/v3.6 DOS releases, and place this
-    repo's copy in the resulting timeline.** Largely resolved: real,
-    verified copies of **v3.1** (`TODAY31.ZIP`, from
+    repo's copy in the resulting timeline.** Resolved, more thoroughly
+    than originally scoped: real, verified copies of **v3.1**
+    (`TODAY31.ZIP`, from
     [archive.org](https://archive.org/details/msdos_festival_TODAY31)),
-    **v3.4** (`TODAY34.ZIP`, from
+    **v3.3** and **v3.5** (`TODAY33.ZIP`/`TODAY35.ZIP` — both previously
+    undocumented versions, found via
+    [discmaster.textfiles.com](https://discmaster.textfiles.com/), a
+    ~1.6-billion-file search index across dumped shareware CD-ROMs/BBS/
+    FTP archives), **v3.4** (`TODAY34.ZIP`, from
     [bbs.retropc.se](https://bbs.retropc.se/smmwldct/TODAY34.ZIP)), and
     **v3.6** (`TODAY36.ZIP`, from
     [archive.org](https://archive.org/details/TODAY36_ZIP)) have all been
-    downloaded, MD5-verified where archive.org provided a checksum, and
-    are preserved in [`zips/`](zips/) — see README Section I for
-    everything they revealed (the full "TODAY's History" section and
-    Michael Butler's full name direct from Kincaid in v3.1/v3.4, its
-    removal by v3.6, registration terms, the Golden Gate Computer
-    Society/Corte Madera/PCBoard details, the full data-format spec,
-    `TODAY.OWN`'s actual contents, byte-exact confirmation of the Usenet
-    version banner, and confirmation the lunar-phase feature is absent
-    from all three releases' code and docs alike). Line-level comparison
-    against this repo's own month files now places this repo's copy
-    **chronologically between v3.1 and v3.4** — see README Section I.
+    downloaded and are preserved in [`zips/`](zips/) — see README Section
+    I for everything they revealed (the full "TODAY's History" section
+    and Michael Butler's full name direct from Kincaid in v3.1/v3.3/v3.4;
+    its removal turns out to date to a general documentation rewrite in
+    v3.5, not specifically v3.6; registration terms; the Golden Gate
+    Computer Society/Corte Madera/PCBoard details; the full data-format
+    spec; `TODAY.OWN`'s actual contents; byte-exact confirmation of the
+    Usenet version banner; and confirmation the lunar-phase feature is
+    absent from all five releases' code and docs alike). Line-level
+    comparison against this repo's own month files, across all five
+    versions, now places this repo's copy **chronologically between v3.1
+    (Sept. 1990) and v3.3 (May 1991), closer to v3.1** — see README
+    Section I for the full comparison table.
+
+    A search of the same discmaster.textfiles.com index also confirmed
+    `TODAY32.ZIP` is a false positive (an unrelated HP48 calculator app)
+    — no genuine v3.2 has surfaced anywhere, unlike every other version
+    from 3.1 through 3.6 — and turned up 9 further copies of
+    `TODAY36.ZIP`, 1 more of `TODAY31.ZIP`, and 29/26 copies respectively
+    of Michael Conley's `TODAYDOR.ZIP`/`TODAYBBS.ZIP` (see README Section
+    I), none individually downloaded.
+
     Still open:
-    - v3.3 specifically is still not located as a real executable — only
-      known from the Usenet copyright banner in Section I.
-    - None of the three recovered `TODAY.EXE` files has actually been
+    - None of the five recovered `TODAY.EXE` files has actually been
       *run* (in DOSBox or similar) — only their embedded strings have
       been read (directly, for the uncompressed v3.1 binary; not at all
-      yet for the LZEXE-compressed v3.4/v3.6 binaries, which would need
-      decompressing first to read their internal strings the same way).
+      yet for the LZEXE-compressed v3.4/v3.5/v3.6 binaries, which would
+      need decompressing first to read their internal strings the same
+      way).
     - `TODAYQ1.ZIP`–`Q4.ZIP` and `TODAYWIT.ZIP` (on pcorner.com) are
       separately-distributed, more expanded versions of the data/
       witticisms files, known only from their pcorner.com listings so
-      far — worth downloading and comparing against this repo's own
-      month files too, alongside the v3.1/v3.4 comparisons already done.
+      far — worth downloading (or searching for on
+      discmaster.textfiles.com) and comparing against this repo's own
+      month files too, alongside the comparisons already done.
     - This repository's own [`today.c`](today/today.c) still has no
       version banner, no copyright string, and no lunar-phase code at
       all — unlike every DOS release documented so far. Why a data
       snapshot from this specific window would be paired with a reader
       that never had (or had already lost) the version-banner code seen
       in every surviving DOS release is still unexplained.
+    - Both recovered v3.3 copies are missing `TODAY.OWN` (present in
+      every other version) — likely a repackaging omission rather than
+      something genuinely dropped by Kincaid for that one release, but
+      not confirmed either way.
 
 12. **Golden Gate Computer Society vs. Marin-Sonoma PC User Group — same
     BBS, two names?** The `TODAY34.ZIP` manual (README Section I) gives
@@ -267,13 +305,44 @@ value. None of these were run down during the initial research pass.
     these — `MUSIC`, `SPACE`, `SCIENCE`, or others that may exist — have
     been located yet.
 
-14. **Chase Bruce Goldman's `DAY907-*.ZIP` series and `NEWDAY/PC`.**
-    Per `TODAYBBS.DOC` (see [`zips/README.md`](zips/README.md)), Bruce
-    Goldman was, by 1993, distributing his own expanded
-    `TODAY.nnn`-compatible data files (series "907") through The
-    Charlatan's Cabin BBS, for use with both `TODAYBBS` and a program
-    called `NEWDAY/PC`. Neither Goldman nor `NEWDAY/PC` turned up in a
-    first search pass; worth a dedicated look.
+14. **Contact Bruce Goldman, and chase his `DAY9nn-*.ZIP` series and
+    `NEWDAY/PC`.** Per `TODAYBBS.DOC` (see
+    [`zips/README.md`](zips/README.md)), Bruce Goldman was, by 1993,
+    distributing his own expanded `TODAY.nnn`-compatible data files
+    (series "907") through The Charlatan's Cabin BBS, for use with both
+    `TODAYBBS` and a program called `NEWDAY/PC`.
+
+    **Update:** a June 8, 1996 Usenet post by Michael Conley to
+    [`alt.bbs.wildcat`](https://groups.google.com/g/alt.bbs.wildcat/c/u0QVUS_Z7qg)
+    ("TODAYBBS files") confirms Goldman was still actively maintaining
+    this data at least three years later, now as series "910"
+    (`DAY910-1.ZIP`–`DAY910-5.ZIP`, plus a revised `DAY910A6.ZIP`),
+    distributed via `ftp.mustang.com`/`bbs.mustang.com` (Mustang
+    Software, maker of Wildcat! BBS) as well as Charlatan's Cabin BBS.
+    The distribution model is described as "char-ware" — no registration
+    fee, donations to charity encouraged instead.
+
+    Goldman is now the most direct maintainer of the *data* found in this
+    research (as opposed to the several independent program authors), so
+    the single most valuable question to ask him, if he can be found and
+    reached, is **where he first got the `TODAY`/`DAY9nn` data from** —
+    directly from Kincaid, from another BBS, or from some other
+    intermediate source. Neither the `DAY9nn` series nor `NEWDAY/PC`
+    itself has been tracked down yet; Mustang Software's old FTP/BBS
+    archives (if they survive anywhere) are a new avenue worth trying for
+    that.
+
+    **In progress (July 2026):** Leo Bicknell has found a likely
+    candidate — a **Bruce Goldman**
+    ([linkedin.com/in/bruce-goldman-0a9535](https://www.linkedin.com/in/bruce-goldman-0a9535/)),
+    Tools S/W Architect at Oracle, 1990–1995, Redwood City, CA. The
+    profile itself has very little detail, but the era and location are
+    a reasonable fit: Redwood City is the same Bay Area region as
+    Kincaid's own Mill Valley base and the Golden Gate Computer Society
+    BBS, which would make sense if Goldman got the `TODAY` data
+    first-hand from that same regional BBS scene before redistributing
+    it (as an expanded, separately-numbered series) through Michael
+    Conley's Los Angeles-based Charlatan's Cabin BBS. Not yet confirmed.
 
 15. **Contact Michael Conley, author of `TODAYDOR`/`TODAYBBS`.** A third
     independent implementer of a reader for Kincaid's data format (see
