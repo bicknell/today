@@ -198,7 +198,8 @@ value. None of these were run down during the initial research pass.
    domain in `jeff@pro-avalon.cts.com`) was CTS Network Services, the
    San Diego ISP Morgan Davis himself co-founded. The profile has very
    little detail, but it's the only LinkedIn hit at all for this
-   unusual name/spelling combination. Not yet contacted or confirmed.
+   unusual name/spelling combination. LinkedIn contact request/message
+   sent (July 2026), no reply yet; not yet confirmed.
 
    **Update (July 2026): Morgan Davis replied — no new information, but
    confirms Jungblut as the sole source.** Responding to Leo Bicknell's
