@@ -386,8 +386,13 @@ CP/M version of the TODAY program that is floating around on the I.B.M.
 PC's... As far as i can see, it emulates the I.B.M version correctly." A
 self-referential `TODAY.OWN` entry pins its release to May 22, 1989, and
 a source comment ("Enable external I/O port on my TRS-80 Model 4P") shows
-Howland ran CP/M on a Tandy TRS-80 Model 4P. Not yet contacted — see
-[TODO.md](TODO.md).
+Howland ran CP/M on a Tandy TRS-80 Model 4P.
+
+**Update (July 2026):** identified, but deceased. His full name is
+**Jean-Michel "Mick" Howland**, of Perth, Western Australia, and he is
+listed as a "Silent Key" (deceased amateur radio operator) in the 2008
+entry of the Wireless Institute of Australia's Silent Key database — see
+[TODO.md](TODO.md) item 17.
 
 A companion archive on pcorner.com, `TODAYQ1.ZIP`–`TODAYQ4.ZIP` ("Events
 for TODAY program," by quarter), shows the dataset was also distributed
@@ -559,6 +564,7 @@ there). Byte/line comparisons below were run against this directory's
 | [`TODAY36.ZIP`, archive.org](https://archive.org/details/TODAY36_ZIP) — preserved at [`zips/TODAY36.ZIP`](zips/TODAY36.ZIP) | `TODAY.EXE` (LZEXE-compressed), `TODAY.JAN`–`.DEC`, `TODAY36.DOC`, `WHATS.NEW`, `README.1ST`, `TODAY.OWN`, `TODAYCFG.EXE`, `WHEN.EXE`, `TODAY.WIT` (real DOS shareware archive, downloaded and read in full; MD5-verified against archive.org's metadata; 9 further copies found via discmaster.textfiles.com but not individually downloaded) | The actual v3.6 (11/14/93) release, the last documented DOS version — see Section I for what `TODAY36.DOC` revealed (Corte Madera/PCBoard/"TODAY Conference" detail and Kincaid's "learn a new compiler" remark). |
 | [`TODAYDOR.ZIP`](https://bbs.retropc.se/smmwldct/TODAYDOR.ZIP) / [`TODAYBBS.ZIP`](https://bbs.retropc.se/smmwldct/TODAYBBS.ZIP), bbs.retropc.se — preserved at [`zips/`](zips/) | Wildcat! BBS "door" (`TODAYDOR` v3.24) and bulletin-generator (`TODAYBBS` v3.08) programs, both by **Michael Conley** (1993) | Independent third-party readers of the same `TODAY.xxx` data format — not copies of Kincaid's code, but further evidence (alongside Fiennes's ARCbbs module) that the data format was widely reimplemented rather than treated as tied to one program. See Section I and [`zips/README.md`](zips/README.md). |
 | [`TODAY-CPM.ARC`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/19793/2015.02.ftp.barnyard.co.uk.tar/ftp.barnyard.co.uk/cpm/walnut-creek-CDROM/BEEHIVE/UTILITYS/TODAY.ARC) — preserved at [`zips/TODAY-CPM.ARC`](zips/TODAY-CPM.ARC) | A CP/M port in Turbo Pascal (`TODAY.COM`, `TODAY.PAS` source, all 12 month files, `TODAY.OWN`, `README.DOC`), by **Mick Howland (VK6ZMH)**, Perth, Western Australia, 1989 | A fifth independent implementer, on a third platform (after DOS and Fiennes's Acorn/RISC OS). Reuses Kincaid's actual databases; self-references pin its release to May 22, 1989. See Section I. |
+| [ProLine 3.0 source, morgandavis.net](https://www.morgandavis.net/post/proline) | `man/man/man.G/today.G`, a man page for ProLine's built-in `today` command (no source/data bundled — see below) | Not a code or data copy — a **documentation trail**. The man page directly names **Jeff Jungblut** (`jeff@pro-avalon.cts.com`) as author of the ProLine port, and states outright that its database "is from a similar public domain program for the IBM PC called TODAY/PC" — independently confirming Kincaid's exact program name and identifying a sixth independent implementer. This is also the direct source of the "ProLine's today file" attribution in the GNU `gcal` row above. See [TODO.md](TODO.md) item 4. |
 
 **Excluded as false positives:** several other hits turned out to be
 unrelated programs that merely share a filename with this one.
@@ -811,5 +817,8 @@ while opening one new one:
 38. Walter Olson, "Marin: GGCS Internet SIG Meeting," [`ba.internet`](https://groups.google.com/g/ba.internet/c/B7zuOtDipAg), June 16, 1994 — confirms the Golden Gate Computer Society was formerly named the Marin/Sonoma PC Users Group, resolving TODO.md item 12
 39. [Golden Gate Computer Society, ggcs.org](https://www.ggcs.org/) and its [About page](https://www.ggcs.org/about-2) — the group's current, still-active website; confirms 1981 founding and provides current contact information (see TODO.md item 18)
 40. [bicknell/burgerbecky.com](https://github.com/bicknell/burgerbecky.com) — a Wayback Machine mirror of Rebecca Heineman's personal site, made as an offshoot of this research after the domain hijack was discovered (Section IV); see TODO.md item 6
+41. [Wireless Institute of Australia Silent Key database](https://www.wiaawards.com/view/ViewSK.php) — confirms Jean-Michel "Mick" Howland, VK6ZMH, died in 2008; see TODO.md item 17
+42. `usbbs152.lst`, a dial-up BBS phone-number directory (mirrored at [textfiles.serverrack.net](http://textfiles.serverrack.net/bbs/BBSLISTS/USBBS/usbbs152.lst) and [textfiles.meulie.net](https://textfiles.meulie.net/bbs/BBSLISTS/USBBS/usbbs152.lst)) — independently corroborates Michael Conley as the sysop of "Charlatan Cabn" in Los Angeles, at a different phone number than his 1996 Usenet post; see TODO.md item 15
+43. [Morgan Davis, "ProLine," morgandavis.net](https://www.morgandavis.net/post/proline), and its `proline-3.0-source.zip`, specifically `man/man/man.G/today.G` — names Jeff Jungblut as author of ProLine's `today` port and confirms Kincaid's program name "TODAY/PC" directly, resolving most of TODO.md item 4
 
 *Compiled July 2026. See [TODO.md](TODO.md) for open research threads.*

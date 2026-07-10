@@ -73,15 +73,15 @@ value. None of these were run down during the initial research pass.
      club, which would be a more likely venue than the general newspaper
      for coverage of a hobby mainframe program.
 
-   **In progress (July 2026):** Leo Bicknell is reaching out via
-   LinkedIn to a **Michael Butler**
+   **In progress (July 2026):** Leo Bicknell has sent a LinkedIn contact
+   request/message to a **Michael Butler**
    ([linkedin.com/in/strider1](https://www.linkedin.com/in/strider1/)) —
    based in Mississauga, ON, BA in Economics and Political Science from
    the University of Toronto, 1980–1984. Matches the right city
    (Mississauga/Erindale) and era; class years start just after the
    1981 mainframe debut, so if this is the right person he'd have been a
-   first- or second-year student at the time. Not yet confirmed as the
-   same Michael Butler.
+   first- or second-year student at the time. Sent, no reply yet; not
+   yet confirmed as the same Michael Butler.
 
 3. **Find the original Usenet posting — but note the evidence for *when*
    is weaker than it looks.** The working assumption that this was posted
@@ -159,14 +159,52 @@ value. None of these were run down during the initial research pass.
    likely not worth further search time barring a new, more specific
    lead.
 
-4. **Investigate "ProLine."** The GNU `gcal` data files state their
-   trivia was "extracted from ProLine's today file." This likely refers
-   to Morgan Davis's ProLine BBS software (an Apple II Unix-like system
-   with UUCP connectivity, popular in the late 1980s/early 1990s) or to a
-   specific ProLine-based BBS node Kincaid used to distribute his data.
-   Contacting Morgan Davis, or searching ProLine node lists from the Bay
-   Area, could establish whether this is the same distribution channel
-   as the Marin-Sonoma PC User Group BBS, or a separate one.
+4. **Investigate "ProLine." Largely resolved.** The GNU `gcal` data files
+   state their trivia was "extracted from ProLine's today file." This
+   referred to Morgan Davis's ProLine BBS software (an Apple II Unix-like
+   system with UUCP connectivity, popular in the late 1980s/early 1990s).
+
+   **Update (July 2026):** Leo Bicknell found that Morgan Davis has
+   posted ProLine's disk images, a 335-page manual, and its full source
+   code at [morgandavis.net/post/proline](https://www.morgandavis.net/post/proline).
+   The source archive (`proline-3.0-source.zip`) includes a man page,
+   `man/man/man.G/today.G`, for a built-in `today` command — and it
+   names names directly:
+
+   > The ProLine version was written by **Jeff Jungblut**
+   > (`jeff@pro-avalon.cts.com`). The original database is from a
+   > similar public domain program for the IBM PC called **TODAY/PC**.
+
+   This is a direct, independent confirmation of Kincaid's exact program
+   name (matching the "TODAY/PC" version banners already found on the
+   recovered DOS executables — item 11) and identifies a **sixth
+   independent implementer**, previously unknown: Jeff Jungblut, who
+   ported the `today` display command (not necessarily Kincaid's own
+   code — most likely a fresh implementation reading an imported copy of
+   his data files, in the same pattern as Fiennes/Conley/Howland).
+   `jeff@pro-avalon.cts.com` is almost certainly defunct (`cts.com` was
+   CTS Network Services, a San Diego ISP Davis himself co-founded — so
+   "pro-avalon" was a ProLine BBS node hosted on his own network), but
+   the name is a new, searchable lead. The man page itself doesn't
+   include the actual `today` source code or data files (the ProLine
+   source archive only bundles system/admin code, not per-installation
+   game data — the `today` databases would have lived in
+   `$/games/lib/today/*` on a running system and aren't preserved here).
+
+   **In progress (July 2026):** Leo Bicknell found a likely candidate —
+   a **Jeff Jungblut**
+   ([linkedin.com/in/jeff-jungblut-7170572a1](https://www.linkedin.com/in/jeff-jungblut-7170572a1/)),
+   based in **San Diego, CA** — a strong match, since `cts.com` (the
+   domain in `jeff@pro-avalon.cts.com`) was CTS Network Services, the
+   San Diego ISP Morgan Davis himself co-founded. The profile has very
+   little detail, but it's the only LinkedIn hit at all for this
+   unusual name/spelling combination. Not yet contacted or confirmed.
+
+   **Also in progress (July 2026):** Leo Bicknell has posted a comment
+   on Morgan Davis's blog post itself
+   ([morgandavis.net/post/proline](https://www.morgandavis.net/post/proline))
+   asking whether he recalls Jungblut or has any surviving `today` data
+   files from a running ProLine system. Awaiting a reply.
 
 5. **Contact the `gcal` data's editors.** The `events1`/`lives3` headers
    name Robert Heckendorn (`robert@fc.hp.com`, contributed "Today in
@@ -176,8 +214,8 @@ value. None of these were run down during the initial research pass.
    knowledge of where the ProLine file came from, or retain older copies
    with more attribution than what survived into `gcal`.
 
-   **In progress (July 2026):** Leo Bicknell is reaching out via
-   LinkedIn to a **Robert Heckendorn**
+   **In progress (July 2026):** Leo Bicknell has sent LinkedIn contact
+   requests/messages to a **Robert Heckendorn**
    ([linkedin.com/in/robertheckendorn](https://www.linkedin.com/in/robertheckendorn/))
    — software engineer at HP, Fort Collins, CO, 1979–1995, matching the
    `robert@fc.hp.com` ("fc" = Fort Collins) address exactly — and a
@@ -185,7 +223,8 @@ value. None of these were run down during the initial research pass.
    ([linkedin.com/in/billrandle](https://www.linkedin.com/in/billrandle))
    — at Tektronix, Beaverton, OR, 1974–2001, matching the
    `billr@saab.cna.tek.com` ("tek" = Tektronix) address. Both are strong
-   company/location/era matches. Not yet confirmed.
+   company/location/era matches. Sent, no reply yet from either; not yet
+   confirmed.
 
 6. **Preserve the Wayback Machine capture — done.** The last known-good
    archive of `burgerbecky.com` is from January 16, 2026
@@ -432,32 +471,71 @@ value. None of these were run down during the initial research pass.
     BBS, which would make sense if Goldman got the `TODAY` data
     first-hand from that same regional BBS scene before redistributing
     it (as an expanded, separately-numbered series) through Michael
-    Conley's Los Angeles-based Charlatan's Cabin BBS. Not yet confirmed.
+    Conley's Los Angeles-based Charlatan's Cabin BBS. LinkedIn contact
+    request/message sent, no reply yet; not yet confirmed.
 
 15. **Contact Michael Conley, author of `TODAYDOR`/`TODAYBBS`.** A third
     independent implementer of a reader for Kincaid's data format (see
     README Section I and III, and [`zips/README.md`](zips/README.md)),
     alongside Kincaid and Hugo Fiennes. Ran The Charlatan's Cabin BBS in
-    Los Angeles, CA in the early 1990s. Not yet searched for or
-    contacted — worth the same kind of outreach that worked for Fiennes
-    (item 9).
+    Los Angeles, CA in the early 1990s. Worth the same kind of outreach
+    that worked for Fiennes (item 9).
+
+    **Update (July 2026):** Leo Bicknell found **5 candidates named
+    Michael Conley on LinkedIn**, all in the greater LA area and old
+    enough to fit the BBS-scene timeline — but none of their profiles
+    mention BBSs, `TODAY`, or anything else that clearly identifies the
+    right one.
+
+    Tried to narrow it down via an email address and came up empty:
+    - His June 8, 1996 Usenet post to
+      [`alt.bbs.wildcat`](https://groups.google.com/g/alt.bbs.wildcat/c/u0QVUS_Z7qg)
+      ("TODAYBBS files") has "show original"/raw-source view greyed out
+      in Google Groups' current UI, and the classic `?dmode=source`
+      raw-NNTP-source URL parameter doesn't expose it either — Google
+      Groups anonymizes email addresses for this group entirely, not
+      just in the UI.
+    - The Wayback Machine couldn't be queried directly for an old capture
+      of the same Google Groups URL (fetch tooling can't reach
+      web.archive.org in this environment).
+    - Did turn up one corroborating (but not new-identity-narrowing)
+      detail: an old dial-up BBS phone list, `usbbs152.lst`, lists
+      `213-656-6955 CA Los Angeles Michael Conley ... Charlatan Cabn` —
+      confirming the name/BBS pairing from an independent source, with a
+      different phone number than the 1996 post's (213) 654-7337
+      (consistent with a long-running board that changed lines over the
+      years). No email or other disambiguating detail came with it.
+
+    **Not yet tried:** messaging all 5 LinkedIn candidates with a short
+    note naming "Charlatan's Cabin BBS," "TODAYDOR"/"TODAYBBS," and
+    Wildcat! BBS specifically — distinctive enough that the right one
+    should self-identify immediately.
 
 16. **Contact Jason Scott / bbsdocumentary.com**, per Hugo Fiennes's
     suggestion (item 9) — he may know more about this program's general
     place in BBS history, or have leads on the sysop(s) between Kincaid
     and Fiennes.
 
-17. **Contact Mick Howland, author of the CP/M port.** A fifth
-    independent implementer of Kincaid's data format (see README Section
-    I and III, and [`zips/README.md`](zips/README.md)), alongside
+17. **Mick Howland, author of the CP/M port — identified, but deceased.**
+    A fifth independent implementer of Kincaid's data format (see README
+    Section I and III, and [`zips/README.md`](zips/README.md)), alongside
     Kincaid, Hugo Fiennes, and Michael Conley — this one on a third
     platform (CP/M, via Turbo Pascal), released May 1989. Known contact
-    details are thin and decades-old: amateur radio callsign **VK6ZMH**
+    details were thin and decades-old: amateur radio callsign **VK6ZMH**
     (Western Australia) and "c/o Perth Omen," presumably a BBS name, from
-    his own doc file. Worth trying an Australian amateur radio callsign
-    lookup (VK6ZMH) to see if it resolves to a real name and current
-    contact info, and/or searching for any surviving record of a Perth,
-    WA BBS called "Omen" from the late 1980s. Not yet attempted.
+    his own doc file.
+
+    **Update (July 2026):** Leo Bicknell confirmed his full name —
+    **Jean-Michel "Mick" Howland**, VK6ZMH, of Perth, Western Australia —
+    and that he is listed as a "**Silent Key**" (the amateur radio
+    community's term for a deceased operator) in the **2008** entry of
+    the Wireless Institute of Australia's Silent Key database
+    ([wiaawards.com](https://www.wiaawards.com/view/ViewSK.php), verified
+    directly: "Jean‐Michel Howland VK6ZMH" appears under the "2008 (65)"
+    heading). This closes the identification but forecloses direct
+    outreach — any further leads on his port would have to come through
+    family, estate, or someone from the Perth "Omen" BBS scene who knew
+    him, not from Howland himself.
 
 18. **Contact the Golden Gate Computer Society directly — it's still an
     active organization.** Per item 12 (now resolved), GGCS is the
