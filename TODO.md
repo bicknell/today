@@ -200,11 +200,26 @@ value. None of these were run down during the initial research pass.
    little detail, but it's the only LinkedIn hit at all for this
    unusual name/spelling combination. Not yet contacted or confirmed.
 
-   **Also in progress (July 2026):** Leo Bicknell has posted a comment
-   on Morgan Davis's blog post itself
-   ([morgandavis.net/post/proline](https://www.morgandavis.net/post/proline))
-   asking whether he recalls Jungblut or has any surviving `today` data
-   files from a running ProLine system. Awaiting a reply.
+   **Update (July 2026): Morgan Davis replied — no new information, but
+   confirms Jungblut as the sole source.** Responding to Leo Bicknell's
+   comment on his blog post
+   ([morgandavis.net/post/proline](https://www.morgandavis.net/post/proline)),
+   Davis wrote:
+
+   > I'm afraid I cannot offer much help here. Jeff Jungblut provided the
+   > code and any database that may have been included with ProLine.
+   > Hunting down Jeff would be your next step in getting some answers.
+   > Good luck on your search.
+   >
+   > For reference, the documentation says: The ProLine version was
+   > written by Jeff Jungblut (`jeff@pro-avalon.cts.com`). The original
+   > database is from a similar public domain program for the IBM PC
+   > called TODAY/PC.
+
+   Davis himself never had the data files independently — Jungblut
+   supplied everything — so this thread now dead-ends at Davis and
+   points entirely back to confirming the Jeff Jungblut LinkedIn lead,
+   above (sent, no reply yet).
 
 5. **Contact the `gcal` data's editors.** The `events1`/`lives3` headers
    name Robert Heckendorn (`robert@fc.hp.com`, contributed "Today in
