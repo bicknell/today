@@ -431,14 +431,64 @@ value. None of these were run down during the initial research pass.
     "0628," is explained by "you will see why I used it" — Kincaid was
     pointing readers at his own easter egg.
 
+    **Update (July 2026): all seven recovered DOS releases have now
+    been run in DOSBox — v1.0, v2.1, v3.1, v3.3, v3.4, v3.5, and v3.6**,
+    each on June 28, confirming a clear evolution in the program's UI
+    across versions:
+
+    - **v1.0 and v2.1** (1986/87 and April 1988) run in **plain
+      monochrome text — no color, no screen-clearing at all.** Neither
+      has a `DISK` option (that's a v3.x addition), and neither pauses
+      by default — both need the `WAIT` option to hold the screen open,
+      confirmed directly from each release's own `.DOC` (v1.0's option
+      set is just `MMDD`/`HELP`/`CLEAR`/`WAIT`/`ONCE`; `DIR`/`SET`
+      overrides and `NOPAUSE` don't exist until v2.1). v1.0 also turned
+      up a real quirk: it has **no relative-directory support at
+      all** — it expects its data files at the hardcoded path
+      `C:\TODAY\`, and fails with a misleading "Not enough memory to
+      read file \TODAY\TODAY.JUN" if run from anywhere else (the
+      message is generic, not an actual memory problem — the fix was
+      simply mounting a drive where the data really does live at
+      `C:\TODAY`). v2.1 has no such issue, matching its documented
+      `DIR`/`SET` override support. Both show the birthday entry in its
+      short original form, **"send him a card."** — without the "he'll
+      love it." that v3.1 later added. See
+      [`screenshots/today10-dosbox-1947-birthday.png`](screenshots/today10-dosbox-1947-birthday.png)
+      and
+      [`screenshots/today21-dosbox-1947-birthday.png`](screenshots/today21-dosbox-1947-birthday.png)
+      (both fit on one screen, no pagination needed).
+    - **v3.1** (1990) is the first to add color, a drawn border, and
+      screen-clearing — see the screenshots linked above. Ends simply
+      with "Press ENTER to end Today and restore your screen."
+    - **v3.3** (1991) replaces that ending with an interactive loop,
+      **"Enter a new date as MMDD or just `<ENTER>` to quit,"** — new
+      in this release. It also gave a live, behavioral confirmation of
+      this document's own hypothesis about `TODAY.OWN`: the **"And
+      remember..." reminder section is completely absent** from v3.3's
+      output, exactly because `TODAY.OWN` really is missing from this
+      release (confirmed directly: `ls` on the extracted archive shows
+      no `TODAY.OWN` file). Per Leo Bicknell's direct observation
+      running it, v3.3 does not clear the screen before showing the
+      paginated continuation, unlike v3.4 onward. See
+      [`screenshots/today33-dosbox-1947-birthday-1.png`](screenshots/today33-dosbox-1947-birthday-1.png)
+      and
+      [`-2.png`](screenshots/today33-dosbox-1947-birthday-2.png).
+    - **v3.4, v3.5, and v3.6** (1992–93) all clear the screen before
+      showing the continuation page (the difference from v3.3), and all
+      have `TODAY.OWN` restored — "And remember... Pay the mortgage!"
+      is back in all three. Version banners read live from each,
+      matching the `unlzexe`-decoded strings exactly: `01/05/92`,
+      `07/12/92`, `11/14/93`. See
+      [`screenshots/today34-dosbox-1947-birthday-1.png`](screenshots/today34-dosbox-1947-birthday-1.png)/[`-2.png`](screenshots/today34-dosbox-1947-birthday-2.png),
+      [`screenshots/today35-dosbox-1947-birthday-1.png`](screenshots/today35-dosbox-1947-birthday-1.png)/[`-2.png`](screenshots/today35-dosbox-1947-birthday-2.png),
+      and
+      [`screenshots/today36-dosbox-1947-birthday-1.png`](screenshots/today36-dosbox-1947-birthday-1.png)/[`-2.png`](screenshots/today36-dosbox-1947-birthday-2.png).
+
+    Every recovered DOS release has now actually been executed and
+    visually verified, not just read as strings — this bullet is fully
+    resolved.
+
     Still open:
-    - Only v3.1 has been run so far; the other six recovered binaries
-      (v1.0, v2.1, v3.3–v3.6) haven't been tried in DOSBox yet, though
-      there's no reason to expect they wouldn't work the same way now
-      that the setup is proven. v1.0 in particular would be worth
-      running, since its data files are the ones byte-for-byte identical
-      to this repo's own — literally watching this repo's own data
-      through the original program.
     - `TODAYQ2.ZIP`–`Q4.ZIP` (on pcorner.com) remain unrecovered — see
       update above.
     - This repository's own [`today.c`](today/today.c) still has no

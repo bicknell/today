@@ -303,18 +303,22 @@ sources recovered in this research. Highlights:
   exact match, straight from the binary, for what the Usenet posts in
   this section quote — plus Kincaid's mailing address embedded directly
   in the executable.
-- **v3.1 has actually been run, in DOSBox, and the easter egg fires on
-  screen exactly as the data predicts.** With the DOS date set to June
-  28, `TODAY.EXE` displays "Happy Birthday to... In 1947 Patrick
-  Kincaid, send him a card, he'll love it." alongside real historical
-  entries (Henry VIII, Rousseau, Gilda Radner), closing with "And
-  remember... Pay the mortgage!" — see
-  [`screenshots/today31-dosbox-1947-birthday-1.png`](screenshots/today31-dosbox-1947-birthday-1.png)
-  and
-  [`screenshots/today31-dosbox-1947-birthday-2.png`](screenshots/today31-dosbox-1947-birthday-2.png).
+- **All seven recovered DOS releases have now actually been run, in
+  DOSBox, and the easter egg fires on screen exactly as the data
+  predicts every time.** With the DOS date set to June 28, each release
+  displays "Happy Birthday to... In 1947 Patrick Kincaid, send him a
+  card..." alongside real historical entries (Henry VIII, Rousseau,
+  Gilda Radner) — full screenshots and a version-by-version breakdown
+  of the UI's evolution (color/clearing added in v3.1; the interactive
+  "enter a new date" loop added in v3.3; a live, behavioral confirmation
+  that v3.3's missing `TODAY.OWN` really does silently drop the "And
+  remember..." reminder section) are in [TODO.md](TODO.md) item 11.
   `TODAY.DOC`'s own manual uses "0628" as its example date and remarks
   "you will see why I used it" — Kincaid was pointing readers at his own
-  joke. See [TODO.md](TODO.md) item 11.
+  joke. v1.0 and v2.1 run in plain monochrome with no color or
+  clearing at all, and the birthday joke there reads only "send him a
+  card." — the "he'll love it." seen from v3.1 onward was a later
+  addition.
 - **This repository's own data is not merely an early ancestor of this
   dataset — it is a byte-for-byte, unmodified copy of the *original 1986*
   release.** Two earlier, previously-undocumented releases have since
