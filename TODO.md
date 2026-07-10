@@ -652,6 +652,34 @@ value. None of these were run down during the initial research pass.
     family, estate, or someone from the Perth "Omen" BBS scene who knew
     him, not from Howland himself.
 
+    **Update (July 2026): his CP/M port has now actually been run.**
+    Leo Bicknell found [davidly/ntvcm](https://github.com/davidly/ntvcm)
+    ("NT Virtual CP/M Machine," a cross-platform 8080/Z80/CP/M 2.2
+    emulator), built it on macOS via its `mrmac.sh` script, and ran
+    `TODAY.COM` directly. It hit a real gap in the emulator along the
+    way: `ntvcm` didn't implement the Z80 `IN r,(C)`/`OUT (C),r`
+    instructions, and Howland's Turbo Pascal runtime executes `IN L,(C)`
+    during startup, so the first attempt hit ntvcm's
+    "not-implemented z80 instruction" hard exit. A ~15-line patch (`IN
+    r,(C)` returns a fixed `0xFF`, since ntvcm has no real I/O hardware
+    to query, and updates flags per the documented instruction
+    behavior; `OUT (C),r` is a no-op) fixed it. **A pull request with
+    this fix has been opened upstream:
+    [davidly/ntvcm#32](https://github.com/davidly/ntvcm/pull/32)**,
+    explaining the gap and linking back here for context.
+
+    With that fix, `TODAY.COM 0628` runs cleanly and produces exactly
+    the expected output — the short-form birthday joke ("send him a
+    card.") and the same June 28 entries already known from the DOS
+    v1.0/v2.1 releases, confirming Howland's port really did reuse
+    Kincaid's original databases unmodified. Transcript saved at
+    [`screenshots/today-cpm-ntvcm-1947-birthday.txt`](screenshots/today-cpm-ntvcm-1947-birthday.txt)
+    (plain text, since this is a console-only CP/M program with no
+    color or graphics to screenshot). This means **all eight** recovered
+    program releases — seven DOS versions plus this CP/M port — have
+    now actually been executed and visually/textually verified, not
+    just read as strings.
+
 18. **Contact the Golden Gate Computer Society directly — it's still an
     active organization.** Per item 12 (now resolved), GGCS is the
     renamed continuation of the Marin/Sonoma PC User Group BBS Kincaid

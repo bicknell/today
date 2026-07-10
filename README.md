@@ -428,6 +428,19 @@ listed as a "Silent Key" (deceased amateur radio operator) in the 2008
 entry of the Wireless Institute of Australia's Silent Key database — see
 [TODO.md](TODO.md) item 17.
 
+**Update (July 2026): his CP/M port has actually been run**, using
+[davidly/ntvcm](https://github.com/davidly/ntvcm), a cross-platform
+8080/Z80/CP/M emulator — after fixing a real gap it exposed in the
+emulator (an unimplemented Z80 `IN r,(C)` instruction Howland's Turbo
+Pascal runtime executes at startup; fix submitted upstream as
+[davidly/ntvcm#32](https://github.com/davidly/ntvcm/pull/32)).
+`TODAY.COM 0628` runs cleanly and reproduces exactly the same short-form
+birthday joke and June 28 entries already known from the DOS v1.0/v2.1
+releases, confirming this port reused Kincaid's original databases
+unmodified. See
+[`screenshots/today-cpm-ntvcm-1947-birthday.txt`](screenshots/today-cpm-ntvcm-1947-birthday.txt)
+and [TODO.md](TODO.md) item 17.
+
 A companion archive on pcorner.com, `TODAYQ1.ZIP`–`TODAYQ4.ZIP` ("Events
 for TODAY program," by quarter), shows the dataset was also distributed
 separately in a far more expanded form still — `TODAY.JAN` alone grows
@@ -871,5 +884,6 @@ while opening one new one:
 43. [Morgan Davis, "ProLine," morgandavis.net](https://www.morgandavis.net/post/proline), and its `proline-3.0-source.zip`, specifically `man/man/man.G/today.G` — names Jeff Jungblut as author of ProLine's `today` port and confirms Kincaid's program name "TODAY/PC" directly, resolving most of TODO.md item 4
 44. [`mywave82/unlzexe`](https://github.com/mywave82/unlzexe) — POSIX-ported build of the classic `UNLZEXE` decompressor, used to decode the LZEXE-compressed `TODAY.EXE` binaries in `TODAY34.ZIP`/`TODAY35.ZIP`/`TODAY36.ZIP`
 45. [`TODAYQ1.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/18105/Wildcat%20Gold%20-%20The%20Optical%20BBS%20%28The%20Golden%20ROM%20Series%29%28Volume%204%20Number%201%29%28The%20Digital%20Publishing%20Company%29%281992%29.ISO/misc/todayq1.zip) and [`TODAYWIT.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/16610/Shareware%20Explorer%20Series%20-%20MS-DOS%20Collection%20%28New%20Frontiers%29%20%28Volume%201%29.ISO/a050/todaywit.zip) — expanded, separately-distributed data/witticisms packs, downloaded and compared against this repo's own data; preserved at [`zips/`](zips/), see [`zips/README.md`](zips/README.md)
+46. [`davidly/ntvcm`](https://github.com/davidly/ntvcm) — a cross-platform 8080/Z80/CP/M 2.2 emulator, used to actually run Mick Howland's CP/M port (`TODAY.COM`); required a small upstream fix, submitted as [davidly/ntvcm#32](https://github.com/davidly/ntvcm/pull/32), for an unimplemented `IN r,(C)` instruction
 
 *Compiled July 2026. See [TODO.md](TODO.md) for open research threads.*
