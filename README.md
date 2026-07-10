@@ -140,15 +140,22 @@ its output:
   post (Gary Baumgartner, Jan 14–22, 2004) shows a further revision:
   `TODAY Version 3.6 11/14/93 Copyright 1986, 1993 By Patrick Kincaid`.
 
-Together these give a version timeline: 1986 (original, with lunar phase)
-→ 1988 → 1990 (v3.1, still circulating unchanged among SCA users as late
-as 1995) → 1993 (v3.3, lunar phase already gone by the time Ziem got a
-copy) → November 14, 1993 (v3.6, still circulating on Fidonet as late as
-2004). Notably, this repository's own [`today.c`](today/today.c) has no
-lunar-phase code, no version number, and prints no copyright banner at
-all — it doesn't obviously match any of these DOS releases, and where it
-falls in this lineage (a pre-versioned prototype? a stripped-down
-Unix-side rewrite?) is an open question. See [TODO.md](TODO.md).
+Together these give a version timeline: 1986 (v1.0, the original) → 1988
+(v2.0, then v2.1) → 1990 (v3.1, still circulating unchanged among SCA
+users as late as 1995) → 1993 (v3.3, lunar phase already gone by the time
+Ziem got a copy) → November 14, 1993 (v3.6, still circulating on Fidonet
+as late as 2004). Two of these releases — v1.0 and v2.1 — have since been
+directly recovered (below), and neither shows any trace of a lunar-phase
+feature in doc or executable, so "1986 (original, with lunar phase)" is
+likely a misremembering on Ziem's part rather than a real feature that
+was later removed. Notably, this repository's own
+[`today.c`](today/today.c) has no version number and prints no copyright
+banner at all, even though its accompanying data files — see below — turn
+out to be an exact copy of Kincaid's original 1986 v1.0 databases. Why a
+data snapshot from that specific moment would be paired with a reader
+that never had (or had already lost) the version-banner code seen in
+every surviving DOS release remains an open question. See
+[TODO.md](TODO.md).
 
 **Real, complete copies of v3.1, v3.3, v3.4, v3.5, and v3.6 have now all
 been recovered, downloaded, and read in full.** `TODAY31.ZIP` and
@@ -266,33 +273,109 @@ sources recovered in this research. Highlights:
   exact match, straight from the binary, for what the Usenet posts in
   this section quote — plus Kincaid's mailing address embedded directly
   in the executable.
-- **This repository's own data is a genuine, earlier ancestor of this
-  same dataset — and can now be placed more precisely in the lineage.**
-  Comparing this repo's [`today.1`–`today.12`](today/) line-by-line
-  (after normalizing line endings and trailing padding, and summing
-  across all twelve months — 2,284 lines total) against every recovered
-  version gives a clear trend:
+- **This repository's own data is not merely an early ancestor of this
+  dataset — it is a byte-for-byte, unmodified copy of the *original 1986*
+  release.** Two earlier, previously-undocumented releases have since
+  been recovered — `TODAY10.ARC` (v1.0, 1986/87) and `TODAY21.ZIP` (v2.1,
+  April 1988), both preserved in [`zips/`](zips/) — and comparing this
+  repo's [`today.1`–`today.12`](today/) against them (after normalizing
+  line endings and the trailing Ctrl-Z padding) resolves the question
+  completely:
 
   | Compared against | Total lines in that version | Lines shared with this repo | Share of this repo's lines found verbatim |
   |---|---|---|---|
-  | `TODAY31.ZIP` (1990) | 1,932 | 1,572 | 68.8% |
+  | `TODAY10.ARC` (1986/87, v1.0) | 2,284 | 2,284 | **100.0%** |
+  | `TODAY21.ZIP` (1988, v2.1) | 1,687 | 1,681 | 99.6% |
+  | `TODAY31.ZIP` (1990, v3.1) | 1,932 | 1,572 | 68.8% |
   | `TODAY33.ZIP`/`TODAY34.ZIP` (1991–92) | 4,508 | 1,243 | 54.4% |
   | `TODAY35.ZIP` (1992) | 4,525 | 1,212 | 53.1% |
 
-  This repo's own files are *larger* than v3.1's in every single month,
-  but *smaller* than v3.3/v3.4/v3.5's in every month (all three of which
-  roughly doubled in size from v3.1, matching the "tripled"
-  database-expansion claim in v3.3's own changelog) — and the overlap
-  percentage falls off steadily the further forward in time the
-  comparison version is, exactly as expected if this repo's copy is an
-  ancestor rather than a later or unrelated variant. Put together, this
-  repository's copy appears to sit **chronologically between v3.1
-  (September 1990) and v3.3 (May 1991)** — closer to v3.1 than to any
-  later release. This is the strongest evidence yet for where this
-  repository's own copy sits in the version lineage (see
-  [TODO.md](TODO.md) item 11), though it remains a placement by data
-  content only — the lack of any version banner or lunar-phase code in
-  this repo's `today.c` is still unexplained.
+  Every one of the twelve month files matches **exactly** — not just in
+  aggregate line count, but file for file (`today.1` = `TODAY.JAN`,
+  `today.6` = `TODAY.JUN`, and so on down to `today.12` = `TODAY.DEC`),
+  with identical byte counts and zero diff output once line endings and
+  the DOS end-of-file marker are stripped. This repository's own data
+  files are, in other words, a direct transcription of Kincaid's original
+  1986 databases — not a later snapshot, not a partial subset, and not
+  independently assembled. (The 6 lines/points of difference against
+  v2.1 are additions v2.1 made, like the two new `TODAY.OWN`-adjacent
+  self-referential entries documented in `zips/README.md`; this repo's
+  files don't include `TODAY.OWN` at all, only the 12 month files, so
+  those never entered the comparison to begin with.) The declining
+  overlap against every later version (v3.1 onward) simply reflects how
+  much the databases grew release over release, exactly as expected once
+  this repo's copy is understood to be the *starting point* of that
+  growth rather than a stop somewhere along the way. This resolves
+  [TODO.md](TODO.md) item 11's central question: this repo's `today.1`–
+  `today.12` are Patrick Kincaid's original 1986 `TODAY.JAN`–`TODAY.DEC`,
+  unmodified. The lack of any version banner or lunar-phase code in this
+  repo's own `today.c` remains unexplained — but see immediately below,
+  since even the actual v1.0 executable and doc show no trace of a lunar
+  feature either.
+
+**The earliest two releases, `TODAY10.ARC` (v1.0) and `TODAY21.ZIP`
+(v2.1), confirm several things at once.** Both found via
+[discmaster.textfiles.com](https://discmaster.textfiles.com/) and
+preserved in [`zips/`](zips/) (full details in
+[`zips/README.md`](zips/README.md)):
+
+- **Confirms the `.ARC`-before-`.ZIP` hypothesis directly** — and that
+  hypothesis, once pushed one step further back, ruled out an even older
+  distribution format too (see [TODO.md](TODO.md) item 3). PKZIP's format
+  wasn't introduced until 1989, so any Kincaid release from 1986 through
+  1988 could only have circulated as a `.ARC` file — and both v1.0's and
+  v2.1's own documentation say exactly that: "TODAY is distributed as an
+  archive file(TODAY.ARC) and you must have ARC V5.0 or later to extract
+  the required files." (The `TODAY21.ZIP` copy preserved here is a `.ZIP`
+  only because whoever curated the CD-ROM it was found on re-packaged the
+  original `TODAY21.ARC` at some point — the file timestamps inside are
+  unchanged from the original 1988 dates. That re-zipping used PKZIP's
+  old "Reducing" method for 4 of its 16 members, a scheme so obscure that
+  neither Info-ZIP, `p7zip`, `unar`, nor the current official 7-Zip 26.02
+  could decode it — only [Hans Wennborg's `hwzip`](https://www.hanshq.net/zip2.html),
+  a public-domain reference implementation, could. See
+  [`zips/README.md`](zips/README.md).)
+- **A version banner one full major version earlier than previously
+  known — and a second one right behind it.** `TODAY10.ARC`'s
+  uncompressed `TODAY.EXE` reads `TODAY/PC  V1.0 (c) 1986 by Patrick
+  Kincaid`; `TODAY21.ZIP`'s `TODAY21.EXE` (once decoded via `hwzip`, above)
+  reads `TODAY/PC V2.1 (c) 1986, 1988 by Patrick Kincaid` — compare the
+  `TODAY  Version 3.1 09/01/90` banner from v3.1 (above). Self-referential
+  entries in `TODAY.OWN` pin exact dates: the program itself was "born"
+  August 2, 1986, and "born again" (the v2.0 rewrite) March 18, 1988 —
+  both more precise than the "July 1986"/"March 1988" the documentation
+  gives in prose.
+- **The earliest known copy of Kincaid's own version history, predating
+  the "TODAY's History" section (found in v3.1/v3.3/v3.4, above) by two
+  years.** `TODAY21.DOC`: "TODAY/PC was originally written in Datalight C
+  for IBM PC compatible systems by Patrick Kincaid in July of 1986. It was
+  inspired by a program originally written by **Mike Butler** in PL/1 on
+  an IBM VM/CMS system." Word-for-word the same claim as the later
+  versions, three major releases earlier.
+- **Pins the origin of the `ALTFN`/`MUSIC`/`SPACE` special-database
+  feature (TODO.md item 13) to v2.0, March 1988** — two years earlier
+  than the v3.1/v3.4 documentation that was previously the earliest
+  source for it.
+- **No mention of the moon or lunar phase in either release** — the
+  earliest so far checked, both in documentation and, for both releases'
+  executables (v1.0's directly readable, v2.1's once decoded via `hwzip`),
+  in their own embedded strings. Whatever the 2001 Usenet poster's "lunar
+  phase" recollection referred to, it's not present in the earliest
+  recovered release either. See [TODO.md](TODO.md).
+
+**A fifth independent implementer, on a third platform.** Alongside
+Kincaid himself, Hugo Fiennes's ARCbbs module, and Michael Conley's
+`TODAYDOR`/`TODAYBBS` (below), a **CP/M port** written in Turbo Pascal by
+**Mick Howland** (amateur radio callsign VK6ZMH, based in Perth, Western
+Australia, "c/o Perth Omen" BBS) turned up via the same
+discmaster.textfiles.com search, preserved as
+[`zips/TODAY-CPM.ARC`](zips/TODAY-CPM.ARC). Its own doc: "This is the
+CP/M version of the TODAY program that is floating around on the I.B.M.
+PC's... As far as i can see, it emulates the I.B.M version correctly." A
+self-referential `TODAY.OWN` entry pins its release to May 22, 1989, and
+a source comment ("Enable external I/O port on my TRS-80 Model 4P") shows
+Howland ran CP/M on a Tandy TRS-80 Model 4P. Not yet contacted — see
+[TODO.md](TODO.md).
 
 A companion archive on pcorner.com, `TODAYQ1.ZIP`–`TODAYQ4.ZIP` ("Events
 for TODAY program," by quarter), shows the dataset was also distributed
@@ -455,12 +538,15 @@ there). Byte/line comparisons below were run against this directory's
 | [IanDarwin/OpenLookCDROM](https://github.com/IanDarwin/OpenLookCDROM) | `src/xview/xcalentool/dates/events1`, `dates/lives3` (the `xcalentool`/`calentool` X11 calendar tool) | Same CalenTool-format lineage as the `gcal` entries above; likely the direct ancestor those files were copied from. Not independently diffed against this copy beyond the format check. |
 | [Possibly93/possibly93.github.io](https://github.com/Possibly93/possibly93.github.io) | `c/files/images/ansi/unsorted/today.jan.ans`, `today.jun.ans` (filed under "ansi" in a BBS file dump, but not actually ANSI art) | Despite the `.ans` extension and folder, this is plain-text `TODAY.JAN` data, misfiled. Nearly identical to this copy, but with two edits indicating a later-generation snapshot: Mozart's birthday is corrected from this copy's `B01231756` (January 23 — an error; Mozart was born January 27) to the historically correct `B01271756`, and a new event line is present, `S01281986 Space Shuttle Challenger explodes, killing a brave crew and NASA...` — the Challenger disaster (January 28, 1986) postdates Kincaid's July 1986 `TODAY/PC` release, so this snapshot was updated at least once after the original release. |
 | [wyattshanahan/BIS](https://github.com/wyattshanahan/BIS) | `WebDev1/lab08/trivia.dat` (student web-dev coursework) | Not a copy of the `B`/`S`/`R` file format at all — reformatted into CSV (`month,day,year,description`, e.g. `1,1,1801,Giuseppe Piazzi discovered 1st asteroid...`). Confirmed to reuse this dataset's content directly (its January 1 entries match this copy's verbatim, just re-punctuated), pulled in for an unrelated class assignment. A downstream reformatted derivative, similar in kind to `cfug-today`. |
-| [`TODAY31.ZIP`, archive.org](https://archive.org/details/msdos_festival_TODAY31) — preserved at [`zips/TODAY31.ZIP`](zips/TODAY31.ZIP) | `TODAY.EXE` (uncompressed), all 12 month files, `TODAY.DOC`, `TODAY.OWN`, `TODAY.WIT`, `TODAYCFG.EXE` (real DOS shareware archive, downloaded and read in full) | The actual v3.1 (09/01/90) release, MD5-verified against archive.org's own metadata. Byte-exact match for the Usenet-quoted version banner. Line-level comparison against this repo's `today.1`–`.12` shows 65–85% of this repo's lines reappearing verbatim, with this repo's files larger than v3.1's in every month — see Section I. |
+| [`TODAY10.ARC`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/16616/Shareware%20Grab%20Bag.iso/011/today.arc) — preserved at [`zips/TODAY10.ARC`](zips/TODAY10.ARC) | `TODAY.EXE` (uncompressed), all 12 month files, `TODAY.DOC`, `TODAY.OWN` (real DOS shareware archive, downloaded and read in full) | The actual **v1.0 (1986/87)** release, the earliest recovered — distributed as `.ARC`, since PKZIP didn't exist yet. **This repo's own `today.1`–`.12` are byte-for-byte identical to this release's month files**, confirming this repo's copy is a direct transcription of Kincaid's original 1986 databases, not a later snapshot — see Section I. |
+| [`TODAY21.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/6948/TheCaliforniaCollection.cdr/his018/today21.zip) — preserved at [`zips/TODAY21.ZIP`](zips/TODAY21.ZIP) | `TODAY21.EXE`, all 12 month files, `TODAY21.DOC`, `TODAY.OWN`, `TODAYBUG.BAT` (real DOS shareware archive, downloaded and read in full — including the 4 of 16 members using PKZIP's old "Reducing" method, decoded via [Hans Wennborg's `hwzip`](https://www.hanshq.net/zip2.html), since no other tool tried could) | The actual **v2.1 (April 1988)** release — a re-zip of the original `TODAY21.ARC`. 99.6% line match against this repo's month files (2,274/2,284, full 12-month comparison). Its `TODAY21.EXE` reads `TODAY/PC V2.1 (c) 1986, 1988 by Patrick Kincaid`. Its doc contains the earliest known copy of Kincaid's "History" text and the `ALTFN`/`MUSIC`/`SPACE` feature's actual introduction (v2.0, March 1988) — see Section I. |
+| [`TODAY31.ZIP`, archive.org](https://archive.org/details/msdos_festival_TODAY31) — preserved at [`zips/TODAY31.ZIP`](zips/TODAY31.ZIP) | `TODAY.EXE` (uncompressed), all 12 month files, `TODAY.DOC`, `TODAY.OWN`, `TODAY.WIT`, `TODAYCFG.EXE` (real DOS shareware archive, downloaded and read in full) | The actual v3.1 (09/01/90) release, MD5-verified against archive.org's own metadata. Byte-exact match for the Usenet-quoted version banner. Line-level comparison against this repo's `today.1`–`.12` shows 68.8% of this repo's lines reappearing verbatim — see Section I for the fuller picture once v1.0/v2.1 are factored in. |
 | [`TODAY33.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/6948/TheCaliforniaCollection.cdr/his032/today33.zip) — preserved at [`zips/TODAY33.ZIP`](zips/TODAY33.ZIP) | `TODAY.EXE`, all 12 month files, `TODAY.DOC`, `TODAY.WIT`, `TODAYCFG.EXE`, `WHEN.EXE`/`.DOC` (no `TODAY.OWN` — see Section I) | The actual v3.3 (May 1991) release. Its `TODAY.DOC` is byte-for-byte identical to `TODAY34.ZIP`'s, confirming v3.4 was a pure bugfix release. |
 | [`TODAY34.ZIP`, bbs.retropc.se](https://bbs.retropc.se/smmwldct/TODAY34.ZIP) — preserved at [`zips/TODAY34.ZIP`](zips/TODAY34.ZIP) | `TODAY.EXE`, all 12 month files, `TODAY.DOC` (full manual), `TODAY.OWN`, `TODAY.WIT`, `TODAYCFG.EXE`, `WHEN.EXE`/`.DOC` (real DOS shareware archive, downloaded and read in full) | The actual v3.4 (1991–92) release; downloaded, extracted, and read directly — see Section I for what it revealed. |
 | [`TODAY35.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/6179/PSL%20Monthly%20Shareware%20CD-ROM%20(Public%20Software%20Library)%20(January%201994).iso/dos/business/today35.zip) — preserved at [`zips/TODAY35.ZIP`](zips/TODAY35.ZIP) | `TODAY.EXE`, all 12 month files, `TODAY35.DOC`, `WHATS.NEW`, `TODAY.OWN`, `TODAY.WIT`, `TODAYCFG.EXE`, `WHEN.EXE` (no separate `WHEN.DOC`) | A previously undocumented version (1992), not referenced by any prior source in this research. Its `WHATS.NEW` explains the shorter `TODAY36.DOC` style — see Section I. |
 | [`TODAY36.ZIP`, archive.org](https://archive.org/details/TODAY36_ZIP) — preserved at [`zips/TODAY36.ZIP`](zips/TODAY36.ZIP) | `TODAY.EXE` (LZEXE-compressed), `TODAY.JAN`–`.DEC`, `TODAY36.DOC`, `WHATS.NEW`, `README.1ST`, `TODAY.OWN`, `TODAYCFG.EXE`, `WHEN.EXE`, `TODAY.WIT` (real DOS shareware archive, downloaded and read in full; MD5-verified against archive.org's metadata; 9 further copies found via discmaster.textfiles.com but not individually downloaded) | The actual v3.6 (11/14/93) release, the last documented DOS version — see Section I for what `TODAY36.DOC` revealed (Corte Madera/PCBoard/"TODAY Conference" detail and Kincaid's "learn a new compiler" remark). |
 | [`TODAYDOR.ZIP`](https://bbs.retropc.se/smmwldct/TODAYDOR.ZIP) / [`TODAYBBS.ZIP`](https://bbs.retropc.se/smmwldct/TODAYBBS.ZIP), bbs.retropc.se — preserved at [`zips/`](zips/) | Wildcat! BBS "door" (`TODAYDOR` v3.24) and bulletin-generator (`TODAYBBS` v3.08) programs, both by **Michael Conley** (1993) | Independent third-party readers of the same `TODAY.xxx` data format — not copies of Kincaid's code, but further evidence (alongside Fiennes's ARCbbs module) that the data format was widely reimplemented rather than treated as tied to one program. See Section I and [`zips/README.md`](zips/README.md). |
+| [`TODAY-CPM.ARC`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/19793/2015.02.ftp.barnyard.co.uk.tar/ftp.barnyard.co.uk/cpm/walnut-creek-CDROM/BEEHIVE/UTILITYS/TODAY.ARC) — preserved at [`zips/TODAY-CPM.ARC`](zips/TODAY-CPM.ARC) | A CP/M port in Turbo Pascal (`TODAY.COM`, `TODAY.PAS` source, all 12 month files, `TODAY.OWN`, `README.DOC`), by **Mick Howland (VK6ZMH)**, Perth, Western Australia, 1989 | A fifth independent implementer, on a third platform (after DOS and Fiennes's Acorn/RISC OS). Reuses Kincaid's actual databases; self-references pin its release to May 22, 1989. See Section I. |
 
 **Excluded as false positives:** several other hits turned out to be
 unrelated programs that merely share a filename with this one.
@@ -480,6 +566,21 @@ bbs.retropc.se: `WCTODAY.ZIP` ("Who Called Today?" v3.5, by Boardwalk
 Software, 1989/91), an unrelated Wildcat! BBS caller-log/hello-screen
 generator. None of the five shares any code, data, or attribution with
 this program.
+
+**A further, deliberate search for `TODAY.ZIP`, `TODAY10.ZIP`,
+`TODAY11.ZIP`, `TODAY20.ZIP`, and `TODAY21.ZIP`, plus every `.ARC`/`.ARK`
+variant of the same names** (since PKZIP didn't exist before 1989, any
+release predating that could only have circulated as `.ARC` — see above)
+turned up two genuine finds (`TODAY10.ARC`, `TODAY21.ZIP`, both in the
+table above) and several more false positives, all documented in full in
+[`zips/README.md`](zips/README.md): `TODAY11.ZIP` (an unrelated BBS
+caller-log utility, "Today's Callers v1.1 for PC-Express," 1994); two
+more unrelated hits for `TODAY10.ZIP` (a Windows WinSock utility, and an
+entry in a "hackers toolkit" crack-file collection); no hits at all for
+`TODAY20.ZIP`, `TODAY20.ARC`, `TODAY2.ARC`, `TODAY21.ARC`, or
+`TODAY.ARK`; and, for the very common bare name `TODAY.ZIP` (40+
+discmaster.textfiles.com hits), a checked sample that turned out to be
+entirely unrelated programs coincidentally sharing the name.
 
 ---
 
@@ -683,5 +784,9 @@ while opening one new one:
 31. `TODAY34.ZIP`, `TODAYDOR.ZIP`, and `TODAYBBS.ZIP`, obtained independently by Leo Bicknell from `annex.retroarchive.org` (`cdrom/smsw-modmad-1/WILDCAT/`), July 2026 — byte-for-byte identical (SHA-256 confirmed) to the bbs.retropc.se copies above, corroborating their exact circulation on a second CD-ROM collection; see [`zips/README.md`](zips/README.md)
 32. [`TODAY33.ZIP`](https://discmaster.textfiles.com/view/6948/TheCaliforniaCollection.cdr/his032/today33.zip) and [`TODAY35.ZIP`](https://discmaster.textfiles.com/view/6179/PSL%20Monthly%20Shareware%20CD-ROM%20(Public%20Software%20Library)%20(January%201994).iso/dos/business/today35.zip), via [discmaster.textfiles.com](https://discmaster.textfiles.com/) — previously undocumented versions, downloaded and read in full; preserved at [`zips/`](zips/), see [`zips/README.md`](zips/README.md)
 33. Michael Conley, "TODAYBBS files," [`alt.bbs.wildcat`](https://groups.google.com/g/alt.bbs.wildcat/c/u0QVUS_Z7qg), June 8, 1996 — confirms Bruce Goldman's continued data maintenance (series "910") and Mustang Software's role in distribution
+34. [`TODAY10.ARC`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/16616/Shareware%20Grab%20Bag.iso/011/today.arc) — the actual v1.0 (1986/87) release, the earliest recovered; downloaded and read in full; preserved at [`zips/TODAY10.ARC`](zips/TODAY10.ARC), see [`zips/README.md`](zips/README.md). This repo's own `today.1`–`.12` are byte-for-byte identical to this release's month files.
+35. [`TODAY21.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/6948/TheCaliforniaCollection.cdr/his018/today21.zip) — the actual v2.1 (April 1988) release; downloaded and read in full; preserved at [`zips/TODAY21.ZIP`](zips/TODAY21.ZIP), see [`zips/README.md`](zips/README.md)
+36. [`TODAY-CPM.ARC`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/19793/2015.02.ftp.barnyard.co.uk.tar/ftp.barnyard.co.uk/cpm/walnut-creek-CDROM/BEEHIVE/UTILITYS/TODAY.ARC) — Mick Howland's independent CP/M port (Turbo Pascal, 1989); preserved at [`zips/TODAY-CPM.ARC`](zips/TODAY-CPM.ARC), see [`zips/README.md`](zips/README.md)
+37. [`TODAY11.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/29642/ibm0240-0249/ibm0243.tar/ibm0243/TODAY11.ZIP) — false positive, "Today's Callers v1.1 for PC-Express," an unrelated BBS caller-log utility
 
 *Compiled July 2026. See [TODO.md](TODO.md) for open research threads.*

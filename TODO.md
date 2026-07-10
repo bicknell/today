@@ -126,6 +126,39 @@ value. None of these were run down during the initial research pass.
    C," "Mill Valley," and "Marin-Sonoma PC User Group" as more distinctive
    search anchors than a generic "Patrick Kincaid" + "today" query.
 
+   **Update (July 2026) — tried, came up empty; the case for "moot" is
+   now stronger.** Prompted by the discovery that PKZIP didn't exist
+   until 1989 (which led directly to `TODAY10.ARC`/`TODAY21.ZIP`, item 11
+   above), the same logic was applied one step further back: `.arc` only
+   dates to 1985 itself, so an original *Unix-side* posting from the
+   plausible 1986–1987 window would more likely have used a Unix-native
+   format — `.shar` (shell archive, the standard comp.sources.misc/
+   alt.sources posting format), `.tar`/`.tar.Z`, or the old `ar` archiver.
+   A search of discmaster.textfiles.com for `TODAY.SHAR`, `TODAY10.SHAR`,
+   `TODAY11.SHAR`, `TODAY20.SHAR`, `TODAY21.SHAR`, `TODAY.AR`,
+   `TODAY10.AR`, `TODAY11.AR`, `TODAY.TAR`, `TODAY10.TAR`, `TODAY11.TAR`,
+   and `TODAY.TAR.Z` returned **zero hits for every single one** — a sharp
+   contrast with the immediate, multiple hits `TODAY10.ARC`/`TODAY21.ZIP`
+   produced. An archive.org advanced-search API query for `today.shar`
+   likewise returned zero results, and `"patrick kincaid"` returned only
+   the two DOS releases already in hand plus unrelated court records. The
+   Google Groups searches suggested above (using "Datalight C," "Mill
+   Valley," "Marin-Sonoma PC User Group," `TODAY.DOC`/`TODAY.JAN` as
+   anchors, alone and combined with `shar`/`tar`) were also run and
+   returned nothing relevant. Finally, the tuhs.org comp.sources.misc
+   full index for Volumes 1 through 8 (covering 1987–1989, the earliest
+   part of that archive's coverage and the most plausible window for an
+   original posting) was checked directly for any entry containing the
+   word "today" anywhere in its archive-name or subject fields — no
+   match. None of this proves a Usenet source posting never existed
+   (Deja News/Google Groups' indexing of this era is known to be
+   incomplete, and a `.shar` predating 1987 wouldn't be in
+   comp.sources.misc at all, since that group didn't exist yet), but
+   between this and Hugo Fiennes's account (item 9), pure BBS-to-BBS
+   propagation is now the much better-supported story — this thread is
+   likely not worth further search time barring a new, more specific
+   lead.
+
 4. **Investigate "ProLine."** The GNU `gcal` data files state their
    trivia was "extracted from ProLine's today file." This likely refers
    to Morgan Davis's ProLine BBS software (an Apple II Unix-like system
@@ -228,10 +261,10 @@ value. None of these were run down during the initial research pass.
     her estate or the `Olde-Skuul` org — it may be worth a heads-up,
     independent of the Kincaid research.
 
-11. **Track down the actual v3.1/v3.3/v3.6 DOS releases, and place this
-    repo's copy in the resulting timeline.** Resolved, more thoroughly
-    than originally scoped: real, verified copies of **v3.1**
-    (`TODAY31.ZIP`, from
+11. **Track down the actual DOS releases, and place this repo's copy in
+    the resulting timeline.** Resolved, far more completely than
+    originally scoped, in two waves. First wave: real, verified copies of
+    **v3.1** (`TODAY31.ZIP`, from
     [archive.org](https://archive.org/details/msdos_festival_TODAY31)),
     **v3.3** and **v3.5** (`TODAY33.ZIP`/`TODAY35.ZIP` — both previously
     undocumented versions, found via
@@ -240,36 +273,74 @@ value. None of these were run down during the initial research pass.
     FTP archives), **v3.4** (`TODAY34.ZIP`, from
     [bbs.retropc.se](https://bbs.retropc.se/smmwldct/TODAY34.ZIP)), and
     **v3.6** (`TODAY36.ZIP`, from
-    [archive.org](https://archive.org/details/TODAY36_ZIP)) have all been
-    downloaded and are preserved in [`zips/`](zips/) — see README Section
-    I for everything they revealed (the full "TODAY's History" section
-    and Michael Butler's full name direct from Kincaid in v3.1/v3.3/v3.4;
-    its removal turns out to date to a general documentation rewrite in
-    v3.5, not specifically v3.6; registration terms; the Golden Gate
-    Computer Society/Corte Madera/PCBoard details; the full data-format
-    spec; `TODAY.OWN`'s actual contents; byte-exact confirmation of the
-    Usenet version banner; and confirmation the lunar-phase feature is
-    absent from all five releases' code and docs alike). Line-level
-    comparison against this repo's own month files, across all five
-    versions, now places this repo's copy **chronologically between v3.1
-    (Sept. 1990) and v3.3 (May 1991), closer to v3.1** — see README
-    Section I for the full comparison table.
+    [archive.org](https://archive.org/details/TODAY36_ZIP)).
 
-    A search of the same discmaster.textfiles.com index also confirmed
-    `TODAY32.ZIP` is a false positive (an unrelated HP48 calculator app)
-    — no genuine v3.2 has surfaced anywhere, unlike every other version
-    from 3.1 through 3.6 — and turned up 9 further copies of
-    `TODAY36.ZIP`, 1 more of `TODAY31.ZIP`, and 29/26 copies respectively
-    of Michael Conley's `TODAYDOR.ZIP`/`TODAYBBS.ZIP` (see README Section
-    I), none individually downloaded.
+    **Second wave (July 2026): the two earliest releases, `TODAY10.ARC`
+    (v1.0) and `TODAY21.ZIP` (v2.1), have now also been recovered**, via
+    a deliberate search of discmaster.textfiles.com for `TODAY.ZIP`,
+    `TODAY10.ZIP`, `TODAY11.ZIP`, `TODAY20.ZIP`, `TODAY21.ZIP`, and their
+    `.ARC`/`.ARK` equivalents (PKZIP didn't exist before 1989, so any
+    release predating that had to circulate as `.ARC` — this is exactly
+    what turned up). All seven releases are preserved in [`zips/`](zips/)
+    — see README Section I and [`zips/README.md`](zips/README.md) for
+    everything they revealed collectively: the full "TODAY's History"
+    section and Michael Butler's full name direct from Kincaid, present
+    as early as v2.1 (1988) and continuing through v3.4; documentation
+    consistently lagging the version number by one release; registration
+    terms; the Golden Gate Computer Society/Corte Madera/PCBoard details;
+    the full data-format spec; `TODAY.OWN`'s actual contents; byte-exact
+    confirmation of the Usenet version banner (and an even earlier one,
+    `TODAY/PC V1.0 (c) 1986`, from the v1.0 executable itself); the
+    `ALTFN`/`MUSIC`/`SPACE` special-database feature's actual introduction
+    in v2.0 (March 1988); and confirmation the lunar-phase feature is
+    absent from every recovered release's code and docs alike, including
+    the earliest one.
+
+    **This resolves the central open question: line-level comparison
+    against this repo's own month files, across all seven versions, shows
+    this repo's `today.1`–`.12` are byte-for-byte identical, file for
+    file, to `TODAY10.ARC`'s (v1.0, 1986/87) month files** — not merely
+    the closest match, as the earlier v3.1-vs-v3.3 comparison had
+    suggested, but an exact, unmodified copy of Kincaid's original 1986
+    databases. See README Section I for the full comparison table and
+    per-file verification.
+
+    The same discmaster.textfiles.com searches also confirmed `TODAY32.ZIP`
+    (an unrelated HP48 calculator app) and `TODAY11.ZIP` ("Today's Callers
+    v1.1 for PC-Express," an unrelated BBS caller-log utility) are false
+    positives, found no evidence at all of a standalone `TODAY20.ZIP`/
+    `TODAY20.ARC`/`TODAY2.ARC`/`TODAY21.ARC`/`TODAY.ARK`, turned up 9
+    further copies of `TODAY36.ZIP`, 1 more of `TODAY31.ZIP`, and 29/26
+    copies respectively of Michael Conley's `TODAYDOR.ZIP`/`TODAYBBS.ZIP`
+    (see README Section I), none individually downloaded — and turned up
+    a **fifth independent implementer**, Mick Howland's CP/M port
+    (`TODAY-CPM.ARC`, 1989, see item 17 below).
+
+    **Update (July 2026): the v2.1 "Reducing"-compression blocker is
+    resolved.** Neither Info-ZIP `unzip`, `p7zip`, nor the current
+    official 7-Zip 26.02 (`7zz`) can decode PKZIP's old "Reducing" method
+    (methods 1–4) — confirmed by testing all three directly. **[Hans
+    Wennborg's `hwzip`](https://www.hanshq.net/zip2.html)**, a
+    public-domain reference implementation written specifically to
+    document the Shrink/Reduce/Implode legacy methods (source at
+    `hanshq.net/files/hwzip/hwzip-2.4.zip`, builds clean with a plain
+    `clang` invocation per its own README), extracts all 16 members of
+    `TODAY21.ZIP` cleanly, including the 4 that had been stuck
+    (`TODAY.APR`, `TODAY.MAR`, `TODAY.OCT`, `TODAY21.EXE`). This gave a
+    second executable's version banner directly from the binary
+    (`TODAY/PC V2.1 (c) 1986, 1988 by Patrick Kincaid`) and let the
+    month-file comparison in README Section I be run against the
+    complete v2.1 dataset rather than 9 of 12 months (result: unchanged,
+    99.6%).
 
     Still open:
-    - None of the five recovered `TODAY.EXE` files has actually been
-      *run* (in DOSBox or similar) — only their embedded strings have
-      been read (directly, for the uncompressed v3.1 binary; not at all
-      yet for the LZEXE-compressed v3.4/v3.5/v3.6 binaries, which would
-      need decompressing first to read their internal strings the same
-      way).
+    - None of the seven recovered `TODAY.EXE`/`.COM` files has actually
+      been *run* (in DOSBox, a CP/M emulator, or similar) — only their
+      embedded strings have been read (directly, for the uncompressed
+      v1.0/v3.1 binaries, and now, via `hwzip`, decoded for v2.1's too;
+      not at all yet for the LZEXE-compressed v3.4/v3.5/v3.6 binaries,
+      which is a separate compression scheme from Reducing and hasn't
+      been tried against any of the tools above).
     - `TODAYQ1.ZIP`–`Q4.ZIP` and `TODAYWIT.ZIP` (on pcorner.com) are
       separately-distributed, more expanded versions of the data/
       witticisms files, known only from their pcorner.com listings so
@@ -278,14 +349,18 @@ value. None of these were run down during the initial research pass.
       month files too, alongside the comparisons already done.
     - This repository's own [`today.c`](today/today.c) still has no
       version banner, no copyright string, and no lunar-phase code at
-      all — unlike every DOS release documented so far. Why a data
-      snapshot from this specific window would be paired with a reader
-      that never had (or had already lost) the version-banner code seen
-      in every surviving DOS release is still unexplained.
+      all — unlike every DOS release documented so far, including the
+      v1.0 release its own data files are an exact copy of. Why a 1986
+      data snapshot would be paired with a reader that never had (or had
+      already lost) the version-banner code seen in every surviving DOS
+      release is still unexplained.
     - Both recovered v3.3 copies are missing `TODAY.OWN` (present in
       every other version) — likely a repackaging omission rather than
       something genuinely dropped by Kincaid for that one release, but
       not confirmed either way.
+    - A real, independently-archived v2.0 or v3.2 release, if either ever
+      existed on its own (as opposed to v2.0 only being known from v2.1's
+      changelog), has not surfaced.
 
 12. **Golden Gate Computer Society vs. Marin-Sonoma PC User Group — same
     BBS, two names?** The `TODAY34.ZIP` manual (README Section I) gives
@@ -301,9 +376,13 @@ value. None of these were run down during the initial research pass.
     file format, "found on the GGCS BBS" and readable via `TODAY`'s new
     `ADD` option. `TODAY31.ZIP`'s doc reveals this was one instance of a
     broader, Kincaid-encouraged pattern: "create specialized databases,
-    (SPACE.mon, SCIENCE.mon etc) to share with the rest of us." None of
-    these — `MUSIC`, `SPACE`, `SCIENCE`, or others that may exist — have
-    been located yet.
+    (SPACE.mon, SCIENCE.mon etc) to share with the rest of us." **Update
+    (July 2026):** `TODAY21.ZIP`'s doc (README Section I) shows this
+    feature — the `ALTFN` option — actually dates to **v2.0, March 1988**,
+    two years earlier than previously documented, and was already
+    described the same way ("special interests such as MUSIC and SPACE").
+    None of these — `MUSIC`, `SPACE`, `SCIENCE`, or others that may
+    exist — have been located yet.
 
 14. **Contact Bruce Goldman, and chase his `DAY9nn-*.ZIP` series and
     `NEWDAY/PC`.** Per `TODAYBBS.DOC` (see
@@ -356,3 +435,15 @@ value. None of these were run down during the initial research pass.
     suggestion (item 9) — he may know more about this program's general
     place in BBS history, or have leads on the sysop(s) between Kincaid
     and Fiennes.
+
+17. **Contact Mick Howland, author of the CP/M port.** A fifth
+    independent implementer of Kincaid's data format (see README Section
+    I and III, and [`zips/README.md`](zips/README.md)), alongside
+    Kincaid, Hugo Fiennes, and Michael Conley — this one on a third
+    platform (CP/M, via Turbo Pascal), released May 1989. Known contact
+    details are thin and decades-old: amateur radio callsign **VK6ZMH**
+    (Western Australia) and "c/o Perth Omen," presumably a BBS name, from
+    his own doc file. Worth trying an Australian amateur radio callsign
+    lookup (VK6ZMH) to see if it resolves to a real name and current
+    contact info, and/or searching for any surviving record of a Perth,
+    WA BBS called "Omen" from the late 1980s. Not yet attempted.
