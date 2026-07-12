@@ -616,7 +616,12 @@ value. None of these were run down during the initial research pass.
     Michael Conley on LinkedIn**, all in the greater LA area and old
     enough to fit the BBS-scene timeline — but none of their profiles
     mention BBSs, `TODAY`, or anything else that clearly identifies the
-    right one.
+    right one:
+    - [linkedin.com/in/michael-conley-5593147](https://www.linkedin.com/in/michael-conley-5593147/)
+    - [linkedin.com/in/michael-conley-4689ab3](https://www.linkedin.com/in/michael-conley-4689ab3/)
+    - [linkedin.com/in/mike-conley-5529b3](https://www.linkedin.com/in/mike-conley-5529b3/)
+    - [linkedin.com/in/michael-conley-8212292b](https://www.linkedin.com/in/michael-conley-8212292b/)
+    - [linkedin.com/in/michael-conley-8a38594b](https://www.linkedin.com/in/michael-conley-8a38594b/)
 
     Tried to narrow it down via an email address and came up empty:
     - His June 8, 1996 Usenet post to
