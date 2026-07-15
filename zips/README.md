@@ -125,6 +125,77 @@ travels with the file.
   Model 4P, a real CP/M-capable machine. Not yet contacted — see
   [`../TODO.md`](../TODO.md).
 
+## `JUNGBLUT-TODAY.ZIP` / `JUNGBLUT-TODAY.BAS`
+
+- **What it is:** Jeff Jungblut's independent **ProLine BBS port** of
+  `today`, written in Applesoft BASIC (using ProLine's own `&`-prefixed
+  system-call extensions) for Morgan Davis's ProLine BBS software (an
+  Apple II-based Unix-like system). `JUNGBLUT-TODAY.BAS` is the source
+  (header comment: `today 1.2  5/20/92`); `JUNGBLUT-TODAY.ZIP` contains
+  his `today/` directory of 12 month data files (`JAN`–`DEC`, no
+  extension, Apple-style CR line endings), which he says are dated
+  7-Feb-1989 in his own surviving ProLine 2.0 installation. A sixth
+  independent implementer of Kincaid's data format, alongside Kincaid,
+  Hugo Fiennes, Michael Conley, and Mick Howland — previously known only
+  by name from ProLine's own man page (see the "ProLine 3.0 source" row
+  in `../README.md` Section III and [`../TODO.md`](../TODO.md) item 4).
+- **Source:** obtained directly from Jeff Jungblut via email, in reply to
+  outreach forwarded by Morgan Davis, July 2026. Provided with his express
+  permission to add to this repository.
+- **Received:** July 2026.
+- **SHA-256:** `d389767a1ad691bc37dfb2794e0c3455b30f13c96a1bc18e97b6cd633cb2d8af`
+  (`JUNGBLUT-TODAY.BAS`), `8a40557def757d611c6d8d750c45d0f9acb5e6311cb3405125abfa491854ccd0`
+  (`JUNGBLUT-TODAY.ZIP`)
+- **Significance:** Jungblut wrote that he "wrote the ProLine port of
+  Today/PC in 1988 or early 1989," but the source's own header comment
+  reads version **1.2, dated 5/20/92** — three years later. Asked about
+  the discrepancy, he confirmed no earlier source survives: "I don't have
+  anything earlier than what was included in the ProLine 2.0 and later
+  releases. I believe the only changes are likely somewhere in the
+  proline-specific code in the first 20 lines that would have differed
+  between the ProLine 1.x and 2.0 releases" — meaning the display logic
+  itself is unchanged from his original 1988/89 version; only ProLine's
+  own system-call interface evolved underneath it.
+
+  **The data is the real find.** Line-by-line comparison against this
+  repo's own `../today/today.1`–`.12` (already established as
+  byte-for-byte identical to Kincaid's actual 1986 v1.0 release — see
+  `TODAY10.ARC` above) shows a **99.1% verbatim match (2,192 of 2,212
+  records)** — and June, the month containing Kincaid's own
+  self-referential birthday entry, matches **100%**, differing from this
+  repo's `today.6` only by four header/separator comment lines the data
+  file itself doesn't carry. So Jungblut's Feb-1989 ProLine snapshot is,
+  in substance, **Kincaid's original 1986 database** — not a later,
+  expanded edition like the DOS v3.6 release (whose June file has grown to
+  510 records, nearly triple Jungblut's 178, and rephrases the same
+  birthday joke as "send him a card, he'll love it." instead of
+  Jungblut's shorter "send him a card."). This is a third independent
+  lineage confirming the same original dataset, entirely apart from the
+  `TODAY10.ARC`/v1.0 shareware archive itself.
+
+  Jungblut's June file also still carries a self-referential entry that
+  Kincaid's own later DOS releases dropped: `S06051981 TODAY ran for 1st
+  time` — the same entry already found in this repo's own `today.6` (see
+  `../README.md` Section I), pinning the original program's first run to
+  June 5, 1981, and confirming Jungblut's copy predates whatever edit
+  removed it from the DOS line by 1993.
+
+  Jungblut also confirmed, by email, that he is the same **Jeff
+  Jungblut** found on LinkedIn
+  ([linkedin.com/in/jeff-jungblut-7170572a1](https://www.linkedin.com/in/jeff-jungblut-7170572a1/))
+  — explaining why that contact attempt went unanswered: he no longer
+  uses LinkedIn. He did not recognize any of the other names in this
+  research (Butler, Conley, Goldman, Heckendorn, Randle) and doesn't
+  recall where he originally obtained Kincaid's data. See
+  [`../TODO.md`](../TODO.md) item 4 and `../README.md` Section VI.
+- **Also received:** a screenshot of a live ProLine session (his own
+  emulated ProLine 2.0 install), preserved at
+  [`../screenshots/proline-jungblut-y2k-bug.png`](../screenshots/proline-jungblut-y2k-bug.png)
+  — shows the port's actual output and, as Jungblut flagged himself ("the
+  y2k bug I never fixed"), the date printed as "Wednesday, July 15th,
+  **1926**" instead of 2026 — visible directly in the BASIC source at the
+  hardcoded `"19" + MID$(T$,13,2)` year concatenation (line 64).
+
 ## `TODAY34.ZIP`
 
 - **What it is:** Patrick Kincaid's own `TODAY` v3.4 (a "maintenance

@@ -222,6 +222,32 @@ value. None of these were run down during the initial research pass.
    points entirely back to confirming the Jeff Jungblut LinkedIn lead,
    above (sent, no reply yet).
 
+   **Resolved (July 2026): Jungblut replied, largely closing this item.**
+   Davis forwarded Bicknell's question directly to Jungblut, who replied
+   to both of them, confirmed he is the same Jeff Jungblut found on
+   LinkedIn (explaining the earlier silence there: he no longer uses the
+   site), and gave permission to add his source code, data files, and
+   message excerpts to this repository. Full account, correspondence, and
+   findings now in README.md Section VI and [`zips/README.md`](zips/README.md)
+   (`JUNGBLUT-TODAY.ZIP`/`JUNGBLUT-TODAY.BAS`). Highlights:
+   - His code is an independent implementation (Applesoft BASIC, ProLine's
+     own system-call extensions), not a port of Kincaid's C — the same
+     "wrote my own reader" pattern as Fiennes (item 9) and Howland (item
+     17).
+   - His own Feb-1989 data files are a **99.1% verbatim match** against
+     this repo's own `today.1`–`.12` (already known to be byte-identical
+     to Kincaid's 1986 v1.0 release), with June matching 100% — a third
+     independent lineage confirming the same *original* 1986 database,
+     including the self-referential `S06051981 TODAY ran for 1st time`
+     entry later dropped from the DOS v3.6 release.
+   - He does not know, and cannot shed any light on, Michael Butler,
+     Michael Conley, Bruce Goldman, Robert Heckendorn, or Bill Randle —
+     those threads (items 1, 5, 14, 15) remain exactly as open as before.
+   - He does not recall where he originally obtained Kincaid's data, and
+     no source earlier than his surviving v1.2 (5/20/92) copy exists — so
+     the specific BBS-to-BBS link between Kincaid and Jungblut, circa
+     1988/89, is still unknown.
+
 5. **Contact the `gcal` data's editors.** The `events1`/`lives3` headers
    name Robert Heckendorn (`robert@fc.hp.com`, contributed "Today in
    History" dates) and Larry Virden / Bill Randle

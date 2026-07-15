@@ -630,6 +630,7 @@ there). Byte/line comparisons below were run against this directory's
 | [`TODAYDOR.ZIP`](https://bbs.retropc.se/smmwldct/TODAYDOR.ZIP) / [`TODAYBBS.ZIP`](https://bbs.retropc.se/smmwldct/TODAYBBS.ZIP), bbs.retropc.se — preserved at [`zips/`](zips/) | Wildcat! BBS "door" (`TODAYDOR` v3.24) and bulletin-generator (`TODAYBBS` v3.08) programs, both by **Michael Conley** (1993) | Independent third-party readers of the same `TODAY.xxx` data format — not copies of Kincaid's code, but further evidence (alongside Fiennes's ARCbbs module) that the data format was widely reimplemented rather than treated as tied to one program. See Section I and [`zips/README.md`](zips/README.md). |
 | [`TODAY-CPM.ARC`, discmaster.textfiles.com](https://discmaster.textfiles.com/view/19793/2015.02.ftp.barnyard.co.uk.tar/ftp.barnyard.co.uk/cpm/walnut-creek-CDROM/BEEHIVE/UTILITYS/TODAY.ARC) — preserved at [`zips/TODAY-CPM.ARC`](zips/TODAY-CPM.ARC) | A CP/M port in Turbo Pascal (`TODAY.COM`, `TODAY.PAS` source, all 12 month files, `TODAY.OWN`, `README.DOC`), by **Mick Howland (VK6ZMH)**, Perth, Western Australia, 1989 | A fifth independent implementer, on a third platform (after DOS and Fiennes's Acorn/RISC OS). Reuses Kincaid's actual databases; self-references pin its release to May 22, 1989. See Section I. |
 | [ProLine 3.0 source, morgandavis.net](https://www.morgandavis.net/post/proline) | `man/man/man.G/today.G`, a man page for ProLine's built-in `today` command (no source/data bundled — see below) | Not a code or data copy — a **documentation trail**. The man page directly names **Jeff Jungblut** (`jeff@pro-avalon.cts.com`) as author of the ProLine port, and states outright that its database "is from a similar public domain program for the IBM PC called TODAY/PC" — independently confirming Kincaid's exact program name and identifying a sixth independent implementer. This is also the direct source of the "ProLine's today file" attribution in the GNU `gcal` row above. See [TODO.md](TODO.md) item 4. |
+| [`JUNGBLUT-TODAY.ZIP`/`JUNGBLUT-TODAY.BAS`](zips/) — obtained directly from Jeff Jungblut, July 2026 | His actual ProLine port (Applesoft BASIC, ProLine 2.0-era) and his own Feb-1989 `today/` data files (`JAN`–`DEC`) | **99.1% verbatim match (2,192/2,212 records)** against this repo's own `today.1`–`.12` — already established as byte-identical to Kincaid's 1986 v1.0 release (see `TODAY10.ARC` above) — making this a third independent confirmation of the same original dataset. June matches 100% (aside from this copy's own header comments), including Kincaid's June 28 birthday entry in an earlier, shorter form ("send him a card." vs. v3.6's "send him a card, he'll love it.") and a self-referential entry since dropped from the DOS line, `S06051981 TODAY ran for 1st time`. See Section VI and [TODO.md](TODO.md) item 4. |
 | [`TODAYQ1.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/18105/Wildcat%20Gold%20-%20The%20Optical%20BBS%20%28The%20Golden%20ROM%20Series%29%28Volume%204%20Number%201%29%28The%20Digital%20Publishing%20Company%29%281992%29.ISO/misc/todayq1.zip) — preserved at [`zips/TODAYQ1.ZIP`](zips/TODAYQ1.ZIP) | Expanded `TODAY.JAN`/`.FEB`/`.MAR` (5–7x this repo's own month files), plus an unrelated bundled `GOOD.COM` BBS splash screen | A separately-distributed, far more expanded edition of the data, previously known only from a pcorner.com listing. Real but small verbatim overlap confirms shared lineage with this repo's data, though neither Kincaid's nor Fiennes's self-referential entries appear in it. See Section I and [`zips/README.md`](zips/README.md). |
 | [`TODAYWIT.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/16610/Shareware%20Explorer%20Series%20-%20MS-DOS%20Collection%20%28New%20Frontiers%29%20%28Volume%201%29.ISO/a050/todaywit.zip) — preserved at [`zips/TODAYWIT.ZIP`](zips/TODAYWIT.ZIP) | An expanded standalone `TODAY.WIT` witticisms file, plus `XTRAQUOT.TXT` | Same expanded/separately-maintained pattern as `TODAYQ1.ZIP`. See Section I and [`zips/README.md`](zips/README.md). |
 | [bicknell/today-web](https://github.com/bicknell/today-web), live at [bicknell.github.io/today-web](https://bicknell.github.io/today-web/) | A from-scratch C reimplementation (2026, by this repo's own author, Leo Bicknell), reading `TODAY36.ZIP`'s actual `TODAY.JAN`–`.DEC`, `TODAY.WIT`, and `TODAY.OWN`, built to a static GitHub Pages site | Not a copy of Kincaid's code, and not a historical find like the rows above — a new, modern-day entry in the same "reads the data format, writes new code" lineage as Fiennes/Conley/Howland/Jungblut/Heineman, done deliberately as a tribute after this research. Reproduces the `TODAY36` DOS screen exactly: a real CP437 box-drawing border (not CSS-drawn), the VGA color palette sampled directly from `screenshots/today36-dosbox-1947-birthday-1.png`, a DOS boot/prompt animation, and page-for-page pagination (18 content lines/page, reverse-engineered from the same reference screenshots), verified against all 366 calendar dates. Along the way it also had to newly implement two things the recovered Unix `today.c` in this repo never handled: `TODAY.WIT`'s "Thought for the day" section, and `TODAY.OWN`'s date-range/month-wraparound reminder format and day-of-week gating (used by the DST and Labor Day reminders). |
@@ -843,7 +844,83 @@ while opening one new one:
 
 ---
 
-## VI. Full Source List
+## VI. Jeff Jungblut and the ProLine Port
+
+ProLine's own man page (Section III) named Jeff Jungblut as the author of
+its `today` port back in 1988/89, but with no way to reach him beyond a
+defunct `@cts.com` address. A LinkedIn profile matching the name and
+location went unanswered for weeks. The actual break came sideways: Morgan
+Davis, replying to a blog comment about his own ProLine software (Section
+III, [TODO.md](TODO.md) item 4), forwarded the question directly to
+Jungblut — who replied to both Davis and Bicknell at once.
+
+**Direct correspondence, July 2026.** Jungblut wrote:
+
+> Hi Morgan, good to hear from you!
+>
+> Leo, I wrote the ProLine port of Today/PC in 1988 or early 1989. I
+> checked my installation of ProLine 2.0 in an old emulator disk image
+> I've been carrying from Mac to Mac for 30 years and found the data files
+> it uses (jan…dec) are all dated 7-Feb-89. The June file includes
+> "B06281947 Patrick Kincaid, send him a card." I don't remember where I
+> got Kincaid's data or what version of Today/PC it came from, but the
+> code for ProLine's version was written in Applesoft BASIC. I've attached
+> the output and source, including the y2k bug I never fixed.
+
+Follow-up questions confirmed a few more things. Asked about the surviving
+source's own header — `today 1.2  5/20/92`, three years later than his
+stated 1988/89 authorship — he explained no earlier copy survives:
+
+> No I don't have anything earlier than what was included in the ProLine
+> 2.0 and later releases. I believe the only changes are likely somewhere
+> in the proline-specific code in the first 20 lines that would have
+> differed between the ProLine 1.x and 2.0 releases.
+
+He confirmed he is the same Jeff Jungblut found on LinkedIn
+([linkedin.com/in/jeff-jungblut-7170572a1](https://www.linkedin.com/in/jeff-jungblut-7170572a1/))
+— explaining the earlier silence there: he no longer uses LinkedIn. He did
+not recognize any of the other names in this research (Michael Butler,
+Michael Conley, Bruce Goldman, Robert Heckendorn, Bill Randle), and gave
+express permission to add his source code, data files, and message
+excerpts to this repository.
+
+**This resolves most of [TODO.md](TODO.md) item 4**, while confirming a
+sixth independent implementer of Kincaid's data format (alongside Kincaid
+himself, Hugo Fiennes, Michael Conley, and Mick Howland):
+
+- **His code is an independent implementation, like Fiennes's**, not a
+  port of Kincaid's own C — Applesoft BASIC using ProLine's own
+  `&`-prefixed system-call extensions, reading a `today/` directory of
+  12 month files in the same `B`/`S`-record format documented elsewhere in
+  this repo. See [`zips/JUNGBLUT-TODAY.BAS`](zips/JUNGBLUT-TODAY.BAS) and
+  [`zips/README.md`](zips/README.md).
+- **His data turned out to be the more significant find.** His Feb-1989
+  `today/` files are a **99.1% verbatim match (2,192 of 2,212 records)**
+  against this repo's own `today.1`–`.12` — already known to be
+  byte-for-byte identical to Kincaid's actual 1986 v1.0 release (Section
+  III, `TODAY10.ARC`). June matches 100%, including the same self-
+  referential `S06051981 TODAY ran for 1st time` entry already known from
+  this repo's own data (Section I) — an entry later dropped from the DOS
+  v3.6 release. In other words: an Apple II BBS door program, copied
+  independently of the DOS shareware chain, preserves the same *original*
+  1986 database as this repo's own recovered copy, not a later or
+  differently-edited one. See [`zips/README.md`](zips/README.md) for the
+  full comparison.
+- **A small textual variant confirms the data's age.** Jungblut's June
+  file has Kincaid's own birthday entry as `B06281947 Patrick Kincaid,
+  send him a card.` — shorter than the `...send him a card, he'll love
+  it.` wording in the later DOS v3.6 release, consistent with his copy
+  predating that later edit.
+- **He has no lead on Kincaid, Butler, Conley, Goldman, Heckendorn, or
+  Randle** — like Fiennes, a leaf node who received the data secondhand
+  and doesn't recall the source.
+- **Screenshot preserved**, showing his port running live in an emulator
+  (and, per his own note, its unfixed Y2K bug):
+  [`screenshots/proline-jungblut-y2k-bug.png`](screenshots/proline-jungblut-y2k-bug.png).
+
+---
+
+## VII. Full Source List
 
 1. [`TODAY_DOC`, hfiennes/arcbbs](https://github.com/hfiennes/arcbbs/blob/master/%21ARCserver/Text/Today/TODAY_DOC) — primary source, Kincaid's own documentation; the same repo's `Today_03` and `Today_05` files date this dataset's integration into Hugo Fiennes's ARCbbs software to May 14, 1990
 2. [`today.cpp`, Olde-Skuul/KitchenSink](https://github.com/Olde-Skuul/KitchenSink/blob/master/tools/all/today/source/today.cpp)
@@ -891,5 +968,7 @@ while opening one new one:
 44. [`mywave82/unlzexe`](https://github.com/mywave82/unlzexe) — POSIX-ported build of the classic `UNLZEXE` decompressor, used to decode the LZEXE-compressed `TODAY.EXE` binaries in `TODAY34.ZIP`/`TODAY35.ZIP`/`TODAY36.ZIP`
 45. [`TODAYQ1.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/18105/Wildcat%20Gold%20-%20The%20Optical%20BBS%20%28The%20Golden%20ROM%20Series%29%28Volume%204%20Number%201%29%28The%20Digital%20Publishing%20Company%29%281992%29.ISO/misc/todayq1.zip) and [`TODAYWIT.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/16610/Shareware%20Explorer%20Series%20-%20MS-DOS%20Collection%20%28New%20Frontiers%29%20%28Volume%201%29.ISO/a050/todaywit.zip) — expanded, separately-distributed data/witticisms packs, downloaded and compared against this repo's own data; preserved at [`zips/`](zips/), see [`zips/README.md`](zips/README.md)
 46. [`davidly/ntvcm`](https://github.com/davidly/ntvcm) — a cross-platform 8080/Z80/CP/M 2.2 emulator, used to actually run Mick Howland's CP/M port (`TODAY.COM`); required a small upstream fix, submitted as [davidly/ntvcm#32](https://github.com/davidly/ntvcm/pull/32), for an unimplemented `IN r,(C)` instruction
+47. Jeff Jungblut, personal correspondence with Leo Bicknell (and Morgan Davis), July 2026 — see Section VI
+48. `JUNGBLUT-TODAY.ZIP`/`JUNGBLUT-TODAY.BAS`, provided directly by Jeff Jungblut, July 2026 — his ProLine port source and Feb-1989 data files; preserved at [`zips/`](zips/), see [`zips/README.md`](zips/README.md)
 
 *Compiled July 2026. See [TODO.md](TODO.md) for open research threads.*
