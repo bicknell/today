@@ -57,21 +57,57 @@ value. None of these were run down during the initial research pass.
    - A University of Toronto "pioneers of Canadian computing" retrospective
      PDF (`individual.utoronto.ca/klyons/files/pioneers.pdf`): no mention
      of Butler or Erindale in a relevant context.
+   - **(October 2026) The UTM Library's own full-text search of *The
+     Erindalian* / *The Medium* / *Medium II*
+     ([collections.utm.utoronto.ca](https://collections.utm.utoronto.ca/)),
+     which covers about 1969–1999 including the summer 1981 gap and
+     everything after March 1982 that the Internet Archive set above
+     lacks.** Every "Butler" hit from 1979–83 was reviewed by hand (via
+     each issue's "Search this document" box, which jumps to the page):
+     6 Feb 1979, 26 Mar 1981, 28 Jan 1982, 3 Nov 1982, 2 Mar 1983, 2 Nov
+     1983 and 23 Nov 1983. All are dead ends — either the ordinary English
+     word "butler," or a person named Tom Butler with no connection to
+     this research. The "PL/1" (27 Oct 1982) and "computing services" (22
+     Sep 1982) hits were not pursued further. Don't repeat.
+   - **(October 2026) U of T Discover Archives and the UTM Library
+     collections catalogue.** Searched for Michael/Mike Butler, "computing
+     centre," "computer club/society," VM/CMS, PL/1, mainframe, academic
+     computing and similar. Nothing relevant: no computing club or society
+     appears among the UTM student club records (C003 B006), and no
+     computing newsletters are listed. What does exist, and has not yet
+     been examined: the Erindale telephone/office directories for
+     1979/80–1982/83 (UTM Legacy collection C003, file B031(01), physical,
+     reading room by appointment), which would show whether a Butler was
+     staff or faculty in Computing Services; and photos of the Computer
+     Centre (UTM Photography Collection C004, 1975–1989; names not given).
+     The Erindale personnel files (UTARMS A1999-0013) are restricted.
 
    **In progress:**
    - Outreach sent to the `UTMBiology` Facebook page asking how they
-     sourced the 2019 "on this day" post and for more on Michael Butler —
-     awaiting a reply. Whoever wrote that post had *some* source, which
-     may lead straight to Butler or his original code.
+     sourced the 2019 "on this day" post and for more on Michael Butler.
+     **Update (October 2026): never replied.** Whoever wrote that post had
+     *some* source, which may lead straight to Butler or his original
+     code, but this avenue appears closed.
 
    **Not yet tried:**
-   - Contact UTM Archives & Records Management Services (UTARMS)
-     directly — they hold the official institutional archive, including
-     things a student newspaper wouldn't cover, like computing centre
-     newsletters, course calendars, or IT staff records from 1980–82.
-   - Check for a UTM/Erindale "Computing Society" or similar student
-     club, which would be a more likely venue than the general newspaper
-     for coverage of a hobby mainframe program.
+   - Email the UTM Library Archives & Special Collections
+     (`utml.asc@utoronto.ca`) asking someone to check the 1980/81 and
+     1981/82 Erindale telephone directories (see above) for a Butler in
+     Computing Services, and whether they hold any Erindale computing
+     centre material from 1980–82. UTARMS (`utarms@utoronto.ca`) holds the
+     restricted personnel files and is a second choice.
+   - ~~Check for a UTM/Erindale "Computing Society" or similar student
+     club~~ — done, October 2026: none exists in the UTM catalogues (see
+     above).
+
+   **Possible clue, weak (October 2026):** Bruce Goldman's `TODAY88.TXT`
+   (Oct 1988, inside `zips/goldman/today89.zip`) says "Mike Butler's
+   description for planned modifications to TODAY.EXE was promised for
+   August." If that is the original Butler, he was still involved with the
+   DOS program in 1988. But Goldman's own 1996 history knows Butler only
+   as the mainframe designer, `TODAY.EXE` was Kincaid's, and the sentence
+   may be a slip for Kincaid. It's the only mention of Butler in any
+   Goldman file — see README Section VII and item 14.
 
    **In progress (July 2026):** Leo Bicknell has sent a LinkedIn contact
    request/message to a **Michael Butler**
@@ -80,8 +116,8 @@ value. None of these were run down during the initial research pass.
    the University of Toronto, 1980–1984. Matches the right city
    (Mississauga/Erindale) and era; class years start just after the
    1981 mainframe debut, so if this is the right person he'd have been a
-   first- or second-year student at the time. Sent, no reply yet; not
-   yet confirmed as the same Michael Butler.
+   first- or second-year student at the time. Sent; not confirmed as the
+   same Michael Butler. **Update (October 2026): never replied.**
 
 3. **Find the original Usenet posting — but note the evidence for *when*
    is weaker than it looks.** The working assumption that this was posted
@@ -265,8 +301,8 @@ value. None of these were run down during the initial research pass.
    ([linkedin.com/in/billrandle](https://www.linkedin.com/in/billrandle))
    — at Tektronix, Beaverton, OR, 1974–2001, matching the
    `billr@saab.cna.tek.com` ("tek" = Tektronix) address. Both are strong
-   company/location/era matches. Sent, no reply yet from either; not yet
-   confirmed.
+   company/location/era matches. Sent; neither confirmed. **Update
+   (October 2026): neither ever replied.**
 
 6. **Preserve the Wayback Machine capture — done.** The last known-good
    archive of `burgerbecky.com` is from January 16, 2026
@@ -334,8 +370,8 @@ value. None of these were run down during the initial research pass.
     **New lead from his reply:** he suggested contacting the operator of
     [bbsdocumentary.com](http://www.bbsdocumentary.com/) (Jason Scott, who
     compiled the BBS Documentary project) as someone who might know more
-    about this program's place in BBS history generally. Not yet
-    contacted.
+    about this program's place in BBS history generally. Contacted since;
+    see item 16.
 
 10. **Consider flagging the domain hijack.** `burgerbecky.com` currently
     redirects to a gambling site (see README Section IV) with no obvious
@@ -530,9 +566,32 @@ value. None of these were run down during the initial research pass.
     visually verified, not just read as strings — this bullet is fully
     resolved.
 
+    **Update (October 2026): third wave of finds, and several "still
+    open" bullets below are now resolved.** A further discmaster.textfiles.com
+    pass (all files preserved in [`zips/`](zips/), described in
+    [`zips/README.md`](zips/README.md) and [`zips/SOURCES.md`](zips/SOURCES.md))
+    recovered:
+    - **Kincaid's v2.0** (`TODAY2.ZIP`, April 1988), **v2.2** (`TODAY22.LZH`,
+      May 29, 1988), **v2.3** (`TODAY23.ARC`/`.ZIP`, May 30, 1988), and a
+      previously unknown **v3.7** (`TODAY37.ZIP`, June 24, 1994 — newer than
+      v3.6). The v3.0 manual says its predecessor was v2.3, so there was no
+      v2.4. **v3.2 has still never surfaced and probably was never
+      released.** Full sequence: 1.0, 2.0, 2.1, 2.2, 2.3, 3.0, 3.1, 3.3, 3.4,
+      3.5, 3.6, 3.7.
+    - **`TODAYQ1.ZIP` is a near-copy of Bruce Goldman's April 1988 "version
+      7.1b"** (`zips/goldman/TODAY71B.ZIP`; 99.6% / 98.3% / 99.6% of its
+      Jan/Feb/Mar lines match). `TODAYQ2`–`Q4` are therefore very probably
+      Goldman's `TODAY72B`–`74B`, which are now preserved (hypothesis: the
+      real `TODAYQ2`–`Q4` archives have still not been seen).
+    - **v3.3 really has no `TODAY.OWN`**: five copies on five discs from
+      different publishers all lack it, so it was likely never in that release.
+    - Two more v1.0 repacks (`TODAYHIS.ZIP`, `PEGASUS-TODAY.ZIP`), whose month
+      files are identical to this repo's `today.1`–`.12`, and `TODAYCL1.ZIP`
+      (Kincaid's v3.1 program with Cleveland-compiled data).
+
     Still open:
-    - `TODAYQ2.ZIP`–`Q4.ZIP` (on pcorner.com) remain unrecovered — see
-      update above.
+    - `TODAYQ2.ZIP`–`Q4.ZIP` themselves remain unrecovered, but see the
+      October 2026 update above — they are probably `TODAY72B`–`74B`.
     - This repository's own [`today.c`](today/today.c) still has no
       version banner, no copyright string, and no lunar-phase code at
       all — unlike every DOS release documented so far, including the
@@ -557,13 +616,13 @@ value. None of these were run down during the initial research pass.
       was reimplemented across platforms. (He also allows a small chance
       he wrote the reader himself, though he doesn't believe that's the
       case.)
-    - Both recovered v3.3 copies are missing `TODAY.OWN` (present in
-      every other version) — likely a repackaging omission rather than
-      something genuinely dropped by Kincaid for that one release, but
-      not confirmed either way.
-    - A real, independently-archived v2.0 or v3.2 release, if either ever
-      existed on its own (as opposed to v2.0 only being known from v2.1's
-      changelog), has not surfaced.
+    - ~~Both recovered v3.3 copies are missing `TODAY.OWN`~~ — resolved
+      (October 2026): all five copies found lack it, so it was probably
+      genuinely absent from that release.
+    - ~~A real, independently-archived v2.0 or v3.2 release~~ — v2.0 found
+      (October 2026, `TODAY2.ZIP`); v3.2 has not, and probably never existed.
+    - ~~Three archive members use PKZIP "Reduce" compression and were
+      unread~~ — resolved (October 2026) with `hwzip`; see item 20.
 
 12. **Golden Gate Computer Society vs. Marin-Sonoma PC User Group — same
     BBS, two names? Resolved.** The `TODAY34.ZIP` manual (README Section I)
@@ -589,7 +648,28 @@ value. None of these were run down during the initial research pass.
     two years earlier than previously documented, and was already
     described the same way ("special interests such as MUSIC and SPACE").
     None of these — `MUSIC`, `SPACE`, `SCIENCE`, or others that may
-    exist — have been located yet.
+    exist — had been located as of July 2026.
+
+    **Update (October 2026): the `MUSIC` database is found, plus several
+    other special databases; `SPACE` and `SCIENCE` are not.** All preserved
+    in [`zips/data/`](zips/data/) and [`zips/`](zips/) (see
+    [`zips/README.md`](zips/README.md)):
+    - **`TODAYMUS.ZIP`** (Nov 1988): the MUSIC database, in standard format,
+      credited by Bruce Goldman — not originally a GGCS BBS file. The Amiga
+      data pack `T_DATA.LHA` has the same data split into `MUSIC.JAN`–`DEC`,
+      matching `TODAY37.DOC`'s documented `ADD MUSIC` option.
+    - A **Sherlock Holmes** database (`TODAY.SH`, Les Moskowitz, May 1988,
+      inside `TODAY22.LZH`), a birthdays database (`TODAYDOB.ZIP`, Jim
+      Robeson, 1987), an African-American history database (`TODAYLEE.ZIP`,
+      Jerry Lee, 1988–89), and Randy Ross's `TODAYNEW.ZIP` (1987).
+    - Goldman's notes name many more contributed databases — `TODAY.SPC`
+      and 24 STARPOINT BBS space files, `NOVSCI`/`SEPTSCI` science dates,
+      religion and Civil War files, Star Trek files — none of which exist
+      as standalone downloads on discmaster under any spelling tried
+      (`SPACE.xxx`, `SCIENCE.xxx`, `TODAY.SPC`, `NOVSCI`, `TODAYANG`,
+      `TODAYRC`, `TODAYOW2`, `TODAYCSA`, `SFAUTHOR`, `COMPOSER.ZIP`). They
+      may be folded into Goldman's large month files. Don't repeat those
+      searches.
 
 14. **Contact Bruce Goldman, and chase his `DAY9nn-*.ZIP` series and
     `NEWDAY/PC`.** Per `TODAYBBS.DOC` (see
@@ -629,7 +709,43 @@ value. None of these were run down during the initial research pass.
     first-hand from that same regional BBS scene before redistributing
     it (as an expanded, separately-numbered series) through Michael
     Conley's Los Angeles-based Charlatan's Cabin BBS. LinkedIn contact
-    request/message sent, no reply yet; not yet confirmed.
+    request/message sent; not confirmed. **Update (October 2026): never
+    replied — and almost certainly the wrong person (see below).**
+
+    **Update (October 2026): the `DAY9nn` series and `NEWDAY/PC` are found,
+    and Goldman is a New York hobbyist, not a Bay Area engineer.** All files
+    preserved in [`zips/goldman/`](zips/goldman/) and
+    [`zips/other-implementers/`](zips/other-implementers/); full account in
+    README Section VII.
+    - **Identity:** his own release notes sign him **Bruce T. Goldman of the
+      Bronx, New York**, with Internet addresses `Bruce.Goldman@Midnite.Com`
+      (DAY909.TXT, July 1994) and `Twostate@intercom.com` (DAY910.TXT, May
+      1996), and call the project "a hobby." No employer is given. Nothing
+      ties him to Oracle or California, so the Redwood City candidate above is
+      probably not him. (Both e-mail domains are decades old and almost
+      certainly defunct.) His home contact details from those notes are
+      deliberately not recorded in the repo.
+    - **Releases found:** `DAY906`–`DAY910` (Apr 1992–May 1996, up to ~7.6
+      MB / 120,000+ items), plus his 1988 "version 7" packs and the Sept–Nov
+      1988 updates. **Not found:** `DAY900`–`DAY905` (Feb 1989–Mar 1992) and
+      `DAY911`.
+    - **Where he got the data:** still unanswered. His history says Kincaid
+      released `TODAY` in July 1986 "based on a mainframe program designed by
+      Mike Butler," and that "after a few months I had added a lot of new
+      data and released my update," but not where he first got Kincaid's
+      files. His 1988 notes show a working BBS network (the Executive Network
+      in New York, the East Bay X-Change in South Carolina, and the Marin-Sonoma
+      BBS as "TODAY.EXE's homeboard") already circulating the data — more
+      evidence for BBS-to-BBS spread (item 3).
+    - **`NEWDAY/PC`** (v4.0 Oct 1988, v4.5, v4.9 Mar 1995) is Mike Ratledge's
+      reimplementation; see item 19.
+    - **Mustang Software / Wildcat FTP archives:** searched on discmaster for
+      `ftp.mustang.com`/`mustang.com`: only Ford Mustang game files. No mirror
+      found. Mustang was sold to Santronics in Nov 1998. Don't repeat; the
+      Wayback Machine could not be tested from this environment.
+    - **New question:** can anyone still be reached who knew Goldman? His
+      collaborator Robert Braunwart "moved from Washington to Mexico" (item
+      19). No contact is known.
 
 15. **Contact Michael Conley, author of `TODAYDOR`/`TODAYBBS`.** A third
     independent implementer of a reader for Kincaid's data format (see
@@ -668,6 +784,15 @@ value. None of these were run down during the initial research pass.
       (consistent with a long-running board that changed lines over the
       years). No email or other disambiguating detail came with it.
 
+    **New lead (October 2026):** his later `TODAYDOR` v4.02 (Feb 7, 1995,
+    now in [`zips/other-implementers/TODAYDOR-v402.ZIP`](zips/other-implementers/TODAYDOR-v402.ZIP))
+    gives a published e-mail address, `michael.conley@cabin.com`, and a
+    CompuServe address, and refuses voice calls — a 30-year-old address that
+    is probably dead, but a search for "cabin.com" and the surname may help
+    pick the right one of the 5 LinkedIn candidates. A WWIV-community data
+    pack also shows he was **editing `TODAY` data in 1988**
+    (`*REVISED/COMBINED 5/7/88 CONLEY` in its `TODAY.JAN`).
+
     **Not yet tried:** messaging all 5 LinkedIn candidates with a short
     note naming "Charlatan's Cabin BBS," "TODAYDOR"/"TODAYBBS," and
     Wildcat! BBS specifically — distinctive enough that the right one
@@ -677,6 +802,11 @@ value. None of these were run down during the initial research pass.
     suggestion (item 9) — he may know more about this program's general
     place in BBS history, or have leads on the sysop(s) between Kincaid
     and Fiennes.
+
+    **Dead end (October 2026): contacted, no leads.** Leo Bicknell emailed
+    Scott, who had no personal knowledge of the program or its authors. He
+    said he would pass the material along to a group of fellow BBS
+    enthusiasts and hoped one of them would reach out. Nobody ever did.
 
 17. **Mick Howland, author of the CP/M port — identified, but deceased.**
     A fifth independent implementer of Kincaid's data format (see README
@@ -711,9 +841,11 @@ value. None of these were run down during the initial research pass.
     r,(C)` returns a fixed `0xFF`, since ntvcm has no real I/O hardware
     to query, and updates flags per the documented instruction
     behavior; `OUT (C),r` is a no-op) fixed it. **A pull request with
-    this fix has been opened upstream:
+    this fix was opened upstream:
     [davidly/ntvcm#32](https://github.com/davidly/ntvcm/pull/32)**,
-    explaining the gap and linking back here for context.
+    explaining the gap and linking back here for context. **Closed
+    (October 2026): the PR was accepted and merged**, so upstream `ntvcm`
+    now runs Howland's `TODAY.COM` without a local patch.
 
     With that fix, `TODAY.COM 0628` runs cleanly and produces exactly
     the expected output — the short-form birthday joke ("send him a
@@ -744,5 +876,66 @@ value. None of these were run down during the initial research pass.
     records/archives.
 
     **In progress (July 2026):** Leo Bicknell has emailed
-    `info@ggcs.org` asking about Kincaid and the BBS's history. Awaiting
-    a reply.
+    `info@ggcs.org` asking about Kincaid and the BBS's history.
+    **Update (October 2026): never replied.**
+
+19. **Other people and programs identified in October 2026 (none contacted).**
+    The `DAY9nn`/`NEWDAY` search (items 13 and 14) turned up several more
+    names. Most of what is known comes from their own 1980s–90s release
+    notes, now in [`zips/`](zips/); see README Section VII for the story and
+    [`zips/README.md`](zips/README.md) for the files. Home addresses and
+    personal phone numbers appear in those notes and are deliberately not
+    recorded in this repo.
+    - **Mike Ratledge**, McClellanville, SC — author of `Today/PC II`
+      and **`NEWDAY/PC`** (1988–1995). Hurricane Hugo destroyed his source
+      code and both homes in September 1989, and his BBS ("East Bay
+      X-Change") is permanently down. No e-mail address is known. Goldman
+      spoke to him by phone on July 23, 1994.
+    - **Robert "Bob" Braunwart**, Seattle (Academic Text Processing
+      Service), who later moved to Mexico — Goldman's collaborator and the
+      author of a parallel 1988–89 series of monthly data files (8 of 12
+      months survive). He might know where Goldman or Kincaid's data came
+      from. No contact is known.
+    - **Roland Haley** (southwest Ontario, "Haley's Comment BBS") — author
+      of `TO-DAY` (1990–92). **Jonas Svensson** (Sweden) — author of
+      AmiTODAY (1993); his shareware doc gives the e-mail address
+      `Jonas_Svensson@augs.se`, probably long dead.
+    - **Randy Ross** (Ridgetown, Ontario), who in 1987 said he downloaded
+      updates "from the Marin-Sonoma BBS" and contributed `TODAYNEW`;
+      **Jim Robeson** (Pacific Grove, CA; `TODAYDOB`, 1987), whose note is
+      addressed directly to Kincaid; **Les Moskowitz** (Sherlock Holmes
+      data); **Jerry Lee, JD** (African-American history data).
+    - **John T.S. Brouwer de Koning** (Amsterdam), a major data contributor
+      to Goldman's 9.07, and **Daniel Doman** (a New York BBS operator,
+      whose sort utility Goldman used).
+    All are decades-old trails; the most promising is **Braunwart** and
+    **Ross** (whose notes show them working directly with
+    Kincaid's own BBS in 1987–89). This item may be moot if the July 2026 LinkedIn
+    announcement post brings in leads.
+
+20. ~~**Unpack the three "Reduce"-compressed members.**~~ Done (October
+    2026). `TODAY.OCT` (`zips/braunwart/TODAYOCT.ZIP`), `TIMELINE.EXE`
+    (`zips/data/CIVILWAR.ZIP`), and `NEWDAYPC.EXE` v4.5
+    (`zips/other-implementers/NEWDAY45.ZIP`) use PKZIP's "Reduce" method,
+    which Info-ZIP `unzip` (Apple's and Homebrew's 6.0), `7zz`, `unar`, and
+    `bsdtar` all refuse (and no Homebrew formula handles). `hwzip` 2.4
+    (public domain, checksum verified against the author's site, built from
+    source with `clang`) extracted all three. Results: `TODAY.OCT` is
+    ordinary `TODAY` data (Braunwart's Oct 1988 file, 1,190 lines);
+    `TIMELINE.EXE` is an unrelated standalone Civil War timeline program, not
+    `TODAY` data; `NEWDAYPC.EXE` is Ratledge's NEWDAY/PC v4.5 using the same
+    `TODAY.xxx`/`TODAY.OWN` conventions. Details in
+    [`zips/README.md`](zips/README.md).
+
+21. ~~**Scan the `BTG`/`BTG.COM` files bundled in the `DAY9nn` archives.**~~
+    Done (October 2026), nothing found. They are Goldman's initials: a
+    706-byte ANSI-art banner in the 906 set and a small PKLITE-packed `.COM`
+    (five distinct versions) in the 907–910 sets. `strings` shows only a
+    "Press ESC to end" screen display, and one re-hosted copy named
+    `BTG_COM.vir` is byte-identical to a normally-named `BTG.COM` (the
+    `.vir` name was added by that collection's curator). Leo Bicknell ran
+    all of the distinct files through **ClamAV**, which reported them all
+    clean, and looked up their SHA-256 hashes on **VirusTotal**, which
+    showed no detections. Neither is proof (ClamAV's coverage of 1990s DOS
+    viruses is partial), but together with the contents it makes a virus
+    very unlikely. The files were never executed here.

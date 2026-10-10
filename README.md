@@ -18,7 +18,10 @@ see Section III below for how it was built.
 **Recovered shareware ZIPs:** original DOS-era `TODAY` distribution
 archives, found during this research, are preserved as-downloaded in
 [`zips/`](zips/), each documented with its source URL and checksum in
-[`zips/README.md`](zips/README.md).
+[`zips/README.md`](zips/README.md). A few archives use PKZIP's obsolete
+"Reduce" compression that common tools can't read; `zips/README.md` also
+explains how to build [`hwzip`](https://www.hanshq.net/zip2.html) to
+extract them.
 
 **Building:** the original source doesn't compile clean on modern
 compilers without changes — see [BUILDING.md](BUILDING.md) for the
@@ -173,6 +176,20 @@ data snapshot from that specific moment would be paired with a reader
 that never had (or had already lost) the version-banner code seen in
 every surviving DOS release remains an open question. See
 [TODO.md](TODO.md).
+
+**Update (October 2026): the release timeline is now much fuller.** A
+second discmaster.textfiles.com wave recovered Kincaid's **v2.0** (April
+1988, `TODAY2.ZIP`), **v2.2** (May 29, 1988) and **v2.3** (May 30, 1988),
+and a previously unknown **v3.7** (June 24, 1994) — newer than v3.6, with
+the same "maintenance release" character (a Feb 28 → Mar 1 day-counter
+fix plus data corrections). The v3.0 manual (inside `TODAYCL1.ZIP`) says
+its predecessor was 2.3, so the full sequence is **1.0 → 2.0 → 2.1 → 2.2
+→ 2.3 → 3.0 → 3.1 → 3.3 → 3.4 → 3.5 → 3.6 → 3.7**, with **v3.2 never
+having surfaced** (the only `TODAY32.ZIP` found is an unrelated HP48
+program), so it was probably skipped. No v2.4 appears to exist. None of
+the new manuals mentions the moon either. All 12 of these `.ZIP`s,
+and the rest of the second wave, are in [`zips/`](zips/); the data
+lineage that grew around the program is Section VII.
 
 **Real, complete copies of v3.1, v3.3, v3.4, v3.5, and v3.6 have now all
 been recovered, downloaded, and read in full.** `TODAY31.ZIP` and
@@ -438,7 +455,8 @@ entry of the Wireless Institute of Australia's Silent Key database — see
 8080/Z80/CP/M emulator — after fixing a real gap it exposed in the
 emulator (an unimplemented Z80 `IN r,(C)` instruction Howland's Turbo
 Pascal runtime executes at startup; fix submitted upstream as
-[davidly/ntvcm#32](https://github.com/davidly/ntvcm/pull/32)).
+[davidly/ntvcm#32](https://github.com/davidly/ntvcm/pull/32), since
+accepted and merged).
 `TODAY.COM 0628` runs cleanly and reproduces exactly the same short-form
 birthday joke and June 28 entries already known from the DOS v1.0/v2.1
 releases, confirming this port reused Kincaid's original databases
@@ -493,7 +511,7 @@ content difference from the clean copy preserved here.
 (under 6 KB, filed under "HP48/Applications" on several "Palmtops"
 CD-ROMs). Whether Kincaid ever released a numbered v3.2 at all is
 unknown — no archive under that name has surfaced, unlike every other
-version from 3.1 through 3.6.
+version from 3.0 through 3.7; see the October 2026 update above.
 
 **Two more genuine derivatives turned up alongside `TODAY34.ZIP`, from a
 third implementer: Michael Conley.** The same `bbs.retropc.se` file area
@@ -509,8 +527,9 @@ built his own reader for the same data format. `TODAYBBS.DOC` also names
 a fourth party: **Bruce Goldman**, said to be "producing excellent
 `TODAY.nnn` data files... compatible with TODAYBBS, as well as some other
 programs such as **NEWDAY/PC**," distributed as a numbered series
-(`DAY907-1.ZIP` through `DAY907-6.ZIP`). Neither Goldman's files nor
-`NEWDAY/PC` have been tracked down yet — see [TODO.md](TODO.md).
+(`DAY907-1.ZIP` through `DAY907-6.ZIP`). **Both have since been found**
+(October 2026) — Goldman's `DAY906`–`DAY910` releases and `NEWDAY/PC` are
+preserved in [`zips/`](zips/) and described in Section VII.
 
 A same-listing file called `WCTODAY.ZIP` ("Who Called Today?" v3.5, by
 Boardwalk Software, copyright 1989/91) turned out to be an unrelated
@@ -840,7 +859,8 @@ while opening one new one:
   deeper knowledge: "I'm very much a leaf node in this whole thing."
 - **New lead: Jason Scott / bbsdocumentary.com.** Fiennes's own
   suggestion for who might know more about this era's software lineage.
-  Not yet contacted — see [TODO.md](TODO.md).
+  Since contacted; no personal knowledge, and no leads came of it — see
+  [TODO.md](TODO.md) item 16.
 
 ---
 
@@ -918,9 +938,150 @@ himself, Hugo Fiennes, Michael Conley, and Mick Howland):
   (and, per his own note, its unfixed Y2K bug):
   [`screenshots/proline-jungblut-y2k-bug.png`](screenshots/proline-jungblut-y2k-bug.png).
 
----
+## VII. Goldman, Braunwart, and the Other Independent Readers
 
-## VII. Full Source List
+*Added October 2026.* A second search of
+[discmaster.textfiles.com](https://discmaster.textfiles.com/) found the
+people and programs that built on Kincaid's data format. Every file is
+preserved in [`zips/`](zips/) (see [`zips/README.md`](zips/README.md) for
+what each contains and [`zips/SOURCES.md`](zips/SOURCES.md) for source
+URLs and checksums). This section collects what they add to the story.
+Home addresses and personal phone numbers that appear in these 1980s–90s
+shareware documents are deliberately not reproduced here; e-mail
+addresses are only those published in the distributed files.
+
+### Bruce T. Goldman — the data maintainer
+
+**Verified** (from his own release notes, `DAY907.TXT`, `DAY909.TXT`,
+`DAY910.TXT`, and `TODAY7.TXT`): **Bruce T. Goldman** of the **Bronx, New
+York** took Kincaid's 1986 data files, merged in dozens of other
+people's contributions, and published the result as a numbered series
+for the rest of the decade. His notes give Internet addresses
+`Bruce.Goldman@Midnite.Com` (July 1994) and `Twostate@intercom.com` (May
+1996) and call the project "a hobby"; they name no employer. His own
+history: "In July, 1986, Patrick Kincaid released for public usage a
+program called Today. It's based on a mainframe program designed by Mike
+Butler. ... After a few months I had added a lot of new data and released
+my update of the Today monthly files." Robert Braunwart (below) "approached
+me on a calibration of our work." He never says where he first got
+Kincaid's files.
+
+The data grew from Kincaid's roughly 15 KB monthly files, to "over 30,000
+items" in "almost 2 megs" by the time he wrote the history, to **over
+120,000 items (about 7.6 MB)** in version 9.10. His release history
+(`DAY910.TXT`): 9.00 (Feb 9, 1989), 9.02 (May 25, 1989), 9.03 (Nov 6,
+1989), 9.04 (Mar 30, 1991 — delayed by a failed hard drive), 9.05 (Mar
+20, 1992), 9.06 (Apr 17, 1992), 9.07 (Oct 25, 1992), 9.08 (Aug 21,
+1993), 9.09 (Jul 24, 1994), and 9.10 (May 1, 1996). Before 9.0 there
+was a "version 7" series (`TODAY7.TXT`, Jan 2, 1988; `TODAY71B`–`74B`,
+April 11, 1988; "7.9g," Sept 1988). Releases 906 through 910 and the
+1988 packs are preserved; 9.00–9.05 have not been found.
+
+**This overturns the Redwood City guess.** [TODO.md](TODO.md) item 14
+had a LinkedIn candidate for Goldman (an Oracle engineer in Redwood
+City, CA) on the strength of the Bay Area's BBS scene. Goldman is a New
+York hobbyist; nothing ties him to Oracle or California, so that
+candidate is most likely the wrong person. Goldman's 1996 notes say his
+collaborator Braunwart "moved from Washington to Mexico," and that he
+spoke to NEWDAY/PC's author on July 23, 1994.
+
+**Weak evidence about how the data propagated.** Goldman's 1988 notes show a
+working BBS network already circulating `TODAY` data 18 months after the
+release: the "Executive Network" (New York), the "East Bay X-Change"
+(South Carolina), and the Marin-Sonoma BBS, which he calls "TODAY.EXE's
+homeboard" — independent corroboration of Kincaid's own distribution
+channel (Section I). That is consistent with [TODO.md](TODO.md) item
+3's conclusion that BBS-to-BBS spread, not a Usenet posting, carried
+the data.
+
+**Unresolved: one sentence about "Mike Butler."** Goldman's Oct 2, 1988
+note says: "Mike Butler's description for planned modifications to
+TODAY.EXE was promised for August. On my latest call to Maran-Somers in
+late September, I had not seen it on-line." Read literally, Michael
+Butler — the mainframe original's author — would still have been
+involved with the DOS program in 1988. But Goldman's own 1996 history
+knows Butler only as the mainframe designer, `TODAY.EXE` was Kincaid's
+work, and the next sentence names Ratledge's competing update with
+"also" — so this may be a slip for Kincaid. It is the **only** mention of
+Butler in any Goldman file. A lead, not a finding.
+
+### Robert Braunwart — the parallel editor
+
+**Robert "Bob" Braunwart** of Seattle (Academic Text Processing Service)
+published his own monthly editions in 1988–89 and then collaborated with
+Goldman; the April 1989 edition credits both. Goldman later says he
+moved to Mexico and lost interest. Eight of his twelve monthly files
+survive (Jan–Apr, Sep–Dec).
+
+### Mike Ratledge — Today/PC II and NEWDAY/PC
+
+**Mike Ratledge** of McClellanville, SC, ran the "East Bay X-Change" BBS
+and in April 1988 released **Today/PC II**, which his own doc calls "a
+blatant rip-off of the program originally designed by Patrick Kincaid,"
+written in Turbo Pascal because, per Goldman, Ratledge wanted it to run
+on a BBS ("T-Comm") and to lift Kincaid's limits on file size (about 50 KB)
+and entries per day (about 50). In October 1988 he renamed it
+**NEWDAY/PC** (v4.0) to end the name confusion. **Hurricane Hugo
+(September 21, 1989) destroyed his source code and both his homes**; he
+released nothing until a complete rewrite, v4.9 (March 24, 1995). By his
+account and Goldman's, it ran the same data files as `TODAY` but added
+randomness, more categories, remark statements, and date scanning.
+Goldman bundled it with his releases. His BBS is permanently down.
+
+### Roland Haley, Jonas Svensson, and Michael Conley's data editing
+
+- **Roland Haley** ("Haley's Comment BBS," southwest Ontario) wrote
+  **TO-DAY** (v1.07 Jan 1991 through 3.05 Feb 1992), a PCBoard door that
+  reads `TODAY.xxx` files to write daily-trivia and log-off screens. His
+  doc never mentions Kincaid; his bundled `TODAY.JAN` is marked
+  `*updated 03/22/90 HALEY`.
+- **Jonas Svensson** of Sweden wrote **AmiTODAY** (v1.20, Jan 1993) for the
+  Amiga and published a full data pack on Aminet, `T_DATA.LHA`, which
+  includes the **MUSIC** database. Shareware, US$10.
+- **Michael Conley** did not only write `TODAYDOR`/`TODAYBBS` (Section V).
+  A WWIV-community data pack's `TODAY.JAN` is headed `*REVISED/COMBINED
+  5/7/88 CONLEY` — he was **editing `TODAY` data in 1988**, five years
+  before those programs. His later `TODAYDOR` v4.02 (Feb 1995) gives
+  `michael.conley@cabin.com`, which may help pick him out of the 5
+  LinkedIn candidates ([TODO.md](TODO.md) item 15).
+
+### Everyone who has written a reader for this format
+
+| Implementer      | Platform                  | Program                     | Dates          | Where                                    |
+|------------------|---------------------------|-----------------------------|----------------|------------------------------------------|
+| Patrick Kincaid  | DOS                       | TODAY/PC (`TODAY.EXE`)      | 1986–1994      | `zips/`                                  |
+| Hugo Fiennes     | Acorn ARCbbs (C)          | `c/today` module            | 1990           | hfiennes/arcbbs (Section V)              |
+| Michael Conley   | Wildcat! BBS (DOS)        | TODAYDOR / TODAYBBS         | 1993–1995      | `zips/`                                  |
+| Rebecca Heineman | Portable C++              | `today.cpp` (KitchenSink)   | see Section IV | Olde-Skuul/KitchenSink                   |
+| Mick Howland     | CP/M (Turbo Pascal)       | `TODAY.COM`                 | May 1989       | `zips/TODAY-CPM.ARC`                     |
+| Jeff Jungblut    | ProLine BBS (Apple II)    | `today` (Applesoft)         | 1988–1992      | `zips/JUNGBLUT-TODAY.*`                  |
+| Mike Ratledge    | DOS / BBS (Turbo Pascal)  | Today/PC II, then NEWDAY/PC | 1988–1995      | `zips/other-implementers/`               |
+| Roland Haley     | PCBoard door (DOS)        | TO-DAY                      | 1990–1992      | `zips/other-implementers/`               |
+| Jonas Svensson   | Amiga                     | AmiTODAY                    | 1993           | `zips/other-implementers/`, `zips/data/` |
+
+Goldman, Braunwart, Ratledge, and the smaller contributors (Les
+Moskowitz's Sherlock Holmes file, Jim Robeson's birthdays, Randy Ross's
+`TODAYNEW`, Jerry Lee's African-American history data) form a **second
+lineage alongside the programs**: a community that treated Kincaid's file
+format as a shared standard and his data as a starting point, which is
+exactly the model his own `TODAY.DOC` invited ("create specialized
+databases ... to share with the rest of us").
+
+### What this resolved
+
+- **`TODAYQ1.ZIP` is a near-copy of Goldman's 7.1b pack** (99.6% /
+  98.3% / 99.6% of its Jan/Feb/Mar lines appear in `TODAY71B.ZIP`, minus
+  his credit lines), so the missing `TODAYQ2`–`Q4` are probably his
+  `TODAY72B`–`74B`.
+- **The `MUSIC` database exists** (`TODAYMUS.ZIP`, Nov 1988; also
+  `MUSIC.JAN`–`DEC` in the Amiga pack), credited to Goldman, not to the GGCS
+  BBS. `SPACE` and `SCIENCE` have not been found.
+- **v3.3 really has no `TODAY.OWN`:** five copies on discs from several
+  publishers all lack it.
+- **v3.7 exists** and is the newest Kincaid release; **v3.2 probably
+  never did.**
+
+## VIII. Full Source List
 
 1. [`TODAY_DOC`, hfiennes/arcbbs](https://github.com/hfiennes/arcbbs/blob/master/%21ARCserver/Text/Today/TODAY_DOC) — primary source, Kincaid's own documentation; the same repo's `Today_03` and `Today_05` files date this dataset's integration into Hugo Fiennes's ARCbbs software to May 14, 1990
 2. [`today.cpp`, Olde-Skuul/KitchenSink](https://github.com/Olde-Skuul/KitchenSink/blob/master/tools/all/today/source/today.cpp)
@@ -967,8 +1128,14 @@ himself, Hugo Fiennes, Michael Conley, and Mick Howland):
 43. [Morgan Davis, "ProLine," morgandavis.net](https://www.morgandavis.net/post/proline), and its `proline-3.0-source.zip`, specifically `man/man/man.G/today.G` — names Jeff Jungblut as author of ProLine's `today` port and confirms Kincaid's program name "TODAY/PC" directly, resolving most of TODO.md item 4
 44. [`mywave82/unlzexe`](https://github.com/mywave82/unlzexe) — POSIX-ported build of the classic `UNLZEXE` decompressor, used to decode the LZEXE-compressed `TODAY.EXE` binaries in `TODAY34.ZIP`/`TODAY35.ZIP`/`TODAY36.ZIP`
 45. [`TODAYQ1.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/18105/Wildcat%20Gold%20-%20The%20Optical%20BBS%20%28The%20Golden%20ROM%20Series%29%28Volume%204%20Number%201%29%28The%20Digital%20Publishing%20Company%29%281992%29.ISO/misc/todayq1.zip) and [`TODAYWIT.ZIP`, discmaster.textfiles.com](https://discmaster.textfiles.com/browse/16610/Shareware%20Explorer%20Series%20-%20MS-DOS%20Collection%20%28New%20Frontiers%29%20%28Volume%201%29.ISO/a050/todaywit.zip) — expanded, separately-distributed data/witticisms packs, downloaded and compared against this repo's own data; preserved at [`zips/`](zips/), see [`zips/README.md`](zips/README.md)
-46. [`davidly/ntvcm`](https://github.com/davidly/ntvcm) — a cross-platform 8080/Z80/CP/M 2.2 emulator, used to actually run Mick Howland's CP/M port (`TODAY.COM`); required a small upstream fix, submitted as [davidly/ntvcm#32](https://github.com/davidly/ntvcm/pull/32), for an unimplemented `IN r,(C)` instruction
+46. [`davidly/ntvcm`](https://github.com/davidly/ntvcm) — a cross-platform 8080/Z80/CP/M 2.2 emulator, used to actually run Mick Howland's CP/M port (`TODAY.COM`); required a small upstream fix, submitted and merged as [davidly/ntvcm#32](https://github.com/davidly/ntvcm/pull/32), for an unimplemented `IN r,(C)` instruction
 47. Jeff Jungblut, personal correspondence with Leo Bicknell (and Morgan Davis), July 2026 — see Section VI
 48. `JUNGBLUT-TODAY.ZIP`/`JUNGBLUT-TODAY.BAS`, provided directly by Jeff Jungblut, July 2026 — his ProLine port source and Feb-1989 data files; preserved at [`zips/`](zips/), see [`zips/README.md`](zips/README.md)
 
-*Compiled July 2026. See [TODO.md](TODO.md) for open research threads.*
+49. [discmaster.textfiles.com](https://discmaster.textfiles.com/), second wave (October 2026) — source of all 72 files added to [`zips/`](zips/) that month; per-file URLs, dates, and SHA-256s are in [`zips/SOURCES.md`](zips/SOURCES.md)
+50. Bruce T. Goldman, `DAY907.TXT`, `DAY909.TXT`, `DAY910.TXT`, `TODAY7.TXT`, `TODAY88.TXT`, `TODAY8A.TXT` (release notes, 1988–1996), inside [`zips/goldman/`](zips/goldman/) — his version history, "A Bit of History of TODAY/NEWDAYPC," and the "Mike Butler" sentence (Section VII)
+51. Robert Braunwart, `TODAYJAN.DOC`–`TODAYAPR.DOC` (1988–89), inside [`zips/braunwart/`](zips/braunwart/) — his parallel monthly editions and the Braunwart/Goldman collaboration
+52. Mike Ratledge, `TODAYPC2.DOC` (April 1988) and `NEWDAYPC.DOC` (v4.0 Oct 1988, v4.5, v4.9 Mar 1995), inside [`zips/other-implementers/`](zips/other-implementers/) — his independent `TODAY` reimplementation and the Hurricane Hugo account
+53. Roland Haley's `TO-DAY.DOC` (releases 1.07, 2.02, 3.05), Jonas Svensson's `AmiTODAY.eng.doc`, and Michael Conley's `TODAYDOR.DOC` v4.02 (Feb 1995), all inside [`zips/other-implementers/`](zips/other-implementers/)
+
+*Compiled July 2026; updated October 2026. See [TODO.md](TODO.md) for open research threads.*
