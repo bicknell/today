@@ -95,8 +95,12 @@ value. None of these were run down during the initial research pass.
      `utml.asc@utoronto.ca` asking someone to check the 1980/81 and 1981/82
      Erindale telephone directories (see above) for a Butler in Computing
      Services, and whether they hold any Erindale computing centre material
-     from 1980–82. If that goes nowhere, UTARMS (`utarms@utoronto.ca`) holds
-     the restricted personnel files and is a second choice.
+     from 1980–82. An automated acknowledgement arrived the same day,
+     promising a reply "within 3 business days." The email went out on a
+     Saturday, and Monday, October 12 is Canadian Thanksgiving, so a real
+     reply is expected around Thursday, October 15, 2026. If that goes
+     nowhere, UTARMS (`utarms@utoronto.ca`) holds the restricted personnel
+     files and is a second choice.
    - ~~Check for a UTM/Erindale "Computing Society" or similar student
      club~~ — done, October 2026: none exists in the UTM catalogues (see
      above).
