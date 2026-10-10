@@ -386,6 +386,25 @@ value. None of these were run down during the initial research pass.
     (item 6, above) — but the hijacked domain itself is still worth
     flagging if a good point of contact turns up.
 
+    **Update (October 10, 2026): reported to Cloudflare.** GoDaddy's
+    abuse-report categories (phishing, malware, CSAM, IP infringement,
+    UK/EU complaints, public safety and illegal content) don't cover a
+    hijacked-but-validly-registered domain, and registrars generally act
+    only on the account owner's own report. The domain's DNS, the
+    redirect, and both gambling destinations (`toto5000i.com`,
+    `dtoto5000.com`) are all served by Cloudflare, so Leo Bicknell filed a
+    "General" report there with the evidence below. Cloudflare's automated
+    acknowledgement gave **Report ID `89cffeadde1a68b7`**. No further
+    response yet; Cloudflare may not act, since the owner can't be asked.
+    - **State on October 10, 2026:** `http://`, `https://`, and
+      `https://www.burgerbecky.com/` all return a 301 to
+      `https://www.toto5000i.com/`, which 301s to `https://dtoto5000.com/`
+      (HTTP 200). Nameservers `camilo.ns.cloudflare.com` and
+      `sue.ns.cloudflare.com`; registrar GoDaddy.com, LLC; created
+      2005-01-18; last updated 2026-03-10; expires 2027-01-18.
+    - **Still-open routes:** reaching her estate or colleagues, or a short
+      post in game-preservation communities. No estate contact is known.
+
 11. **Track down the actual DOS releases, and place this repo's copy in
     the resulting timeline.** Resolved, far more completely than
     originally scoped, in two waves. First wave: real, verified copies of
