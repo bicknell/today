@@ -954,9 +954,12 @@ people and programs that built on Kincaid's data format. Every file is
 preserved in [`zips/`](zips/) (see [`zips/README.md`](zips/README.md) for
 what each contains and [`zips/SOURCES.md`](zips/SOURCES.md) for source
 URLs and checksums). This section collects what they add to the story.
-Home addresses and personal phone numbers that appear in these 1980s–90s
-shareware documents are deliberately not reproduced here; e-mail
-addresses are only those published in the distributed files.
+Postal addresses, phone numbers, and e-mail addresses below are only
+ones that their owners **published themselves** in the distributed files
+cited; they are 30–40 years old and are recorded here as research
+provenance, not as current contact information. Details that someone else
+published about a third party (for example, the addresses of contributors
+that Goldman lists in his release notes) are not reproduced.
 
 ### Bruce T. Goldman — the data maintainer
 
@@ -966,8 +969,10 @@ York** took Kincaid's 1986 data files, merged in dozens of other
 people's contributions, and published the result as a numbered series
 for the rest of the decade. His notes give Internet addresses
 `Bruce.Goldman@Midnite.Com` (July 1994) and `Twostate@intercom.com` (May
-1996) and call the project "a hobby"; they name no employer. His own
-history: "In July, 1986, Patrick Kincaid released for public usage a
+1996) and call the project "a hobby"; they name no employer. They also
+give his postal address, 2180 Bolton St., Bronx, NY 10462-1332, and a
+telephone number — (212) 823-9873 in `DAY907.TXT` (1992), (718) 823-9873 in
+`DAY909.TXT` (1994) and `DAY910.TXT` (1996). His own history: "In July, 1986, Patrick Kincaid released for public usage a
 program called Today. It's based on a mainframe program designed by Mike
 Butler. ... After a few months I had added a lot of new data and released
 my update of the Today monthly files." Robert Braunwart (below) "approached
@@ -1019,7 +1024,10 @@ Butler in any Goldman file. A lead, not a finding.
 published his own monthly editions in 1988–89 and then collaborated with
 Goldman; the April 1989 edition credits both. Goldman later says he
 moved to Mexico and lost interest. Eight of his twelve monthly files
-survive (Jan–Apr, Sep–Dec).
+survive (Jan–Apr, Sep–Dec). His own notes (`TODAYJAN.DOC`, `TODAYAPR.DOC`,
+1989) give his address as 4134 Eleventh Ave. N.E., #6, Seattle, WA 98105,
+and name the Seattle BBSes he uploaded to; Goldman's `DAY910.TXT` prints it
+as "4132-11th NE #6."
 
 ### Mike Ratledge — Today/PC II and NEWDAY/PC
 
@@ -1034,7 +1042,10 @@ and entries per day (about 50). In October 1988 he renamed it
 released nothing until a complete rewrite, v4.9 (March 24, 1995). By his
 account and Goldman's, it ran the same data files as `TODAY` but added
 randomness, more categories, remark statements, and date scanning.
-Goldman bundled it with his releases. His BBS is permanently down.
+Goldman bundled it with his releases. His BBS is permanently down. His
+own docs give his address as 995 Buck Hall Landing, McClellanville, SC
+(ZIP 29464 in the `NEWDAYPC.DOC` v4.9 header, 29458 in `REGISTER.DOC`) and
+the BBS lines as (803) 723-6430 or 577-9845 (`NEWDAYPC.DOC` v4.0, 1988).
 
 ### Roland Haley, Jonas Svensson, and Michael Conley's data editing
 
@@ -1042,16 +1053,28 @@ Goldman bundled it with his releases. His BBS is permanently down.
   **TO-DAY** (v1.07 Jan 1991 through 3.05 Feb 1992), a PCBoard door that
   reads `TODAY.xxx` files to write daily-trivia and log-off screens. His
   doc never mentions Kincaid; his bundled `TODAY.JAN` is marked
-  `*updated 03/22/90 HALEY`.
+  `*updated 03/22/90 HALEY`. His doc gives the board's numbers as (519)
+  469-3028, 469-3173, and 539-6851 (all HST modems).
 - **Jonas Svensson** of Sweden wrote **AmiTODAY** (v1.20, Jan 1993) for the
   Amiga and published a full data pack on Aminet, `T_DATA.LHA`, which
-  includes the **MUSIC** database. Shareware, US$10.
+  includes the **MUSIC** database. Shareware, US$10. His doc gives his
+  address as Fyrsvängen 18, S-610 42 Gryt, Sweden, the e-mail address
+  `Jonas_Svensson@augs.se`, and Fidonet 2:204/404.8.
 - **Michael Conley** did not only write `TODAYDOR`/`TODAYBBS` (Section V).
   A WWIV-community data pack's `TODAY.JAN` is headed `*REVISED/COMBINED
   5/7/88 CONLEY` — he was **editing `TODAY` data in 1988**, five years
   before those programs. His later `TODAYDOR` v4.02 (Feb 1995) gives
-  `michael.conley@cabin.com`, which may help pick him out of the 5
-  LinkedIn candidates ([TODO.md](TODO.md) item 15).
+  `michael.conley@cabin.com` and CompuServe 70250,220, which may help pick
+  him out of the 5 LinkedIn candidates ([TODO.md](TODO.md) item 15). His
+  "char-ware" notice (`CHARWARE.TXT`, also `SHARE` in the earlier
+  `TODAYDOR.ZIP`/`TODAYBBS.ZIP`) gives P.O. Box 1572, Studio City, CA
+  91614-0572, and the Charlatan's Cabin BBS number, (213) 654-7337.
+- **Smaller contributors** who published their own contact blocks: **Randy
+  Ross** (`READ.ME` in `TODAYNEW.ZIP`, June 1987) — P.O. Box 1258, Ridgetown,
+  Ontario N0P 2C0, (519) 674-5456 work and (519) 674-3932 home, and he says
+  he will "update my files from the Marin-Sonoma BBS"; **Jim Robeson**
+  (`READ.ME` in `TODAYDOB.ZIP`, July 1987) — Pacific Grove, CA, reachable on
+  the WESTLOG BBS in Monterey at (408) 394-6234.
 
 ### Everyone who has written a reader for this format
 

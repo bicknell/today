@@ -723,8 +723,10 @@ value. None of these were run down during the initial research pass.
       1996), and call the project "a hobby." No employer is given. Nothing
       ties him to Oracle or California, so the Redwood City candidate above is
       probably not him. (Both e-mail domains are decades old and almost
-      certainly defunct.) His home contact details from those notes are
-      deliberately not recorded in the repo.
+      certainly defunct.) The same notes give his postal address and phone
+      — 2180 Bolton St., Bronx, NY 10462-1332; (212) 823-9873 in
+      `DAY907.TXT` (1992), (718) 823-9873 in `DAY909.TXT`/`DAY910.TXT`
+      (1994–96) — which he published himself; see README Section VII.
     - **Releases found:** `DAY906`–`DAY910` (Apr 1992–May 1996, up to ~7.6
       MB / 120,000+ items), plus his 1988 "version 7" packs and the Sept–Nov
       1988 updates. **Not found:** `DAY900`–`DAY905` (Feb 1989–Mar 1992) and
@@ -787,8 +789,9 @@ value. None of these were run down during the initial research pass.
     **New lead (October 2026):** his later `TODAYDOR` v4.02 (Feb 7, 1995,
     now in [`zips/other-implementers/TODAYDOR-v402.ZIP`](zips/other-implementers/TODAYDOR-v402.ZIP))
     gives a published e-mail address, `michael.conley@cabin.com`, and a
-    CompuServe address, and refuses voice calls — a 30-year-old address that
-    is probably dead, but a search for "cabin.com" and the surname may help
+    CompuServe address (70250,220), and refuses voice calls; its
+    `CHARWARE.TXT` also gives a postal address, P.O. Box 1572, Studio City,
+    CA 91614-0572. These are 30-year-old details and probably dead, but a search for "cabin.com" and the surname may help
     pick the right one of the 5 LinkedIn candidates. A WWIV-community data
     pack also shows he was **editing `TODAY` data in 1988**
     (`*REVISED/COMBINED 5/7/88 CONLEY` in its `TODAY.JAN`).
@@ -883,31 +886,41 @@ value. None of these were run down during the initial research pass.
     The `DAY9nn`/`NEWDAY` search (items 13 and 14) turned up several more
     names. Most of what is known comes from their own 1980s–90s release
     notes, now in [`zips/`](zips/); see README Section VII for the story and
-    [`zips/README.md`](zips/README.md) for the files. Home addresses and
-    personal phone numbers appear in those notes and are deliberately not
-    recorded in this repo.
+    [`zips/README.md`](zips/README.md) for the files. The contact details
+    below are ones each person published themselves in the cited files (all
+    30–40 years old); details a third party published about someone else —
+    e.g. contributors' addresses in Goldman's notes — are not recorded.
     - **Mike Ratledge**, McClellanville, SC — author of `Today/PC II`
       and **`NEWDAY/PC`** (1988–1995). Hurricane Hugo destroyed his source
       code and both homes in September 1989, and his BBS ("East Bay
-      X-Change") is permanently down. No e-mail address is known. Goldman
-      spoke to him by phone on July 23, 1994.
+      X-Change") is permanently down. No e-mail address is known; his own
+      docs give 995 Buck Hall Landing, McClellanville, SC (ZIP 29464 in
+      `NEWDAYPC.DOC`, 29458 in `REGISTER.DOC`). Goldman spoke to him by phone
+      on July 23, 1994.
     - **Robert "Bob" Braunwart**, Seattle (Academic Text Processing
       Service), who later moved to Mexico — Goldman's collaborator and the
       author of a parallel 1988–89 series of monthly data files (8 of 12
       months survive). He might know where Goldman or Kincaid's data came
-      from. No contact is known.
+      from. His own 1989 docs give 4134 Eleventh Ave. N.E., #6, Seattle, WA
+      98105 (long out of date; he later moved to Mexico).
     - **Roland Haley** (southwest Ontario, "Haley's Comment BBS") — author
-      of `TO-DAY` (1990–92). **Jonas Svensson** (Sweden) — author of
-      AmiTODAY (1993); his shareware doc gives the e-mail address
-      `Jonas_Svensson@augs.se`, probably long dead.
+      of `TO-DAY` (1990–92); his doc gives the board's numbers as (519)
+      469-3028, 469-3173, and 539-6851. **Jonas Svensson** (Sweden) — author
+      of AmiTODAY (1993); his shareware doc gives Fyrsvängen 18, S-610 42
+      Gryt, Sweden, the e-mail address `Jonas_Svensson@augs.se` (probably
+      long dead), and Fidonet 2:204/404.8.
     - **Randy Ross** (Ridgetown, Ontario), who in 1987 said he downloaded
-      updates "from the Marin-Sonoma BBS" and contributed `TODAYNEW`;
-      **Jim Robeson** (Pacific Grove, CA; `TODAYDOB`, 1987), whose note is
-      addressed directly to Kincaid; **Les Moskowitz** (Sherlock Holmes
+      updates "from the Marin-Sonoma BBS" and contributed `TODAYNEW`; his
+      `READ.ME` gives P.O. Box 1258, Ridgetown, Ontario N0P 2C0, (519)
+      674-5456 work and (519) 674-3932 home. **Jim Robeson** (Pacific Grove,
+      CA; `TODAYDOB`, 1987), whose note is addressed directly to Kincaid and
+      gives the WESTLOG BBS in Monterey, (408) 394-6234; **Les Moskowitz** (Sherlock Holmes
       data); **Jerry Lee, JD** (African-American history data).
     - **John T.S. Brouwer de Koning** (Amsterdam), a major data contributor
       to Goldman's 9.07, and **Daniel Doman** (a New York BBS operator,
-      whose sort utility Goldman used).
+      whose sort utility Goldman used). Their addresses appear only as
+      credits in Goldman's notes, not self-published, so they are not
+      recorded here.
     All are decades-old trails; the most promising is **Braunwart** and
     **Ross** (whose notes show them working directly with
     Kincaid's own BBS in 1987–89). This item may be moot if the July 2026 LinkedIn
