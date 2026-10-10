@@ -61,6 +61,14 @@ future researcher can judge it for themselves.
 
 ---
 
+## Lineage Diagram
+
+Two family-tree diagrams — one for the programs that grew out of Kincaid's
+`TODAY/PC`, one for the data files that were copied and expanded alongside
+them — are in [LINEAGE.md](LINEAGE.md).
+
+---
+
 ## I. Verified Facts
 
 **The program was written by Patrick Kincaid, in Datalight C, in July 1986.**
