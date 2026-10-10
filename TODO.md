@@ -402,6 +402,11 @@ value. None of these were run down during the initial research pass.
       (HTTP 200). Nameservers `camilo.ns.cloudflare.com` and
       `sue.ns.cloudflare.com`; registrar GoDaddy.com, LLC; created
       2005-01-18; last updated 2026-03-10; expires 2027-01-18.
+    - **Also opened a GoDaddy case (October 10, 2026).** Although GoDaddy's
+      standard abuse-report categories didn't fit, Leo Bicknell found
+      another way to open a case with them, and received an automated
+      acknowledgement that **case `DCU102261585`** was opened. No update
+      from either GoDaddy or Cloudflare yet.
     - **Still-open routes:** reaching her estate or colleagues, or a short
       post in game-preservation communities. No estate contact is known.
 
