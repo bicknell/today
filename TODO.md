@@ -90,12 +90,13 @@ value. None of these were run down during the initial research pass.
      code, but this avenue appears closed.
 
    **Not yet tried:**
-   - Email the UTM Library Archives & Special Collections
-     (`utml.asc@utoronto.ca`) asking someone to check the 1980/81 and
-     1981/82 Erindale telephone directories (see above) for a Butler in
-     Computing Services, and whether they hold any Erindale computing
-     centre material from 1980–82. UTARMS (`utarms@utoronto.ca`) holds the
-     restricted personnel files and is a second choice.
+   - ~~Email the UTM Library Archives & Special Collections~~ **Sent
+     (October 10, 2026), awaiting a reply.** Leo Bicknell emailed
+     `utml.asc@utoronto.ca` asking someone to check the 1980/81 and 1981/82
+     Erindale telephone directories (see above) for a Butler in Computing
+     Services, and whether they hold any Erindale computing centre material
+     from 1980–82. If that goes nowhere, UTARMS (`utarms@utoronto.ca`) holds
+     the restricted personnel files and is a second choice.
    - ~~Check for a UTM/Erindale "Computing Society" or similar student
      club~~ — done, October 2026: none exists in the UTM catalogues (see
      above).
