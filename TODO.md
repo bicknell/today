@@ -115,11 +115,22 @@ value. None of these were run down during the initial research pass.
        newsletter for campus, and the "Official Memoranda" box of all-staff
        communications, 1967–1997 (`CA UTM C003-A2025.002/B008`; [finding
        aid](https://discoverarchives.library.utoronto.ca/index.php/official-memoranda-40)).
-     - **Next, if worth pursuing:** book an appointment for *The Dale* and
-       the memoranda box (Computing Services announcements might name users
-       or a student account), and look for "P. Wall." UTARMS
-       (`utarms@utoronto.ca`) holds the restricted personnel files and is
-       still a second choice, but it won't help with a student.
+     - **Searched for "P. Wall" (October 14, 2026): nothing.** Four web
+       searches (Wall + Erindale + computing services / computing centre /
+       mainframe / VM/CMS, 1980–82) found no mention of anyone by that name,
+       and no history of an Erindale computing unit. The one tangential
+       find: an archive record for Erindale's old Technical Services
+       Department lists "Micro Computer support" among its units, so
+       computing may have sat inside Technical Services then. Don't repeat.
+     - **Next, if worth pursuing:** the in-person sources (*The Dale*
+       newsletter and the memoranda box) can't be reached right now — Leo is
+       far from Toronto — so a future visit or a researcher on site would
+       be needed. Two already-digitized *Medium II* issues are worth a look
+       remotely: 22 Sep 1982 ("computing services") and 27 Oct 1982 ("PL/1"),
+       the only 1982 issues that matched those terms and have not been read
+       (see the October 2026 note above). UTARMS (`utarms@utoronto.ca`) holds
+       the restricted personnel files and is still a second choice, but it
+       won't help with a student.
    - ~~Check for a UTM/Erindale "Computing Society" or similar student
      club~~ — done, October 2026: none exists in the UTM catalogues (see
      above).
