@@ -122,15 +122,22 @@ value. None of these were run down during the initial research pass.
        find: an archive record for Erindale's old Technical Services
        Department lists "Micro Computer support" among its units, so
        computing may have sat inside Technical Services then. Don't repeat.
-     - **Next, if worth pursuing:** the in-person sources (*The Dale*
-       newsletter and the memoranda box) can't be reached right now — Leo is
-       far from Toronto — so a future visit or a researcher on site would
-       be needed. Two already-digitized *Medium II* issues are worth a look
-       remotely: 22 Sep 1982 ("computing services") and 27 Oct 1982 ("PL/1"),
-       the only 1982 issues that matched those terms and have not been read
-       (see the October 2026 note above). UTARMS (`utarms@utoronto.ca`) holds
-       the restricted personnel files and is still a second choice, but it
-       won't help with a student.
+     - **The two unread 1982 *Medium II* hits are both false positives
+       (checked October 14, 2026).** The 22 Sep 1982 issue's "computing
+       services" match is an article about searching for a job, not about
+       campus computing; the 27 Oct 1982 issue's "PL/1" match is a search
+       failure on the page — it matches the ordinary words "So" and "is."
+       Nothing relevant to Erindale computing. Don't repeat.
+     - **What's left:** the in-person sources (*The Dale* newsletter and the
+       memoranda box) can't be reached right now — Leo is far from Toronto —
+       so they need a future visit or a researcher on site. The online
+       *Medium* archive is exhausted for this question. UTARMS
+       (`utarms@utoronto.ca`) holds the restricted personnel files and is
+       still a second choice, but it won't help with a student. The only
+       other live angle is the Mississauga "Michael Butler" LinkedIn profile
+       above, which now fits a student better (a short, specific message
+       naming the Erindale mainframe and June 5, 1981 might do better than
+       the original contact request).
    - ~~Check for a UTM/Erindale "Computing Society" or similar student
      club~~ — done, October 2026: none exists in the UTM catalogues (see
      above).
