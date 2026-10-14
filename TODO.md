@@ -135,9 +135,9 @@ value. None of these were run down during the initial research pass.
        (`utarms@utoronto.ca`) holds the restricted personnel files and is
        still a second choice, but it won't help with a student. The only
        other live angle is the Mississauga "Michael Butler" LinkedIn profile
-       above, which now fits a student better (a short, specific message
-       naming the Erindale mainframe and June 5, 1981 might do better than
-       the original contact request).
+       above, which fits a student better but already got a detailed message
+       on July 10, 2026 with no reply, so another note is unlikely to do
+       better.
    - ~~Check for a UTM/Erindale "Computing Society" or similar student
      club~~ — done, October 2026: none exists in the UTM catalogues (see
      above).
@@ -158,8 +158,13 @@ value. None of these were run down during the initial research pass.
    the University of Toronto, 1980–1984. Matches the right city
    (Mississauga/Erindale) and era; class years start just after the
    1981 mainframe debut, so if this is the right person he'd have been a
-   first- or second-year student at the time. Sent; not confirmed as the
-   same Michael Butler. **Update (October 2026): never replied.**
+   first- or second-year student at the time. Leo Bicknell sent a
+   detailed LinkedIn message on July 10, 2026; not confirmed as the same
+   Michael Butler. **Update (October 2026): never replied.** The October
+   UTM Library directory check (below) makes a student the likeliest
+   reading of Butler's role, which fits this profile's dates better —
+   though this remains the only candidate and a very common name, so it is
+   a plausible lead, not an established one.
 
 3. **Find the original Usenet posting — but note the evidence for *when*
    is weaker than it looks.** The working assumption that this was posted
