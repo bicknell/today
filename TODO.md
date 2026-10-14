@@ -91,16 +91,35 @@ value. None of these were run down during the initial research pass.
 
    **Not yet tried:**
    - ~~Email the UTM Library Archives & Special Collections~~ **Sent
-     (October 10, 2026), awaiting a reply.** Leo Bicknell emailed
-     `utml.asc@utoronto.ca` asking someone to check the 1980/81 and 1981/82
-     Erindale telephone directories (see above) for a Butler in Computing
-     Services, and whether they hold any Erindale computing centre material
-     from 1980–82. An automated acknowledgement arrived the same day,
-     promising a reply "within 3 business days." The email went out on a
-     Saturday, and Monday, October 12 is Canadian Thanksgiving, so a real
-     reply is expected around Thursday, October 15, 2026. If that goes
-     nowhere, UTARMS (`utarms@utoronto.ca`) holds the restricted personnel
-     files and is a second choice.
+     October 10, 2026; answered (received by October 14).** Leo Bicknell
+     emailed `utml.asc@utoronto.ca` asking someone to check the 1980/81 and
+     1981/82 Erindale telephone directories (see above) for a Butler in
+     Computing Services, and whether they hold any Erindale computing
+     centre material from 1980–82. Christopher "Cal" Long, an archivist
+     there, replied:
+     - **No Butler is listed** in the alphabetical directories for either
+       1980/81 or 1981/82. So Michael Butler was **not on the Erindale staff
+       or faculty list** in those years — which makes a **student** the
+       likeliest reading. (This is the same era and place as the Mississauga
+       "Michael Butler" LinkedIn profile above, a 1980–84 U of T Economics
+       and Political Science student, but nothing yet confirms they are the
+       same person.)
+     - **Computing Services' directory entry** gives only a room number
+       (Rm 2043) and local telephone extensions (2043, 5281). The only
+       person associated with that office in both years is a **"Wall, P.,"
+       listed as the Computing Services Rep**. A possible lead: the rep may
+       have known who used the VM/CMS system in 1981.
+     - **He holds nothing else on Erindale computing**, but suggested two
+       things that require an in-person visit (appointments via the
+       library's online system): *The Dale*, a weekly events-and-activities
+       newsletter for campus, and the "Official Memoranda" box of all-staff
+       communications, 1967–1997 (`CA UTM C003-A2025.002/B008`; [finding
+       aid](https://discoverarchives.library.utoronto.ca/index.php/official-memoranda-40)).
+     - **Next, if worth pursuing:** book an appointment for *The Dale* and
+       the memoranda box (Computing Services announcements might name users
+       or a student account), and look for "P. Wall." UTARMS
+       (`utarms@utoronto.ca`) holds the restricted personnel files and is
+       still a second choice, but it won't help with a student.
    - ~~Check for a UTM/Erindale "Computing Society" or similar student
      club~~ — done, October 2026: none exists in the UTM catalogues (see
      above).
