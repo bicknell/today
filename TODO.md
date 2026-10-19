@@ -451,10 +451,23 @@ value. None of these were run down during the initial research pass.
     - **Also opened a GoDaddy case (October 10, 2026).** Although GoDaddy's
       standard abuse-report categories didn't fit, Leo Bicknell found
       another way to open a case with them, and received an automated
-      acknowledgement that **case `DCU102261585`** was opened. No update
-      from either GoDaddy or Cloudflare yet.
+      acknowledgement that **case `DCU102261585`** was opened.
+    - **Outcome (October 19, 2026): nothing visible changed.**
+      GoDaddy's portal now says only "Your case has been reviewed and
+      resolved"; it states explicitly that it does not tell the reporter
+      how a case was resolved. Cloudflare's only reply is the automated
+      acknowledgement, which warns it "may be the only response you
+      receive." A re-check on October 19 found the domain exactly as on
+      October 10: all three hostnames still 301 to `www.toto5000i.com`
+      and then `dtoto5000.com`, the nameservers are still
+      `camilo.ns.cloudflare.com` and `sue.ns.cloudflare.com`, the registrar
+      is still GoDaddy, and the WHOIS "updated" dates are unchanged
+      (2026-03-10 / 2026-02-28). Neither provider can be pushed further, so
+      there is nothing more to do with them.
     - **Still-open routes:** reaching her estate or colleagues, or a short
       post in game-preservation communities. No estate contact is known.
+      The domain registration runs through January 18, 2027; whether it is
+      renewed then is worth a look.
 
 11. **Track down the actual DOS releases, and place this repo's copy in
     the resulting timeline.** Resolved, far more completely than
