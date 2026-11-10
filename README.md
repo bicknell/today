@@ -1170,3 +1170,16 @@ databases ... to share with the rest of us").
 53. Roland Haley's `TO-DAY.DOC` (releases 1.07, 2.02, 3.05), Jonas Svensson's `AmiTODAY.eng.doc`, and Michael Conley's `TODAYDOR.DOC` v4.02 (Feb 1995), all inside [`zips/other-implementers/`](zips/other-implementers/)
 
 *Compiled July 2026; updated October 2026. See [TODO.md](TODO.md) for open research threads.*
+
+## License
+
+All documents in this repository written by Leo Bicknell, including this
+research note, [LINEAGE.md](LINEAGE.md), [BUILDING.md](BUILDING.md), and
+[TODO.md](TODO.md), are covered by the BSD 3-Clause License in
+[LICENSE](LICENSE).
+
+Anything in this repository that already carries its own license, copyright,
+or distribution terms keeps those terms and is not covered by
+[LICENSE](LICENSE). That includes the preserved third-party archives and
+documents in [`zips/`](zips/) and any program or data files whose original
+authors set their own terms.
